@@ -4,10 +4,14 @@ import { getContext, setContext } from 'svelte';
 import { writable, type Writable } from 'svelte/store';
 /////
 
-export function functionCreateSidebarColorStore() {
-	const storeReturn = writable<'enumLight' | 'enumDark'>('enumDark');
+export type typeSidebarColor = 'enumLight' | 'enumDark';
+
+export function functionCreateSidebarColorStore(parInitialValue: typeSidebarColor = 'enumDark') {
+	const storeReturn = writable<typeSidebarColor>(parInitialValue);
 	if (browser) {
-		storeReturn.set(localStorage.stringSidebarColor === 'enumLight' ? 'enumLight' : 'enumDark');
+		storeReturn.set(
+			localStorage.stringSidebarColor === 'enumLight' ? 'enumLight' : parInitialValue
+		);
 		storeReturn.subscribe((value) => {
 			localStorage.stringSidebarColor = value;
 		});
@@ -16,5 +20,5 @@ export function functionCreateSidebarColorStore() {
 	setContext('contextSidebarColorStore', storeReturn);
 }
 export function functionReadSidebarColorStore() {
-	return getContext<Writable<'enumLight' | 'enumDark'>>('contextSidebarColorStore');
+	return getContext<Writable<typeSidebarColor>>('contextSidebarColorStore');
 }

@@ -4,10 +4,12 @@ import { getContext, setContext } from 'svelte';
 import { writable, type Writable } from 'svelte/store';
 /////
 
-export function functionCreateHeaderColorStore() {
-	const storeReturn = writable<'enumLight' | 'enumDark'>('enumLight');
+export type typeHeaderColor = 'enumLight' | 'enumDark';
+
+export function functionCreateHeaderColorStore(parInitialValue: typeHeaderColor = 'enumLight') {
+	const storeReturn = writable<typeHeaderColor>(parInitialValue);
 	if (browser) {
-		storeReturn.set(localStorage.stringHeaderColor ?? 'enumLight');
+		storeReturn.set(localStorage.stringHeaderColor ?? parInitialValue);
 		storeReturn.subscribe((value) => {
 			localStorage.stringHeaderColor = value;
 		});
@@ -16,5 +18,5 @@ export function functionCreateHeaderColorStore() {
 }
 
 export function functionReadHeaderColorStore() {
-	return getContext<Writable<'enumLight' | 'enumDark'>>('contextHeaderColorStore');
+	return getContext<Writable<typeHeaderColor>>('contextHeaderColorStore');
 }

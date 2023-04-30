@@ -1,20 +1,57 @@
 <script lang="ts">
 	// MODULES
+	import type { typeColorScheme } from './stores/storeColorScheme.js';
 	import { functionCreateColorSchemeStore } from './stores/storeColorScheme.js';
+	import type { typeHeaderColor } from './stores/storeHeaderColor.js';
 	import { functionCreateHeaderColorStore } from './stores/storeHeaderColor.js';
 	import { functionCreateMobileMenuStore } from './stores/storeMobileMenu.js';
-	import { functionCreateRtlStore, functionReadRtlStore } from './stores/storeRtl.js';
+	import {
+		functionCreateRightBottomStore,
+		functionReadRightBottomStore
+	} from './stores/storeRightBottom.js';
 	import { functionCreateSidebarStore } from './stores/storeSidebar.js';
+	import type { typeSidebarColor } from './stores/storeSidebarColor.js';
 	import { functionCreateSidebarColorStore } from './stores/storeSidebarColor.js';
+	import type { typeTextDirection } from './stores/storeTextDirection.js';
+	import {
+		functionCreateTextDirectionStore,
+		functionReadTextDirectionStore
+	} from './stores/storeTextDirection.js';
+	import type { typeInitialProps } from './typeInitialProps.js';
+	/////
+	// NPM MODULES
+	import { setContext } from 'svelte';
+	/////
+
+	// PROPS
+	export let propHeaderColor: typeHeaderColor = 'enumLight';
+	export let propSidebarColor: typeSidebarColor = 'enumDark';
+	export let propColorScheme: typeColorScheme = 'enumLight';
+	export let propSidebar = false;
+	export let propRightBottom = true;
+	export let propTextDirection: typeTextDirection = 'enumLeftToRight';
+	/////
+	// CONSTANTS
+	const objectInitialProps: typeInitialProps = {
+		propHeaderColor,
+		propSidebarColor,
+		propColorScheme,
+		propSidebar,
+		propRightBottom,
+		propTextDirection
+	};
+	setContext<typeInitialProps>('contextInitialProps', objectInitialProps);
 	/////
 	// STORES
-	functionCreateColorSchemeStore();
-	functionCreateHeaderColorStore();
-	functionCreateSidebarColorStore();
-	functionCreateSidebarStore();
+	functionCreateColorSchemeStore(propColorScheme);
+	functionCreateHeaderColorStore(propHeaderColor);
+	functionCreateSidebarColorStore(propSidebarColor);
+	functionCreateSidebarStore(propSidebar);
+	functionCreateTextDirectionStore(propTextDirection);
+	functionCreateRightBottomStore(propRightBottom);
 	functionCreateMobileMenuStore();
-	functionCreateRtlStore();
-	const storeRtl = functionReadRtlStore();
+	const storeTextDirection = functionReadTextDirectionStore();
+	const storeRightBottom = functionReadRightBottomStore();
 	/////
 </script>
 
@@ -28,20 +65,23 @@
 		crossorigin="anonymous"
 	/> -->
 
-	{#if $storeRtl}
+	{#if $storeTextDirection === 'enumRightToLeft'}
 		<link href="/css/theme-rtl.css" rel="stylesheet" type="text/css" />
 	{:else}
 		<link href="/css/theme.css" rel="stylesheet" type="text/css" />
 	{/if}
 </svelte:head>
 
-<div dir={$storeRtl ? 'rtl' : 'ltr'}>
+<div dir={$storeTextDirection === 'enumRightToLeft' ? 'rtl' : 'ltr'}>
 	<main class="main" id="top">
 		<div class="container-fluid px-0" data-layout="container">
 			<slot name="slotSidebar" />
 			<slot name="slotHeader" />
 			<slot name="slotFooter" />
 		</div>
+		{#if $storeRightBottom}
+			<slot name="slotRightBottom" />
+		{/if}
 	</main>
 	<slot name="slotCustomize" />
 </div>

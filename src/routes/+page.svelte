@@ -3,6 +3,7 @@
 	import ComponentBlocks from './componentBlocks/component.svelte';
 	import ComponentMenu from './componentMenu/component.svelte';
 	import ComponentNotifications from './componentNotifications/component.svelte';
+	import ComponentRightBottom from './componentRightBottom/component.svelte';
 	import ComponentSearch from './componentSearch/component.svelte';
 	import ComponentUser from './componentUser/component.svelte';
 </script>
@@ -42,5 +43,8 @@
 	</svelte:fragment>
 	<svelte:fragment slot="slotCustomize">
 		<Customize />
+	</svelte:fragment>
+	<svelte:fragment slot="slotRightBottom">
+		<ComponentRightBottom />
 	</svelte:fragment>
 </Template>

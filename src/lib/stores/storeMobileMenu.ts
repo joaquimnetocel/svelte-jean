@@ -5,8 +5,8 @@ import { writable, type Writable } from 'svelte/store';
 
 export function functionCreateMobileMenuStore() {
 	const storeReturn = writable<boolean>(true);
-	setContext('contextMobileMenuCollapsedStore', storeReturn);
+	setContext('contextMobileMenuStore', storeReturn);
 }
 export function functionReadMobileMenuStore() {
-	return getContext<Writable<boolean>>('contextMobileMenuCollapsedStore');
+	return getContext<Writable<boolean>>('contextMobileMenuStore');
 }

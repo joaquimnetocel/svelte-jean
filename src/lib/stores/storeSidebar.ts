@@ -4,10 +4,10 @@ import { getContext, setContext } from 'svelte';
 import { writable, type Writable } from 'svelte/store';
 /////
 
-export function functionCreateSidebarStore() {
-	const storeReturn = writable<boolean>(false);
+export function functionCreateSidebarStore(parInitialValue: boolean) {
+	const storeReturn = writable<boolean>(parInitialValue);
 	if (browser) {
-		storeReturn.set(localStorage.booleanSidebarCollapsed === 'true' ? true : false);
+		storeReturn.set(localStorage.booleanSidebarCollapsed === 'true' ? true : parInitialValue);
 		storeReturn.subscribe((value) => {
 			localStorage.booleanSidebarCollapsed = value;
 		});

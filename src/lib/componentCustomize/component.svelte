@@ -4,9 +4,6 @@
 	import imageLight from './folderImages/imageLight.png';
 	import imageNavbarTopStyleLight from './folderImages/imageNavbarTopStyleLight.png';
 	import imageTop from './folderImages/imageTop.png';
-	import imageTopDark from './folderImages/imageTopDark.png';
-	import imageTopSlim from './folderImages/imageTopSlim.png';
-	import imageTopSlimDark from './folderImages/imageTopSlimDark.png';
 	import imageTopStyleDarker from './folderImages/imageTopStyleDarker.png';
 	import imageTopStyleLighter from './folderImages/imageTopStyleLighter.png';
 	import imageVerticalDarker from './folderImages/imageVerticalDarker.png';
@@ -15,29 +12,40 @@
 	// MODULES
 	import { functionReadColorSchemeStore } from '../stores/storeColorScheme.js';
 	import { functionReadHeaderColorStore } from '../stores/storeHeaderColor.js';
-	import { functionReadRtlStore } from '../stores/storeRtl.js';
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
 	import { functionReadSidebarColorStore } from '../stores/storeSidebarColor.js';
+	import { functionReadTextDirectionStore } from '../stores/storeTextDirection.js';
+	import type { typeInitialProps } from '../typeInitialProps.js';
+	/////
+	// NPM MODULES
+	import { getContext } from 'svelte';
 	/////
 
-	// STATES
-	let stateCollapsed = true;
+	// CONSTANTS
+	const objectInitialProps = getContext<typeInitialProps>('contextInitialProps');
 	/////
 	// STORES
 	const storeColorScheme = functionReadColorSchemeStore();
-	const storeRtl = functionReadRtlStore();
+	const storeTextDirection = functionReadTextDirectionStore();
 	const storeSidebarColor = functionReadSidebarColorStore();
 	const storeHeaderColor = functionReadHeaderColorStore();
 	const storeSidebar = functionReadSidebarStore();
 	/////
+	// STATES
+	let stateCollapsed = true;
+	let stateRtl = $storeTextDirection === 'enumLeftToRight' ? false : true;
+	/////
 	// FUNCTIONS
 	const functionReset = function () {
-		$storeColorScheme = 'enumLight';
-		$storeHeaderColor = 'enumLight';
-		$storeSidebarColor = 'enumDark';
-		$storeRtl = false;
-		$storeSidebar = false;
+		$storeColorScheme = objectInitialProps.propColorScheme;
+		$storeHeaderColor = objectInitialProps.propHeaderColor;
+		$storeSidebarColor = objectInitialProps.propSidebarColor;
+		$storeTextDirection = objectInitialProps.propTextDirection;
+		$storeSidebar = objectInitialProps.propSidebar;
 	};
+	/////
+	// REACTIVITY
+	$: $storeTextDirection = stateRtl ? 'enumRightToLeft' : 'enumLeftToRight';
 	/////
 </script>
 
@@ -49,7 +57,7 @@
 	id="settings-offcanvas"
 	tabindex="-1"
 	aria-labelledby="settings-offcanvas"
-	style:right={$storeRtl ? 'unset' : '0px'}
+	style:right={$storeTextDirection === 'enumRightToLeft' ? 'unset' : '0px'}
 >
 	<div class="offcanvas-header align-items-start border-bottom flex-column">
 		<div class="pt-1 w-100 mb-6 d-flex justify-content-between align-items-start">
@@ -173,23 +181,26 @@
 		<!---->
 		<!-- TEXT DIRECTION -->
 		<div class="border rounded-3 p-4 setting-panel-item bg-white">
+			<p class="mb-0 text-700">TEXT DIRECTION</p>
 			<div class="d-flex justify-content-between align-items-center">
-				<h5 class="setting-panel-item-title mb-1">RTL</h5>
+				<h5 class="setting-panel-item-title mb-1">
+					{$storeTextDirection === 'enumRightToLeft' ? 'RIGHT TO LEFT' : 'LEFT TO RIGHT'}
+				</h5>
 				<div class="form-check form-switch mb-0">
 					<input
 						class="form-check-input ms-auto"
 						type="checkbox"
 						data-theme-control="phoenixIsRTL"
-						bind:checked={$storeRtl}
+						bind:checked={stateRtl}
 					/>
 				</div>
 			</div>
-			<p class="mb-0 text-700">TEXT DIRECTION</p>
 		</div>
 		<!---->
-		<!-- <div class="border rounded-3 p-4 setting-panel-item bg-white">
+		<!-- RIGHT BOTTOM CONTENT -->
+		<div class="border rounded-3 p-4 setting-panel-item bg-white">
 			<div class="d-flex justify-content-between align-items-center">
-				<h5 class="setting-panel-item-title mb-1">Support Chat</h5>
+				<h5 class="setting-panel-item-title mb-1">RIGHT BOTTOM CONTENT</h5>
 				<div class="form-check form-switch mb-0">
 					<input
 						class="form-check-input ms-auto"
@@ -198,8 +209,9 @@
 					/>
 				</div>
 			</div>
-			<p class="mb-0 text-700">Toggle support chat</p>
-		</div> -->
+			<!-- <p class="mb-0 text-700">RIGHT BOTTOM CONTENT</p> -->
+		</div>
+		<!---->
 		<!-- <div class="setting-panel-item">
 			<h5 class="setting-panel-item-title">Navigation Type</h5>
 			<div class="row gx-2">
@@ -280,8 +292,8 @@
 							src={imageDark}
 							alt=""
 						/>
-						<span class="label-text d-dark-none"> DEFAULT</span>
-						<span class="label-text d-light-none">DEFAULT</span>
+						<span class="label-text d-dark-none"> LIGHT</span>
+						<span class="label-text d-light-none">LIGHT</span>
 					</label>
 				</div>
 				<div class="col-6">
@@ -325,7 +337,7 @@
 								alt=""
 							/>
 						</span>
-						<span class="label-text">DEFAULT</span>
+						<span class="label-text">LIGHT</span>
 					</label>
 				</div>
 				<div class="col-6">
@@ -359,7 +371,7 @@
 		</div>
 		<!---->
 		<!-- HEADER SHAPE -->
-		<div class="setting-panel-item">
+		<!-- <div class="setting-panel-item">
 			<h5 class="setting-panel-item-title">HEADER SHAPE</h5>
 			<div class="row gx-2">
 				<div class="col-6">
@@ -404,7 +416,7 @@
 					>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!---->
 		<!-- <a
 			class="bun btn-primary d-grid mb-3 text-white dark__text-100 mt-5 btn btn-primary"
