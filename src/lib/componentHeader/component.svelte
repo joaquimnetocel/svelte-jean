@@ -19,7 +19,7 @@
 	<div class="collapse navbar-collapse justify-content-between">
 		<div class="navbar-logo">
 			<ComponentMobileMenuButton />
-			<slot name="slotLogo" />
+			<slot name="slotLeft" />
 		</div>
 		<slot name="slotCenter" />
 		<ul class="navbar-nav navbar-nav-icons flex-row">

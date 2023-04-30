@@ -77,6 +77,7 @@
 		<div class="container-fluid px-0" data-layout="container">
 			<slot name="slotSidebar" />
 			<slot name="slotHeader" />
+			<slot name="slotBody" />
 			<slot name="slotFooter" />
 		</div>
 		{#if $storeRightBottom}

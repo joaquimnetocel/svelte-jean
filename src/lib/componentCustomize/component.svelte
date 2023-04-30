@@ -12,6 +12,7 @@
 	// MODULES
 	import { functionReadColorSchemeStore } from '../stores/storeColorScheme.js';
 	import { functionReadHeaderColorStore } from '../stores/storeHeaderColor.js';
+	import { functionReadRightBottomStore } from '../stores/storeRightBottom.js';
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
 	import { functionReadSidebarColorStore } from '../stores/storeSidebarColor.js';
 	import { functionReadTextDirectionStore } from '../stores/storeTextDirection.js';
@@ -30,6 +31,7 @@
 	const storeSidebarColor = functionReadSidebarColorStore();
 	const storeHeaderColor = functionReadHeaderColorStore();
 	const storeSidebar = functionReadSidebarStore();
+	const storeRightBottom = functionReadRightBottomStore();
 	/////
 	// STATES
 	let stateCollapsed = true;
@@ -199,17 +201,18 @@
 		<!---->
 		<!-- RIGHT BOTTOM CONTENT -->
 		<div class="border rounded-3 p-4 setting-panel-item bg-white">
+			<p class="mb-0 text-700">RIGHT BOTTOM CONTENT</p>
 			<div class="d-flex justify-content-between align-items-center">
-				<h5 class="setting-panel-item-title mb-1">RIGHT BOTTOM CONTENT</h5>
+				<h5 class="setting-panel-item-title mb-1">{$storeRightBottom ? 'VISIBLE' : 'HIDDEN'}</h5>
 				<div class="form-check form-switch mb-0">
 					<input
 						class="form-check-input ms-auto"
 						type="checkbox"
 						data-theme-control="phoenixSupportChat"
+						bind:checked={$storeRightBottom}
 					/>
 				</div>
 			</div>
-			<!-- <p class="mb-0 text-700">RIGHT BOTTOM CONTENT</p> -->
 		</div>
 		<!---->
 		<!-- <div class="setting-panel-item">

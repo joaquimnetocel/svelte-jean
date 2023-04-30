@@ -1,3 +1,9 @@
+<script lang="ts">
+	// IMAGES
+	import image301 from './301.webp';
+	/////
+</script>
+
 <div class="support-chat-container show">
 	<div class="container-fluid support-chat">
 		<div class="card bg-white">
@@ -158,11 +164,7 @@
 					</div>
 					<div class="text-center mt-auto">
 						<div class="avatar avatar-3xl status-online">
-							<img
-								class="rounded-circle border border-3 border-white"
-								src="./Phoenix_files/30(1).webp"
-								alt=""
-							/>
+							<img class="rounded-circle border border-3 border-white" src={image301} alt="" />
 						</div>
 						<h5 class="mt-2 mb-3">Eric</h5>
 						<p class="text-center text-black mb-0">

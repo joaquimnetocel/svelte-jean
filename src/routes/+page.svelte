@@ -1,50 +1,12 @@
-<script lang="ts">
-	import { ColorScheme, Customize, Footer, Header, Logo, Sidebar, Template } from '$lib/index.js';
-	import ComponentBlocks from './componentBlocks/component.svelte';
-	import ComponentMenu from './componentMenu/component.svelte';
-	import ComponentNotifications from './componentNotifications/component.svelte';
-	import ComponentRightBottom from './componentRightBottom/component.svelte';
-	import ComponentSearch from './componentSearch/component.svelte';
-	import ComponentUser from './componentUser/component.svelte';
-</script>
-
-<Template>
-	<svelte:fragment slot="slotSidebar">
-		<Sidebar>
-			<ComponentMenu />
-		</Sidebar>
-	</svelte:fragment>
-	<svelte:fragment slot="slotHeader">
-		<Header>
-			<svelte:fragment slot="slotLogo">
-				<Logo />
-			</svelte:fragment>
-			<svelte:fragment slot="slotCenter">
-				<ComponentSearch />
-			</svelte:fragment>
-			<svelte:fragment slot="slotRight">
-				<ColorScheme />
-				<ComponentNotifications />
-				<ComponentBlocks />
-				<ComponentUser />
-			</svelte:fragment>
-		</Header>
-	</svelte:fragment>
-	<svelte:fragment slot="slotFooter">
-		<Footer>
-			<svelte:fragment slot="slotLeft">
-				Thank you for creating with Jean<span class="d-none d-sm-inline-block" />
-				<span class="d-none d-sm-inline-block mx-1">| </span>
-				<br class="d-sm-none" />20XX ©
-				<a class="mx-1" href="https://themewagon.com/"> GitHub </a>
-			</svelte:fragment>
-			<svelte:fragment slot="slotRight">v0.0.0</svelte:fragment>
-		</Footer>
-	</svelte:fragment>
-	<svelte:fragment slot="slotCustomize">
-		<Customize />
-	</svelte:fragment>
-	<svelte:fragment slot="slotRightBottom">
-		<ComponentRightBottom />
-	</svelte:fragment>
-</Template>
+<div class="content">
+	<div class="pb-5">
+		<div class="row g-4">
+			<div class="col-12 col-xxl-6">
+				<div class="mb-8">
+					<h2 class="mb-2">Jean Template</h2>
+					<h5 class="text-700 fw-semi-bold">Here’s what’s going on at your business right now</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
