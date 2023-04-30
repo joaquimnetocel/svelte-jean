@@ -2,8 +2,6 @@
 	// IMAGES
 	import imageDark from './folderImages/imageDark.png';
 	import imageLight from './folderImages/imageLight.png';
-	// import imageNavComboDark from './folderImages/imageNavComboDark.png';
-	// import imageNavComboLight from './folderImages/imageNavComboLight.png';
 	import imageNavbarTopStyleLight from './folderImages/imageNavbarTopStyleLight.png';
 	import imageTop from './folderImages/imageTop.png';
 	import imageTopDark from './folderImages/imageTopDark.png';
@@ -22,12 +20,12 @@
 	import { functionReadSidebarColorStore } from '../stores/storeSidebarColor.js';
 	/////
 	// NPM MODULES
-	import { onMount } from 'svelte';
+	// import { onMount } from 'svelte';
 	/////
 
 	// STATES
 	let stateCollapsed = true;
-	let stateMounted = false;
+	// let stateMounted = false;
 	/////
 	// STORES
 	const storeColorScheme = functionReadColorSchemeStore();
@@ -37,9 +35,9 @@
 	const storeSidebar = functionReadSidebarStore();
 	/////
 	// LIFECYCLE FUNCTIONS
-	onMount(() => {
-		stateMounted = true;
-	});
+	// onMount(() => {
+	// 	stateMounted = true;
+	// });
 	/////
 	// FUNCTIONS
 	const functionReset = function () {
@@ -48,23 +46,19 @@
 		$storeSidebarColor = 'enumDark';
 		$storeRtl = false;
 		$storeSidebar = false;
-		document.body.classList.remove('navbar-vertical-collapsed');
-		document.body.setAttribute('dir', 'ltr');
-		document.body.classList.remove('dark');
+		// document.body.setAttribute('dir', 'ltr');
 	};
 	/////
 	// REACTIVITY
-	$: {
-		if (stateMounted) {
-			if ($storeColorScheme === 'enumLight') {
-				document.body.classList.remove('dark');
-				localStorage.stringColorScheme = 'enumLight';
-			} else {
-				document.body.classList.add('dark');
-				localStorage.stringColorScheme = 'enumDark';
-			}
-		}
-	}
+	// $: {
+	// 	if (stateMounted) {
+	// 		if ($storeColorScheme === 'enumLight') {
+	// 			localStorage.stringColorScheme = 'enumLight';
+	// 		} else {
+	// 			localStorage.stringColorScheme = 'enumDark';
+	// 		}
+	// 	}
+	// }
 	/////
 </script>
 
@@ -291,7 +285,7 @@
 						id="navbar-style-default"
 						type="radio"
 						name="config.name"
-						value="enumDefault"
+						value="enumLight"
 						data-theme-control="phoenixNavbarVerticalStyle"
 					/><label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-default">
 						<img class="img-fluid img-prototype d-dark-none" src={imageLight} alt="" /><img
@@ -310,7 +304,7 @@
 						id="navbar-style-dark"
 						type="radio"
 						name="config.name"
-						value="enumDarker"
+						value="enumDark"
 						data-theme-control="phoenixNavbarVerticalStyle"
 					/>
 					<label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-dark">
@@ -399,7 +393,7 @@
 						id="navbarTopDarker"
 						name="navbar-top-style"
 						type="radio"
-						value="enumDarker"
+						value="enumDark"
 						data-theme-control="phoenixNavbarTopStyle"
 					/>
 					<label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDarker">

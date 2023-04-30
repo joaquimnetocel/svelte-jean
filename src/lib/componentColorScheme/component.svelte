@@ -2,26 +2,22 @@
 	// MODULES
 	import { functionReadColorSchemeStore } from '../stores/storeColorScheme.js';
 	/////
+	// NPM MODULES
+	import { Body } from 'svelte-body';
+	/////
 	// STORES
 	const storeColorScheme = functionReadColorSchemeStore();
 	/////
-	// FUNCTIONS
-	const functionClick = function () {
-		if ($storeColorScheme === 'enumDark') {
-			document.body.classList.remove('dark');
-			$storeColorScheme = 'enumLight';
-			return;
-		}
-		document.body.classList.add('dark');
-		$storeColorScheme = 'enumDark';
-	};
-	/////
 </script>
+
+<Body class={$storeColorScheme === 'enumDark' ? 'dark' : ''} />
 
 <li class="nav-item">
 	<div class="theme-control-toggle afa-icon-wait px-2">
 		<input
-			on:click={functionClick}
+			on:click={() => {
+				$storeColorScheme = $storeColorScheme === 'enumDark' ? 'enumLight' : 'enumDark';
+			}}
 			class="form-check-input ms-0 theme-control-toggle-input"
 			type="checkbox"
 			data-theme-control="phoenixTheme"

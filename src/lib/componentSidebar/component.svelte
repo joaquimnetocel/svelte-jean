@@ -27,9 +27,6 @@
 		<div class="navbar-vertical-content">
 			<ul class="navbar-nav flex-column" id="navbarVerticalNav">
 				<slot />
-				<!-- <li class="nav-item">
-					<ComponentHome />
-				</li> -->
 			</ul>
 		</div>
 	</div>

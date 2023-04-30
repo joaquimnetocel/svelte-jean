@@ -7,16 +7,14 @@ import { writable, type Writable } from 'svelte/store';
 export function functionCreateHeaderColorStore() {
 	const storeReturn = writable<'enumLight' | 'enumDark'>('enumLight');
 	if (browser) {
-		if (localStorage.stringHeaderColor === 'enumDark') {
-			storeReturn.set('enumDark');
-		}
+		storeReturn.set(localStorage.stringHeaderColor ?? 'enumLight');
 		storeReturn.subscribe((value) => {
 			localStorage.stringHeaderColor = value;
 		});
 	}
-
 	setContext('contextHeaderColorStore', storeReturn);
 }
+
 export function functionReadHeaderColorStore() {
 	return getContext<Writable<'enumLight' | 'enumDark'>>('contextHeaderColorStore');
 }

@@ -3,30 +3,22 @@
 	import { functionReadColorSchemeStore } from '../stores/storeColorScheme.js';
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
 	import { functionReadSidebarColorStore } from '../stores/storeSidebarColor.js';
-
+	/////
+	// NPM MODULES
+	import { Body } from 'svelte-body';
 	/////
 	// STORES
 	const storeSidebar = functionReadSidebarStore();
 	const storeColorScheme = functionReadColorSchemeStore();
 	const storeVerticalNavbarDarker = functionReadSidebarColorStore();
 	/////
-
-	// FUNCTIONS
-	const functionClick = function () {
-		if ($storeSidebar === true) {
-			document.body.classList.remove('navbar-vertical-collapsed');
-			$storeSidebar = false;
-			return;
-		}
-		document.body.classList.add('navbar-vertical-collapsed');
-		$storeSidebar = true;
-	};
-	/////
 </script>
+
+<Body class={$storeSidebar ? 'navbar-vertical-collapsed' : ''} />
 
 <div class="navbar-vertical-footer">
 	<button
-		on:click={functionClick}
+		on:click={() => ($storeSidebar = !$storeSidebar)}
 		class="btn navbar-vertical-toggle border-0 fw-semi-bold w-100 white-space-nowrap d-flex align-items-center"
 	>
 		<span class="uil uil-left-arrow-to-left fs-0" />

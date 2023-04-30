@@ -7,11 +7,8 @@ import { writable, type Writable } from 'svelte/store';
 export function functionCreateRtlStore() {
 	const storeReturn = writable<boolean>(false);
 	if (browser) {
-		if (localStorage.booleanRtl === 'true') {
-			storeReturn.set(true);
-		}
+		storeReturn.set(localStorage.booleanRtl === 'true' ? true : false);
 		storeReturn.subscribe((value) => {
-			document.body.setAttribute('dir', value === true ? 'rtl' : 'ltr');
 			localStorage.booleanRtl = value;
 		});
 	}

@@ -31,11 +31,11 @@
 	{#if $storeRtl}
 		<link href="/css/theme-rtl.css" rel="stylesheet" type="text/css" />
 	{:else}
-		<link href="/css/theme.min.css" rel="stylesheet" type="text/css" />
+		<link href="/css/theme.css" rel="stylesheet" type="text/css" />
 	{/if}
 </svelte:head>
 
-<div>
+<div dir={$storeRtl ? 'rtl' : 'ltr'}>
 	<main class="main" id="top">
 		<div class="container-fluid px-0" data-layout="container">
 			<slot name="slotSidebar" />

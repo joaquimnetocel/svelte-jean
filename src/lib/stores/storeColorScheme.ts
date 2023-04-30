@@ -7,10 +7,7 @@ import { writable, type Writable } from 'svelte/store';
 export function functionCreateColorSchemeStore() {
 	const storeReturn = writable<'enumLight' | 'enumDark'>('enumLight');
 	if (browser) {
-		if (localStorage.stringColorScheme === 'enumDark') {
-			storeReturn.set('enumDark');
-			document.body.classList.add('dark');
-		}
+		storeReturn.set(localStorage.stringColorScheme ?? 'enumLight');
 		storeReturn.subscribe((value) => {
 			localStorage.stringColorScheme = value;
 		});

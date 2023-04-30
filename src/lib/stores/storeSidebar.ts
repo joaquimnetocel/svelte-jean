@@ -7,10 +7,7 @@ import { writable, type Writable } from 'svelte/store';
 export function functionCreateSidebarStore() {
 	const storeReturn = writable<boolean>(false);
 	if (browser) {
-		if (localStorage.booleanSidebarCollapsed === 'true') {
-			storeReturn.set(true);
-			document.body.classList.add('navbar-vertical-collapsed');
-		}
+		storeReturn.set(localStorage.booleanSidebarCollapsed === 'true' ? true : false);
 		storeReturn.subscribe((value) => {
 			localStorage.booleanSidebarCollapsed = value;
 		});

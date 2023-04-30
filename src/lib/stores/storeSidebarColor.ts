@@ -7,9 +7,7 @@ import { writable, type Writable } from 'svelte/store';
 export function functionCreateSidebarColorStore() {
 	const storeReturn = writable<'enumLight' | 'enumDark'>('enumDark');
 	if (browser) {
-		if (localStorage.stringSidebarColor === 'enumLight') {
-			storeReturn.set('enumLight');
-		}
+		storeReturn.set(localStorage.stringSidebarColor === 'enumLight' ? 'enumLight' : 'enumDark');
 		storeReturn.subscribe((value) => {
 			localStorage.stringSidebarColor = value;
 		});
