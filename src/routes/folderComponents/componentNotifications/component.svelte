@@ -29,7 +29,7 @@
 		use:functionClickOutside={() => (stateCollapsed = true)}
 		class:show={!stateCollapsed}
 		class="nav-link"
-		href="#"
+		href="javascript:void(0);"
 		role="button"
 		data-bs-toggle="dropdown"
 		aria-haspopup="true"

@@ -40,7 +40,7 @@
 		use:functionClickOutside={() => (stateCollapsed = true)}
 		class="nav-link"
 		id="navbarDropdownNindeDots"
-		href="#"
+		href="javascript:void(0);"
 		role="button"
 		data-bs-toggle="dropdown"
 		aria-haspopup="true"
@@ -78,7 +78,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageBehance} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Behance</p>
@@ -88,7 +88,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageGoogleCloud} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Cloud</p>
@@ -98,7 +98,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageSlack} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Slack</p>
@@ -108,7 +108,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageGitlab} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Gitlab</p>
@@ -118,7 +118,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageBitbucket} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">BitBucket</p>
@@ -128,7 +128,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageGoogleDrive} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Drive</p>
@@ -138,7 +138,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageTrello} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Trello</p>
@@ -148,7 +148,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageFigma} alt="" width="20" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Figma</p>
@@ -158,7 +158,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageTwitter} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Twitter</p>
@@ -168,7 +168,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imagePinterest} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Pinterest</p>
@@ -178,7 +178,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageLn} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Linkedin</p>
@@ -188,7 +188,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageGoogleMaps} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Maps</p>
@@ -198,7 +198,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageGooglePhotos} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Photos</p>
@@ -208,7 +208,7 @@
 							<!-- svelte-ignore a11y-invalid-attribute -->
 							<a
 								class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
-								href="#"
+								href="javascript:void(0);"
 							>
 								<img src={imageSpotify} alt="" width="30" />
 								<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">Spotify</p>
