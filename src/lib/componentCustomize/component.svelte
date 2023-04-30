@@ -19,13 +19,9 @@
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
 	import { functionReadSidebarColorStore } from '../stores/storeSidebarColor.js';
 	/////
-	// NPM MODULES
-	// import { onMount } from 'svelte';
-	/////
 
 	// STATES
 	let stateCollapsed = true;
-	// let stateMounted = false;
 	/////
 	// STORES
 	const storeColorScheme = functionReadColorSchemeStore();
@@ -34,11 +30,6 @@
 	const storeHeaderColor = functionReadHeaderColorStore();
 	const storeSidebar = functionReadSidebarStore();
 	/////
-	// LIFECYCLE FUNCTIONS
-	// onMount(() => {
-	// 	stateMounted = true;
-	// });
-	/////
 	// FUNCTIONS
 	const functionReset = function () {
 		$storeColorScheme = 'enumLight';
@@ -46,19 +37,7 @@
 		$storeSidebarColor = 'enumDark';
 		$storeRtl = false;
 		$storeSidebar = false;
-		// document.body.setAttribute('dir', 'ltr');
 	};
-	/////
-	// REACTIVITY
-	// $: {
-	// 	if (stateMounted) {
-	// 		if ($storeColorScheme === 'enumLight') {
-	// 			localStorage.stringColorScheme = 'enumLight';
-	// 		} else {
-	// 			localStorage.stringColorScheme = 'enumDark';
-	// 		}
-	// 	}
-	// }
 	/////
 </script>
 
@@ -92,10 +71,10 @@
 							d="M512 255.1C512 256.9 511.1 257.8 511.1 258.7C511.6 295.2 478.4 319.1 441.9 319.1H344C317.5 319.1 296 341.5 296 368C296 371.4 296.4 374.7 297 377.9C299.2 388.1 303.5 397.1 307.9 407.8C313.9 421.6 320 435.3 320 449.8C320 481.7 298.4 510.5 266.6 511.8C263.1 511.9 259.5 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256V255.1zM96 255.1C78.33 255.1 64 270.3 64 287.1C64 305.7 78.33 319.1 96 319.1C113.7 319.1 128 305.7 128 287.1C128 270.3 113.7 255.1 96 255.1zM128 191.1C145.7 191.1 160 177.7 160 159.1C160 142.3 145.7 127.1 128 127.1C110.3 127.1 96 142.3 96 159.1C96 177.7 110.3 191.1 128 191.1zM256 63.1C238.3 63.1 224 78.33 224 95.1C224 113.7 238.3 127.1 256 127.1C273.7 127.1 288 113.7 288 95.1C288 78.33 273.7 63.1 256 63.1zM384 191.1C401.7 191.1 416 177.7 416 159.1C416 142.3 401.7 127.1 384 127.1C366.3 127.1 352 142.3 352 159.1C352 177.7 366.3 191.1 384 191.1z"
 						/>
 					</svg>
-					<!-- <span class="fas fa-palette me-2 fs-0"></span> Font Awesome fontawesome.com -->Theme
-					Customizer
+					<!-- <span class="fas fa-palette me-2 fs-0"></span> Font Awesome fontawesome.com -->
+					THEME CUSTOMIZER
 				</h5>
-				<p class="mb-0 fs--1">Explore different styles according to your preferences</p>
+				<p class="mb-0 fs--1">Explore different styles according to your preferences.</p>
 			</div>
 			<button
 				class="btn p-1 fw-bolder"
@@ -123,6 +102,7 @@
 				<!-- <span class="fas fa-times fs-0"> </span> Font Awesome fontawesome.com -->
 			</button>
 		</div>
+		<!-- RESET BUTTON -->
 		<button
 			on:click={functionReset}
 			class="btn btn-phoenix-secondary w-100"
@@ -145,12 +125,14 @@
 				/>
 			</svg>
 			<!-- <span class="fas fa-arrows-rotate me-2 fs--2"></span> Font Awesome fontawesome.com -->
-			Reset to default
+			RESET TO DEFAULT
 		</button>
+		<!---->
 	</div>
 	<div class="offcanvas-body scrollbar px-card" id="themeController">
+		<!-- COLOR SCHEME -->
 		<div class="setting-panel-item mt-0">
-			<h5 class="setting-panel-item-title">Color Scheme</h5>
+			<h5 class="setting-panel-item-title">COLOR SCHEME</h5>
 			<div class="row gx-2">
 				<div class="col-6">
 					<input
@@ -166,7 +148,7 @@
 						<span class="mb-2 rounded d-block"
 							><img class="img-fluid img-prototype mb-0" src={imageLight} alt="" />
 						</span>
-						<span class="label-text">Light</span>
+						<span class="label-text">LIGHT</span>
 					</label>
 				</div>
 				<div class="col-6">
@@ -183,11 +165,13 @@
 						<span class="mb-2 rounded d-block">
 							<img class="img-fluid img-prototype mb-0" src={imageDark} alt="" />
 						</span>
-						<span class="label-text"> Dark</span>
+						<span class="label-text"> DARK</span>
 					</label>
 				</div>
 			</div>
 		</div>
+		<!---->
+		<!-- TEXT DIRECTION -->
 		<div class="border rounded-3 p-4 setting-panel-item bg-white">
 			<div class="d-flex justify-content-between align-items-center">
 				<h5 class="setting-panel-item-title mb-1">RTL</h5>
@@ -200,8 +184,9 @@
 					/>
 				</div>
 			</div>
-			<p class="mb-0 text-700">Change text direction</p>
+			<p class="mb-0 text-700">TEXT DIRECTION</p>
 		</div>
+		<!---->
 		<!-- <div class="border rounded-3 p-4 setting-panel-item bg-white">
 			<div class="d-flex justify-content-between align-items-center">
 				<h5 class="setting-panel-item-title mb-1">Support Chat</h5>
@@ -275,8 +260,9 @@
 				</div>
 			</div>
 		</div> -->
+		<!-- SIDEBAR APPEARANCE -->
 		<div class="setting-panel-item">
-			<h5 class="setting-panel-item-title">Vertical Navbar Appearance</h5>
+			<h5 class="setting-panel-item-title">SIDEBAR APPEARANCE</h5>
 			<div class="row gx-2">
 				<div class="col-6">
 					<input
@@ -287,15 +273,16 @@
 						name="config.name"
 						value="enumLight"
 						data-theme-control="phoenixNavbarVerticalStyle"
-					/><label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-default">
+					/>
+					<label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-default">
 						<img class="img-fluid img-prototype d-dark-none" src={imageLight} alt="" /><img
 							class="img-fluid img-prototype d-light-none"
 							src={imageDark}
 							alt=""
-						/><span class="label-text d-dark-none"> Default</span><span
-							class="label-text d-light-none">Default</span
-						></label
-					>
+						/>
+						<span class="label-text d-dark-none"> DEFAULT</span>
+						<span class="label-text d-light-none">DEFAULT</span>
+					</label>
 				</div>
 				<div class="col-6">
 					<input
@@ -310,60 +297,15 @@
 					<label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-dark">
 						<img class="img-fluid img-prototype d-dark-none" src={imageVerticalDarker} alt="" />
 						<img class="img-fluid img-prototype d-light-none" src={imageVerticalLighter} alt="" />
-						<span class="label-text d-dark-none"> Darker</span>
-						<span class="label-text d-light-none">Lighter</span>
+						<span class="label-text d-dark-none"> DARK</span>
+						<span class="label-text d-light-none">LIGHT</span>
 					</label>
 				</div>
 			</div>
 		</div>
+		<!-- HEADER APPEARANCE -->
 		<div class="setting-panel-item">
-			<h5 class="setting-panel-item-title">Horizontal Navbar Shape</h5>
-			<div class="row gx-2">
-				<div class="col-6">
-					<input
-						class="btn-check"
-						id="navbarShapeDefault"
-						name="navbar-shape"
-						type="radio"
-						value="default"
-						data-theme-control="phoenixNavbarTopShape"
-						checked
-					/><label class="btn d-inline-block btn-navbar-style fs--1" for="navbarShapeDefault">
-						<span class="mb-2 rounded d-block"
-							><img class="img-fluid img-prototype d-dark-none mb-0" src={imageTop} alt="" /><img
-								class="img-fluid img-prototype d-light-none mb-0"
-								src={imageTopDark}
-								alt=""
-							/></span
-						><span class="label-text">Default</span></label
-					>
-				</div>
-				<div class="col-6">
-					<input
-						class="btn-check"
-						id="navbarShapeSlim"
-						name="navbar-shape"
-						type="radio"
-						value="slim"
-						data-theme-control="phoenixNavbarTopShape"
-					/><label class="btn d-inline-block btn-navbar-style fs--1" for="navbarShapeSlim">
-						<span class="mb-2 rounded d-block"
-							><img
-								class="img-fluid img-prototype d-dark-none mb-0"
-								src={imageTopSlim}
-								alt=""
-							/><img
-								class="img-fluid img-prototype d-light-none mb-0"
-								src={imageTopSlimDark}
-								alt=""
-							/></span
-						><span class="label-text"> Slim</span></label
-					>
-				</div>
-			</div>
-		</div>
-		<div class="setting-panel-item">
-			<h5 class="setting-panel-item-title">Horizontal Navbar Appearance</h5>
+			<h5 class="setting-panel-item-title">HEADER APPEARANCE</h5>
 			<div class="row gx-2">
 				<div class="col-6">
 					<input
@@ -383,7 +325,7 @@
 								alt=""
 							/>
 						</span>
-						<span class="label-text">Default</span>
+						<span class="label-text">DEFAULT</span>
 					</label>
 				</div>
 				<div class="col-6">
@@ -409,12 +351,61 @@
 								alt=""
 							/>
 						</span>
-						<span class="label-text d-dark-none">Darker</span>
-						<span class="label-text d-light-none">Lighter</span>
+						<span class="label-text d-dark-none">DARK</span>
+						<span class="label-text d-light-none">LIGHT</span>
 					</label>
 				</div>
 			</div>
 		</div>
+		<!---->
+		<!-- HEADER SHAPE -->
+		<div class="setting-panel-item">
+			<h5 class="setting-panel-item-title">HEADER SHAPE</h5>
+			<div class="row gx-2">
+				<div class="col-6">
+					<input
+						class="btn-check"
+						id="navbarShapeDefault"
+						name="navbar-shape"
+						type="radio"
+						value="default"
+						data-theme-control="phoenixNavbarTopShape"
+						checked
+					/><label class="btn d-inline-block btn-navbar-style fs--1" for="navbarShapeDefault">
+						<span class="mb-2 rounded d-block"
+							><img class="img-fluid img-prototype d-dark-none mb-0" src={imageTop} alt="" /><img
+								class="img-fluid img-prototype d-light-none mb-0"
+								src={imageTopDark}
+								alt=""
+							/></span
+						><span class="label-text">DEFAULT</span></label
+					>
+				</div>
+				<div class="col-6">
+					<input
+						class="btn-check"
+						id="navbarShapeSlim"
+						name="navbar-shape"
+						type="radio"
+						value="slim"
+						data-theme-control="phoenixNavbarTopShape"
+					/><label class="btn d-inline-block btn-navbar-style fs--1" for="navbarShapeSlim">
+						<span class="mb-2 rounded d-block"
+							><img
+								class="img-fluid img-prototype d-dark-none mb-0"
+								src={imageTopSlim}
+								alt=""
+							/><img
+								class="img-fluid img-prototype d-light-none mb-0"
+								src={imageTopSlimDark}
+								alt=""
+							/></span
+						><span class="label-text"> SLIM</span></label
+					>
+				</div>
+			</div>
+		</div>
+		<!---->
 		<!-- <a
 			class="bun btn-primary d-grid mb-3 text-white dark__text-100 mt-5 btn btn-primary"
 			href="https://themes.getbootstrap.com/product/phoenix-admin-dashboard-webapp-template/"
