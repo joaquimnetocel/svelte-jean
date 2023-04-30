@@ -2,10 +2,14 @@
 	// IMAGES
 	import image301 from './301.webp';
 	/////
+
+	// STATES
+	let stateCollapsed = true;
+	/////
 </script>
 
 <div class="support-chat-container show">
-	<div class="container-fluid support-chat">
+	<div class="container-fluid support-chat" class:show-chat={!stateCollapsed}>
 		<div class="card bg-white">
 			<div class="card-header d-flex flex-between-center px-4 py-3 border-bottom">
 				<h5 class="mb-0 d-flex align-items-center gap-2">
@@ -236,7 +240,11 @@
 			</div>
 		</div>
 	</div>
-	<button class="btn p-0 border border-200 btn-support-chat">
+	<button
+		class:btn-chat-close={!stateCollapsed}
+		class="btn p-0 border border-200 btn-support-chat"
+		on:click={() => (stateCollapsed = !stateCollapsed)}
+	>
 		<span class="fs-0 btn-text text-primary text-nowrap">Chat demo</span><svg
 			class="svg-inline--fa fa-circle text-success fs--1 ms-2"
 			aria-hidden="true"
