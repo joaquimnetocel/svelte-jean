@@ -77,7 +77,9 @@
 		<div class="container-fluid px-0" data-layout="container">
 			<slot name="slotSidebar" />
 			<slot name="slotHeader" />
-			<slot name="slotBody" />
+			<div class="content px-0 classContent pb-0">
+				<slot name="slotBody" />
+			</div>
 			<slot name="slotFooter" />
 		</div>
 		{#if $storeRightBottom}
@@ -86,3 +88,9 @@
 	</main>
 	<slot name="slotCustomize" />
 </div>
+
+<style>
+	.classContent {
+		padding-top: var(--phoenix-navbar-top-height);
+	}
+</style>

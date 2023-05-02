@@ -31,7 +31,9 @@
 		</Header>
 	</svelte:fragment>
 	<svelte:fragment slot="slotBody">
-		<slot />
+		<div class="mx-4 my-4">
+			<slot />
+		</div>
 	</svelte:fragment>
 	<svelte:fragment slot="slotFooter">
 		<Footer>
