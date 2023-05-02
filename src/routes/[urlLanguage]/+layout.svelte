@@ -48,10 +48,12 @@
 			<svelte:fragment slot="slotLeft">
 				Thank you for creating with Jean<span class="d-none d-sm-inline-block" />
 				<span class="d-none d-sm-inline-block mx-1">| </span>
-				<br class="d-sm-none" />20XX ©
+				<br class="d-sm-none" />{new Date().getFullYear()} ©
 				<a class="mx-1" href="https://themewagon.com/"> GitHub </a>
 			</svelte:fragment>
-			<svelte:fragment slot="slotRight">v0.0.0</svelte:fragment>
+			<svelte:fragment slot="slotRight">
+				v{process.env.npm_package_version ?? '0.0.0'}
+			</svelte:fragment>
 		</Footer>
 	</svelte:fragment>
 	<svelte:fragment slot="slotCustomize">
