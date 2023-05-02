@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col">
-		<h2 class="mb-2">Jean Template</h2>
+		<h2 class="mb-2">Ecommerce Dashboard</h2>
 		<h5 class="text-700 fw-semi-bold">Here’s what’s going on at your business right now</h5>
 	</div>
 </div>
