@@ -2,6 +2,7 @@
 	import { ColorScheme, Customize, Footer, Header, Logo, Sidebar, Template } from '$lib/index.js';
 	import ComponentBlocks from './folderComponents/componentBlocks/component.svelte';
 	import ComponentChat from './folderComponents/componentChat/component.svelte';
+	import ComponentLanguage from './folderComponents/componentLanguage/component.svelte';
 	import ComponentMenu from './folderComponents/componentMenu/component.svelte';
 	import ComponentNotifications from './folderComponents/componentNotifications/component.svelte';
 	import ComponentSearch from './folderComponents/componentSearch/component.svelte';
@@ -23,6 +24,7 @@
 				<ComponentSearch />
 			</svelte:fragment>
 			<svelte:fragment slot="slotRight">
+				<ComponentLanguage />
 				<ColorScheme />
 				<ComponentNotifications />
 				<ComponentBlocks />
