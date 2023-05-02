@@ -39,17 +39,6 @@
 		aria-expanded={!stateCollapsed}
 	>
 		<img src={imageUs} alt="" class="me-0 me-sm-1" height="12" />
-		<!-- <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<circle cx="2" cy="2" r="2" fill="currentColor" />
-			<circle cx="2" cy="8" r="2" fill="currentColor" />
-			<circle cx="2" cy="14" r="2" fill="currentColor" />
-			<circle cx="8" cy="8" r="2" fill="currentColor" />
-			<circle cx="8" cy="14" r="2" fill="currentColor" />
-			<circle cx="14" cy="8" r="2" fill="currentColor" />
-			<circle cx="14" cy="14" r="2" fill="currentColor" />
-			<circle cx="8" cy="2" r="2" fill="currentColor" />
-			<circle cx="14" cy="2" r="2" fill="currentColor" />
-		</svg> -->
 		<svg
 			fill="var(--phoenix-body-color)"
 			width="8"
@@ -69,28 +58,23 @@
 			data-bs-popper="static"
 		>
 			<div class="card bg-white position-relative border-0">
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<a href="javascript:void(0);" class="dropdown-item">
+				<a href="/en" class="dropdown-item">
 					<img src={imageUs} alt="" class="me-1" height="12" />
 					<span class="align-middle">English</span>
 				</a>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<a href="javascript:void(0);" class="dropdown-item">
+				<a href="/de" class="dropdown-item">
 					<img src={imageGermany} alt="" class="me-1" height="12" />
 					<span class="align-middle">German</span>
 				</a>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<a href="javascript:void(0);" class="dropdown-item">
+				<a href="/it" class="dropdown-item">
 					<img src={imageItaly} alt="" class="me-1" height="12" />
 					<span class="align-middle">Italian</span>
 				</a>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<a href="javascript:void(0);" class="dropdown-item">
+				<a href="/ru" class="dropdown-item">
 					<img src={imageRussia} alt="" class="me-1" height="12" />
 					<span class="align-middle">Russian</span>
 				</a>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<a href="javascript:void(0);" class="dropdown-item">
+				<a href="/es" class="dropdown-item">
 					<img src={imageSpain} alt="" class="me-1" height="12" />
 					<span class="align-middle">Spanish</span>
 				</a>
