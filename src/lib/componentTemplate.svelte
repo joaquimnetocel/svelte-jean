@@ -18,6 +18,7 @@
 		functionReadTextDirectionStore
 	} from './stores/storeTextDirection.js';
 	import type { typeInitialProps } from './typeInitialProps.js';
+	import type { typeLanguage } from './typeLanguage.js';
 	/////
 	// NPM MODULES
 	import { setContext } from 'svelte';
@@ -30,6 +31,7 @@
 	export let propSidebar = false;
 	export let propRightBottom = true;
 	export let propTextDirection: typeTextDirection = 'enumLeftToRight';
+	export let propLanguage: typeLanguage = 'en';
 	/////
 	// CONSTANTS
 	const objectInitialProps: typeInitialProps = {
@@ -40,9 +42,12 @@
 		propRightBottom,
 		propTextDirection
 	};
+	/////
+	// CONTEXT ADDS
+	setContext<typeLanguage>('contextLanguage', propLanguage);
 	setContext<typeInitialProps>('contextInitialProps', objectInitialProps);
 	/////
-	// STORES
+	// STORES ADDED TO CONTEXT
 	functionCreateColorSchemeStore(propColorScheme);
 	functionCreateHeaderColorStore(propHeaderColor);
 	functionCreateSidebarColorStore(propSidebarColor);
@@ -50,6 +55,8 @@
 	functionCreateTextDirectionStore(propTextDirection);
 	functionCreateRightBottomStore(propRightBottom);
 	functionCreateMobileMenuStore();
+	/////
+	// STORES
 	const storeTextDirection = functionReadTextDirectionStore();
 	const storeRightBottom = functionReadRightBottomStore();
 	/////

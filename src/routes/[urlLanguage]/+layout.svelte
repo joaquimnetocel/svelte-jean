@@ -1,5 +1,8 @@
 <script lang="ts">
+	// NPM MODULES
 	import { ColorScheme, Customize, Footer, Header, Logo, Sidebar, Template } from '$lib/index.js';
+	/////
+	// COMPONENTS
 	import ComponentBlocks from './folderComponents/componentBlocks/component.svelte';
 	import ComponentChat from './folderComponents/componentChat/component.svelte';
 	import ComponentLanguage from './folderComponents/componentLanguage/component.svelte';
@@ -7,9 +10,12 @@
 	import ComponentNotifications from './folderComponents/componentNotifications/component.svelte';
 	import ComponentSearch from './folderComponents/componentSearch/component.svelte';
 	import ComponentUser from './folderComponents/componentUser/component.svelte';
+	/////
+	// DATA
+	export let data;
 </script>
 
-<Template>
+<Template propLanguage={data.urlLanguage}>
 	<svelte:fragment slot="slotSidebar">
 		<Sidebar>
 			<ComponentMenu />
