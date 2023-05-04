@@ -29,6 +29,7 @@
 			aria-controls="home"
 		>
 			<div class="d-flex align-items-center">
+				<!-- <span class="fas fa-caret-right"></span> Font Awesome fontawesome.com -->
 				<div class="dropdown-indicator-icon">
 					<svg
 						class="svg-inline--fa fa-caret-right"
@@ -46,8 +47,9 @@
 							d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"
 						/>
 					</svg>
-					<!-- <span class="fas fa-caret-right"></span> Font Awesome fontawesome.com -->
 				</div>
+				<!---->
+				<!-- ICON -->
 				<span class="nav-link-icon">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -65,13 +67,17 @@
 						<path d="M22 12A10 10 0 0 0 12 2v10z" />
 					</svg>
 				</span>
+				<!---->
+				<!-- TEXT -->
 				<span class="nav-link-text">Home</span>
+				<!---->
 			</div>
 		</a>
 		{#if !stateCollapsed || $storeSidebarCollapsed}
 			<div transition:slide class="parent-wrapper label-1">
 				<ul class="nav collapse parent show" data-bs-parent="#navbarVerticalCollapse" id="home">
 					<li class="collapsed-nav-item-title d-none">Home</li>
+					<!-- CONTACTS -->
 					<li class="nav-item">
 						<!-- svelte-ignore a11y-invalid-attribute -->
 						<a
@@ -81,10 +87,12 @@
 							aria-expanded="false"
 						>
 							<div class="d-flex align-items-center">
-								<span class="nav-link-text">E commerce</span>
+								<span class="nav-link-text">Contacts</span>
 							</div>
 						</a><!-- more inner pages-->
 					</li>
+					<!---->
+					<!-- PROJECT MANAGEMENT -->
 					<li class="nav-item">
 						<!-- svelte-ignore a11y-invalid-attribute -->
 						<a class="nav-link" href="javascript:void(0);" data-bs-toggle="" aria-expanded="false">
@@ -93,6 +101,8 @@
 							</div>
 						</a><!-- more inner pages-->
 					</li>
+					<!---->
+					<!-- CRM -->
 					<li class="nav-item">
 						<!-- svelte-ignore a11y-invalid-attribute -->
 						<a class="nav-link" href="javascript:void(0);" data-bs-toggle="" aria-expanded="false">
@@ -103,6 +113,8 @@
 							</div>
 						</a><!-- more inner pages-->
 					</li>
+					<!---->
+					<!-- SOCIAL FEED -->
 					<li class="nav-item">
 						<!-- svelte-ignore a11y-invalid-attribute -->
 						<a class="nav-link" href="javascript:void(0);" data-bs-toggle="" aria-expanded="false">
@@ -111,6 +123,7 @@
 							</div>
 						</a><!-- more inner pages-->
 					</li>
+					<!---->
 				</ul>
 			</div>
 		{/if}

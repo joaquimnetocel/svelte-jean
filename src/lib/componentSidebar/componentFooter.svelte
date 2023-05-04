@@ -1,16 +1,12 @@
 <script lang="ts">
 	// MODULES
-	import { functionReadColorSchemeStore } from '../stores/storeColorScheme.js';
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
-	import { functionReadSidebarColorStore } from '../stores/storeSidebarColor.js';
 	/////
 	// NPM MODULES
 	import { Body } from 'svelte-body';
 	/////
 	// STORES
 	const storeSidebar = functionReadSidebarStore();
-	const storeColorScheme = functionReadColorSchemeStore();
-	const storeVerticalNavbarDarker = functionReadSidebarColorStore();
 	/////
 </script>
 
@@ -25,9 +21,7 @@
 		<span class="uil uil-arrow-from-right fs-0" />
 		{#if $storeSidebar}
 			<svg
-				style:fill={$storeColorScheme === 'enumDark' || $storeVerticalNavbarDarker === 'enumDark'
-					? 'white'
-					: 'black'}
+				style:fill="var(--phoenix-body-color)"
 				width="16"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 512 512"
