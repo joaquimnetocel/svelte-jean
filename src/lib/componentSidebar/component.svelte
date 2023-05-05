@@ -1,7 +1,7 @@
 <script lang="ts">
 	// COMPONENTS
 	import ComponentFooter from './componentFooter.svelte';
-	import ComponentMenu from './componentMenu.svelte';
+	import ComponentMenuItem from './componentMenuItem.svelte';
 	/////
 	// MODULES
 	import { functionReadMobileMenuStore } from '../stores/storeMobileMenu.js';
@@ -34,7 +34,9 @@
 		<!-- scrollbar removed-->
 		<div class="navbar-vertical-content">
 			<ul class="navbar-nav flex-column" id="navbarVerticalNav">
-				<ComponentMenu {propMenu} />
+				{#each propMenu as currentMenu}
+					<ComponentMenuItem propMenuItem={currentMenu} />
+				{/each}
 			</ul>
 		</div>
 	</div>

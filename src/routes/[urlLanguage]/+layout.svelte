@@ -13,6 +13,7 @@
 	/////
 	// DATA
 	export let data;
+	/////
 </script>
 
 <Template propLanguage={data.urlLanguage}>

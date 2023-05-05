@@ -1,5 +1,11 @@
 import type { typeMenu } from '$lib/typeMenu.js';
 
+export type typeMenuEcommerceName =
+	| 'menuEcommerce'
+	| 'menuAdmin'
+	| 'menuAddProduct'
+	| 'menuProducts';
+
 const stringIcon = `
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -18,41 +24,31 @@ const stringIcon = `
 	</svg>
 `;
 
-export const objectMenuEcommerce: typeMenu[number] = {
+export const objectMenuEcommerce: typeMenu<typeMenuEcommerceName>[number] = {
 	objectMenu: {
-		stringIcon: stringIcon,
-		stringSlot: 'Home',
-		stringName: 'menuHome'
+		stringHref: 'https://www.google.com.br',
+		stringSlot: 'E-commerce',
+		stringName: 'menuEcommerce',
+		stringIcon: stringIcon
 	},
 	arraySubmenus: [
 		{
 			objectMenu: {
-				stringHref: 'https://www.google.com.br',
-				stringSlot: 'E-commerce',
-				stringName: 'menuEcommerce'
+				stringSlot: 'Admin',
+				stringName: 'menuAdmin'
 			},
 			arraySubmenus: [
 				{
 					objectMenu: {
-						stringSlot: 'Admin',
-						stringName: 'menuAdmin'
-					},
-					arraySubmenus: [
-						{
-							objectMenu: {
-								stringSlot: 'Add Product',
-								stringName: 'menuAddProduct',
-								stringHref: 'https://www.google.com.br'
-							}
-						},
-						{
-							objectMenu: {
-								stringSlot: 'Products',
-								stringName: 'menuProducts',
-								stringHref: 'https://www.google.com.br'
-							}
-						}
-					]
+						stringSlot: 'Add Product',
+						stringName: 'menuAddProduct'
+					}
+				},
+				{
+					objectMenu: {
+						stringSlot: 'Products',
+						stringName: 'menuProducts'
+					}
 				}
 			]
 		}

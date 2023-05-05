@@ -1,5 +1,6 @@
 <script lang="ts">
 	// MODULES
+	import { functionReadActiveMenuStore } from '../stores/storeActiveMenu.js';
 	import type { typeMenu } from '../typeMenu.js';
 	/////
 	// PROPS
@@ -8,13 +9,17 @@
 	// STATES
 	let stateCollapsed = true;
 	/////
+	// STORES
+	const storeActiveMenu = functionReadActiveMenuStore();
+	/////
 </script>
 
 {#each propSubmenu as currentSubmenu}
 	<li class="nav-item">
 		{#if currentSubmenu.arraySubmenus === undefined}
 			<a
-				class:active={false}
+				on:click={() => ($storeActiveMenu = currentSubmenu.objectMenu.stringName)}
+				class:active={$storeActiveMenu === currentSubmenu.objectMenu.stringName}
 				class="nav-link"
 				href={currentSubmenu.objectMenu.stringHref ?? ''}
 				data-bs-toggle=""
@@ -25,7 +30,7 @@
 						{currentSubmenu.objectMenu.stringSlot}
 					</span>
 				</div>
-			</a><!-- more inner pages-->
+			</a>
 		{:else}
 			<!-- svelte-ignore a11y-invalid-attribute -->
 			<a

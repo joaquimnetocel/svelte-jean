@@ -6,6 +6,7 @@
 	import { slide } from 'svelte/transition';
 	/////
 	// MODULES
+	import { functionReadActiveMenuStore } from '../stores/storeActiveMenu.js';
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
 	import type { typeMenu } from '../typeMenu.js';
 	/////
@@ -14,6 +15,7 @@
 	/////
 	// STORES
 	const storeSidebar = functionReadSidebarStore();
+	const storeActiveMenu = functionReadActiveMenuStore();
 	/////
 	// PROPS
 	export let propMenuItem: typeMenu[number];
@@ -24,7 +26,8 @@
 	<div class="nav-item-wrapper">
 		{#if propMenuItem.arraySubmenus === undefined}
 			<a
-				class:active={false}
+				on:click={() => ($storeActiveMenu = propMenuItem.objectMenu.stringName)}
+				class:active={$storeActiveMenu === propMenuItem.objectMenu.stringName}
 				class="nav-link label-1"
 				href={propMenuItem.objectMenu.stringHref ?? ''}
 				role="button"
@@ -104,4 +107,3 @@
 		{/if}
 	</div>
 </li>
-<!-- parent pages-->

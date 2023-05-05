@@ -1,5 +1,6 @@
 <script lang="ts">
 	// MODULES
+	import { functionCreateActiveMenuStore } from './stores/storeActiveMenu.js';
 	import type { typeColorScheme } from './stores/storeColorScheme.js';
 	import { functionCreateColorSchemeStore } from './stores/storeColorScheme.js';
 	import type { typeHeaderColor } from './stores/storeHeaderColor.js';
@@ -55,6 +56,7 @@
 	functionCreateTextDirectionStore(propTextDirection);
 	functionCreateRightBottomStore(propRightBottom);
 	functionCreateMobileMenuStore();
+	functionCreateActiveMenuStore();
 	/////
 	// STORES
 	const storeTextDirection = functionReadTextDirectionStore();

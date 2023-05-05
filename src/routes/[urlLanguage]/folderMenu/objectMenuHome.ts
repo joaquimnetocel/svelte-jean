@@ -1,5 +1,12 @@
 import type { typeMenu } from '$lib/typeMenu.js';
 
+export type typeMenuHomeName =
+	| 'menuHome'
+	| 'menuEcommerce'
+	| 'menuProjectManagement'
+	| 'menuCRM'
+	| 'menuSocialFeed';
+
 const stringIcon = `
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +25,7 @@ const stringIcon = `
 	</svg>
 `;
 
-export const objectMenuHome: typeMenu[number] = {
+export const objectMenuHome: typeMenu<typeMenuHomeName>[number] = {
 	objectMenu: {
 		stringIcon: stringIcon,
 		stringSlot: 'Home',
@@ -27,28 +34,24 @@ export const objectMenuHome: typeMenu[number] = {
 	arraySubmenus: [
 		{
 			objectMenu: {
-				stringHref: 'https://www.google.com.br',
 				stringSlot: 'E-commerce',
 				stringName: 'menuEcommerce'
 			}
 		},
 		{
 			objectMenu: {
-				stringHref: 'https://www.google.com.br',
 				stringSlot: 'Project Management',
 				stringName: 'menuProjectManagement'
 			}
 		},
 		{
 			objectMenu: {
-				stringHref: 'https://www.google.com.br',
 				stringSlot: 'CRM',
 				stringName: 'menuCRM'
 			}
 		},
 		{
 			objectMenu: {
-				stringHref: 'https://www.google.com.br',
 				stringSlot: 'Social Feed',
 				stringName: 'menuSocialFeed'
 			}

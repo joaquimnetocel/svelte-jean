@@ -20,11 +20,10 @@
 	/////
 </script>
 
-<li class="nav-item dropdown">
+<li use:functionClickOutside={() => (stateCollapsed = true)} class="nav-item dropdown">
 	<!-- svelte-ignore a11y-invalid-attribute -->
 	<a
 		on:click={functionClick}
-		use:functionClickOutside={() => (stateCollapsed = true)}
 		class:show={!stateCollapsed}
 		class="nav-link lh-1 pe-0"
 		id="navbarDropdownUser"
