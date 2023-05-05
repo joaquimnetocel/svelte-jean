@@ -1,15 +1,15 @@
 <script lang="ts">
 	// NPM MODULES
 	import { ColorScheme, Customize, Footer, Header, Logo, Sidebar, Template } from '$lib/index.js';
+	import { arrayMenu } from './folderMenu/arrayMenu.js';
 	/////
 	// COMPONENTS
-	import ComponentBlocks from './folderComponents/componentBlocks/component.svelte';
 	import ComponentChat from './folderComponents/componentChat/component.svelte';
-	import ComponentLanguage from './folderComponents/componentLanguage/component.svelte';
-	import ComponentMenu from './folderComponents/componentMenu/component.svelte';
-	import ComponentNotifications from './folderComponents/componentNotifications/component.svelte';
-	import ComponentSearch from './folderComponents/componentSearch/component.svelte';
-	import ComponentUser from './folderComponents/componentUser/component.svelte';
+	import ComponentBlocks from './folderComponents/folderHeader/componentBlocks/component.svelte';
+	import ComponentLanguage from './folderComponents/folderHeader/componentLanguage/component.svelte';
+	import ComponentNotifications from './folderComponents/folderHeader/componentNotifications/component.svelte';
+	import ComponentSearch from './folderComponents/folderHeader/componentSearch/component.svelte';
+	import ComponentUser from './folderComponents/folderHeader/componentUser/component.svelte';
 	/////
 	// DATA
 	export let data;
@@ -17,14 +17,12 @@
 
 <Template propLanguage={data.urlLanguage}>
 	<svelte:fragment slot="slotSidebar">
-		<Sidebar>
-			<ComponentMenu />
-		</Sidebar>
+		<Sidebar propMenu={arrayMenu} />
 	</svelte:fragment>
 	<svelte:fragment slot="slotHeader">
 		<Header>
 			<svelte:fragment slot="slotLeft">
-				<Logo />
+				<Logo propTitle="jean" />
 			</svelte:fragment>
 			<svelte:fragment slot="slotCenter">
 				<ComponentSearch />

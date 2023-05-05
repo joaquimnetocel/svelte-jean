@@ -4,7 +4,7 @@
 	import image571 from './folderImages/image571.webp';
 	/////
 	// MODULES
-	import { functionClickOutside } from '$lib/functionClickOutside.js';
+	import { functionClickOutside } from '../functionClickOutside.js';
 	/////
 	// NPM MODULE
 	import { slide } from 'svelte/transition';

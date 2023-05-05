@@ -6,5 +6,16 @@ import Logo from './componentLogo/component.svelte';
 import Sidebar from './componentSidebar/component.svelte';
 import Template from './componentTemplate.svelte';
 import type { typeLanguage } from './typeLanguage.js';
+import type { typeMenu } from './typeMenu.js';
 
-export { Template, Sidebar, Logo, Header, ColorScheme, Footer, Customize, type typeLanguage };
+export {
+	Template,
+	Sidebar,
+	Logo,
+	Header,
+	ColorScheme,
+	Footer,
+	Customize,
+	type typeLanguage,
+	type typeMenu
+};

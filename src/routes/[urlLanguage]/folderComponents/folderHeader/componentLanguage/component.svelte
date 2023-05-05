@@ -7,7 +7,7 @@
 	import imageUs from './folderImages/imageUs.jpg';
 	/////
 	// MODULES
-	import { functionClickOutside } from '$lib/functionClickOutside.js';
+	import { functionClickOutside } from '../functionClickOutside.js';
 	/////
 	// NPM MODULE
 	import { slide } from 'svelte/transition';

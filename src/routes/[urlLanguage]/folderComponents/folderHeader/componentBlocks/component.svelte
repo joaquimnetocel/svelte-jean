@@ -16,7 +16,7 @@
 	import imageTwitter from './folderImages/imageTwitter.webp';
 	/////
 	// MODULES
-	import { functionClickOutside } from '$lib/functionClickOutside.js';
+	import { functionClickOutside } from '../functionClickOutside.js';
 	/////
 	// NPM MODULE
 	import { slide } from 'svelte/transition';

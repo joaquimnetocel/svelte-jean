@@ -21,7 +21,7 @@
 		<span class="uil uil-arrow-from-right fs-0" />
 		{#if $storeSidebar}
 			<svg
-				style:fill="var(--phoenix-body-color)"
+				fill="var(--phoenix-body-color)"
 				width="16"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 512 512"
@@ -35,7 +35,7 @@
 			<span class="navbar-vertical-footer-text ms-2">
 				Collapsed View
 				<svg
-					style="fill:lightgrey;"
+					fill="var(--phoenix-body-color)"
 					width="16"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 512 512"
