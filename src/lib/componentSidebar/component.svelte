@@ -7,12 +7,19 @@
 	import { functionReadMobileMenuStore } from '../stores/storeMobileMenu.js';
 	import { functionReadSidebarColorStore } from '../stores/storeSidebarColor.js';
 	import type { typeMenu } from '../typeMenu.js';
+	import type { typeActiveMenu } from './typeActiveMenu.js';
 	/////
 	// NPM MODULES
 	import { slide } from 'svelte/transition';
 	/////
 	// PROPS
 	export let propMenu: typeMenu = [];
+	export let propActiveMenu: typeActiveMenu = {
+		stringBackgroundColor: '#ffecd2',
+		stringBackgroundSecondaryColor: '#fcb69f',
+		stringBackgroundGradientDirection: '270deg',
+		stringColor: 'black'
+	};
 	/////
 
 	// STORES
@@ -22,6 +29,10 @@
 </script>
 
 <nav
+	style:--cssvarActiveBackgroundColor={propActiveMenu.stringBackgroundColor}
+	style:--cssvarActiveBackgroundSecondaryColor={propActiveMenu.stringBackgroundSecondaryColor}
+	style:--cssvarActiveBackgroundGradientDirection={propActiveMenu.stringBackgroundGradientDirection}
+	style:--cssvarActiveColor={propActiveMenu.stringColor}
 	class:navbar-darker={$storeSidebarColor === 'enumDark'}
 	class="navbar navbar-vertical navbar-expand-lg"
 >
@@ -35,7 +46,7 @@
 		<div class="navbar-vertical-content">
 			<ul class="navbar-nav flex-column" id="navbarVerticalNav">
 				{#each propMenu as currentMenu}
-					<ComponentMenuItem propMenuItem={currentMenu} />
+					<ComponentMenuItem {propActiveMenu} propMenuItem={currentMenu} />
 				{/each}
 			</ul>
 		</div>

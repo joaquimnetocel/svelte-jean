@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { functionReadActiveMenuStore } from '$lib/index.js';
-	import type { typeMenuName } from './folderMenu/arrayMenu.js';
+	import type { typeMenuName } from './folderMenu/typeMenuName.js';
 	const storeActiveMenu = functionReadActiveMenuStore<typeMenuName>();
 	$storeActiveMenu = 'menuEcommerce';
 </script>

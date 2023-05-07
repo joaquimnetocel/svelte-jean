@@ -1,11 +1,15 @@
 // NPM MODULES
 import type { typeMenu } from '$lib/typeMenu.js';
+import type { typeMenuName } from './typeMenuName.js';
 /////
 // MODULES
-import { objectMenuEcommerce, type typeMenuEcommerceName } from './objectMenuEcommerce.js';
-import { objectMenuHome, type typeMenuHomeName } from './objectMenuHome.js';
+import { objectMenuEcommerce } from './objectMenuEcommerce.js';
+import { objectMenuHome } from './objectMenuHome.js';
+import { objectMenuStore } from './objectMenuStore.js';
 /////
 
-export type typeMenuName = typeMenuHomeName | typeMenuEcommerceName;
-
-export const arrayMenu: typeMenu<typeMenuName> = [objectMenuHome, objectMenuEcommerce];
+export const arrayMenu: typeMenu<typeMenuName> = [
+	objectMenuHome,
+	objectMenuStore,
+	objectMenuEcommerce
+];

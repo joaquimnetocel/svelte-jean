@@ -2,9 +2,11 @@
 	// MODULES
 	import { functionReadActiveMenuStore } from '../stores/storeActiveMenu.js';
 	import type { typeMenu } from '../typeMenu.js';
+	import type { typeActiveMenu } from './typeActiveMenu.js';
 	/////
 	// PROPS
 	export let propSubmenu: typeMenu;
+	export let propActiveMenu: typeActiveMenu;
 	/////
 	// STATES
 	let stateCollapsed = true;
@@ -17,15 +19,23 @@
 {#each propSubmenu as currentSubmenu}
 	<li class="nav-item">
 		{#if currentSubmenu.arraySubmenus === undefined}
+			<!-- class:active={$storeActiveMenu === currentSubmenu.objectMenu.stringName} -->
 			<a
 				on:click={() => ($storeActiveMenu = currentSubmenu.objectMenu.stringName)}
-				class:active={$storeActiveMenu === currentSubmenu.objectMenu.stringName}
 				class="nav-link"
 				href={currentSubmenu.objectMenu.stringHref ?? ''}
 				data-bs-toggle=""
 				aria-expanded="false"
 			>
-				<div class="d-flex align-items-center">
+				<!-- <div class="d-flex align-items-center"> -->
+				<div
+					style="border-radius: 20px;padding-bottom:2px;"
+					class:classActiveGradient={$storeActiveMenu === currentSubmenu.objectMenu.stringName &&
+						propActiveMenu.stringBackgroundSecondaryColor !== undefined}
+					class:classActive={$storeActiveMenu === currentSubmenu.objectMenu.stringName &&
+						propActiveMenu.stringBackgroundSecondaryColor === undefined}
+					class="d-inline ps-2 ps-lg-0 pe-lg-3 pe-2"
+				>
 					<span class="nav-link-text">
 						{currentSubmenu.objectMenu.stringSlot}
 					</span>
@@ -76,10 +86,25 @@
 			{#if !stateCollapsed}
 				<div class="parent-wrapper">
 					<ul class="nav collapse parent show" data-bs-parent="#e-commerce" id="admin">
-						<svelte:self propSubmenu={currentSubmenu.arraySubmenus} />
+						<svelte:self {propActiveMenu} propSubmenu={currentSubmenu.arraySubmenus} />
 					</ul>
 				</div>
 			{/if}
 		{/if}
 	</li>
 {/each}
+
+<style>
+	.classActiveGradient {
+		background-image: linear-gradient(
+			var(--cssvarActiveBackgroundGradientDirection),
+			var(--cssvarActiveBackgroundColor) 0%,
+			var(--cssvarActiveBackgroundSecondaryColor) 100%
+		);
+		color: var(--cssvarActiveColor) !important;
+	}
+	.classActive {
+		background-color: var(--cssvarActiveBackgroundColor);
+		color: var(--cssvarActiveColor) !important;
+	}
+</style>

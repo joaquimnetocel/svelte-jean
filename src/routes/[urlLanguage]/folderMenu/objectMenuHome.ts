@@ -30,31 +30,5 @@ export const objectMenuHome: typeMenu<typeMenuHomeName>[number] = {
 		stringIcon: stringIcon,
 		stringSlot: 'Home',
 		stringName: 'menuHome'
-	},
-	arraySubmenus: [
-		{
-			objectMenu: {
-				stringSlot: 'E-commerce',
-				stringName: 'menuEcommerce'
-			}
-		},
-		{
-			objectMenu: {
-				stringSlot: 'Project Management',
-				stringName: 'menuProjectManagement'
-			}
-		},
-		{
-			objectMenu: {
-				stringSlot: 'CRM',
-				stringName: 'menuCRM'
-			}
-		},
-		{
-			objectMenu: {
-				stringSlot: 'Social Feed',
-				stringName: 'menuSocialFeed'
-			}
-		}
-	]
+	}
 };

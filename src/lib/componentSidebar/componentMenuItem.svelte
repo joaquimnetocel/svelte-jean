@@ -9,6 +9,7 @@
 	import { functionReadActiveMenuStore } from '../stores/storeActiveMenu.js';
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
 	import type { typeMenu } from '../typeMenu.js';
+	import type { typeActiveMenu } from './typeActiveMenu.js';
 	/////
 	// STATES
 	let stateCollapsed = true;
@@ -19,6 +20,7 @@
 	/////
 	// PROPS
 	export let propMenuItem: typeMenu[number];
+	export let propActiveMenu: typeActiveMenu;
 	/////
 </script>
 
@@ -27,7 +29,10 @@
 		{#if propMenuItem.arraySubmenus === undefined}
 			<a
 				on:click={() => ($storeActiveMenu = propMenuItem.objectMenu.stringName)}
-				class:active={$storeActiveMenu === propMenuItem.objectMenu.stringName}
+				class:classActiveGradient={$storeActiveMenu === propMenuItem.objectMenu.stringName &&
+					propActiveMenu.stringBackgroundSecondaryColor !== undefined}
+				class:classActive={$storeActiveMenu === propMenuItem.objectMenu.stringName &&
+					propActiveMenu.stringBackgroundSecondaryColor === undefined}
 				class="nav-link label-1"
 				href={propMenuItem.objectMenu.stringHref ?? ''}
 				role="button"
@@ -100,10 +105,25 @@
 				<div transition:slide class="parent-wrapper label-1">
 					<ul class="nav collapse parent show" data-bs-parent="#navbarVerticalCollapse" id="home">
 						<li class="collapsed-nav-item-title d-none">{propMenuItem.objectMenu.stringSlot}</li>
-						<ComponentSubmenuItem propSubmenu={propMenuItem.arraySubmenus} />
+						<ComponentSubmenuItem {propActiveMenu} propSubmenu={propMenuItem.arraySubmenus} />
 					</ul>
 				</div>
 			{/if}
 		{/if}
 	</div>
 </li>
+
+<style>
+	.classActiveGradient {
+		background-image: linear-gradient(
+			var(--cssvarActiveBackgroundGradientDirection),
+			var(--cssvarActiveBackgroundColor) 0%,
+			var(--cssvarActiveBackgroundSecondaryColor) 100%
+		);
+		color: var(--cssvarActiveColor) !important;
+	}
+	.classActive {
+		background-color: var(--cssvarActiveBackgroundColor) !important;
+		color: var(--cssvarActiveColor) !important;
+	}
+</style>
