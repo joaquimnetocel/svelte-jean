@@ -2,7 +2,7 @@
 	import { functionReadActiveMenuStore } from '$lib/index.js';
 	import type { typeMenuName } from './folderMenu/typeMenuName.js';
 	const storeActiveMenu = functionReadActiveMenuStore<typeMenuName>();
-	$storeActiveMenu = 'menuEcommerce';
+	$storeActiveMenu = 'menuHome';
 </script>
 
 <div class="row">
