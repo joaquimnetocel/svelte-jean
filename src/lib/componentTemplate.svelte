@@ -75,9 +75,9 @@
 	/> -->
 
 	{#if $storeTextDirection === 'enumRightToLeft'}
-		<link href="/css/theme-rtl.css" rel="stylesheet" type="text/css" />
+		<link href="./css/theme-rtl.min.css" rel="stylesheet" type="text/css" />
 	{:else}
-		<link href="/css/theme.css" rel="stylesheet" type="text/css" />
+		<link href="./css/theme.min.css" rel="stylesheet" type="text/css" />
 	{/if}
 </svelte:head>
 
