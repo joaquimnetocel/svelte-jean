@@ -9,4 +9,7 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-svelte-jean-package
+# ADDED BY ME
+package
+src/lib/folderCopy
+#####

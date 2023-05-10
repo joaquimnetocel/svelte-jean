@@ -1,50 +1,19 @@
 # svelte-jean
 
-Admin Bootstrap Template for Svelte.
+ADMIN TEMPLATE FOR SVELTEKIT.
 
-## DEVELOPING
+## USING ON _[SVELTEKIT](https://kit.svelte.dev/)_
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+* OPEN AN EXISTING _SVELTEKIT_ PROJECT OR CREATE A NEW PROJECT WITH `npm create svelte@latest project-name`.
 
-```bash
-npm run dev
+* COPY `svelte-jean.tar.gz` TO THE _SVELTEKIT_ PROJECT FOLDER.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of the library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## BUILDING
-
-To build the library:
+* GO TO THE _SVELTEKIT_ PROJECT FOLDER AND RUN:
 
 ```bash
-npm run package
+npm install svelte-jean.tar.gz ## OR npm install svelte-jean
+npx cpx node_modules/svelte-jean/dist/folderCopy/staticJean/**/* static/staticJean
+npx cpx node_modules/svelte-jean/dist/folderCopy/routeJean/**/* src/routes/routeJean
 ```
 
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## PUBLISHING
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
-
-## GENERATE OFFLINE PACKAGE
-
-```bash
-npm pack svelte-jean
-```
+FINALLY, RUN `npm run dev` AND VISIT `http://localhost:5173/routeJean`

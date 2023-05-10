@@ -2,6 +2,7 @@
 	"name": "svelte-jean",
 	"version": "0.0.2",
 	"scripts": {
+		"package-offline": "cpx src/routes/routeJean/**/* src/lib/folderCopy/routeJean && cpx static/staticJean/**/* src/lib/folderCopy/staticJean && npm run build && npx cpx package.json package && npx cpx README.md package && npx cpx dist/**/* package/dist",
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
@@ -48,6 +49,8 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
+		"cpx": "^1.5.0",
+		"replace": "^1.2.2",
 		"svelte-body": "^1.3.6"
 	}
 }
