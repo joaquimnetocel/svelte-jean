@@ -1,4 +1,4 @@
-import type { typeMenu } from '$lib/typeMenu.js';
+import type { typeMenu } from '$lib/index.js';
 
 export type typeMenuHomeName =
 	| 'menuHome'

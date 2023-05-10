@@ -46,7 +46,8 @@ npm pack svelte-jean
 
 ```bash
 npm run package-offline
-npx replace '$lib/index.js' 'svelte-jean' . -r src/lib/folderCopy/routeJean
+cd src/lib/folderCopy/routeJean
+npx replace '$lib/index.js' 'svelte-jean' . -r
 ```
 
 * USE [7ZIP](https://www.7-zip.org/) TO CREATE A `svelte-jean.tar` FILE FROM _package_ FOLDER.

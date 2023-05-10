@@ -1,5 +1,5 @@
 // NPM MODULES
-import type { typeMenu } from '$lib/typeMenu.js';
+import type { typeMenu } from '$lib/index.js';
 import type { typeMenuName } from './typeMenuName.js';
 /////
 // MODULES
