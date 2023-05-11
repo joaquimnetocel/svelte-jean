@@ -1,23 +1,18 @@
 <script lang="ts">
-	// IMAGES
+	// MODULES:
+	import { functionClickOutside } from '../functionClickOutside.js';
+	// NPM MODULES:
+	import { slide } from 'svelte/transition';
+	// IMAGES:
 	import image57 from './folderImages/image57.webp';
 	import image571 from './folderImages/image571.webp';
-	/////
-	// MODULES
-	import { functionClickOutside } from '../functionClickOutside.js';
-	/////
-	// NPM MODULE
-	import { slide } from 'svelte/transition';
-	/////
 
-	// STATES
+	// STATES:
 	let stateCollapsed = true;
-	/////
-	// FUNCTIONS
+	//FUNCTIONS:
 	const functionClick = function () {
 		stateCollapsed = !stateCollapsed;
 	};
-	/////
 </script>
 
 <li use:functionClickOutside={() => (stateCollapsed = true)} class="nav-item dropdown">

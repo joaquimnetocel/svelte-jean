@@ -2,7 +2,8 @@
 	"name": "svelte-jean",
 	"version": "0.0.2",
 	"scripts": {
-		"package-offline": "cpx src/routes/routeJean/**/* src/lib/folderCopy/routeJean && cpx static/staticJean/**/* src/lib/folderCopy/staticJean && npm run build && npx cpx package.json package && npx cpx README.md package && npx cpx dist/**/* package/dist",
+		"package-prepare": "cpx src/routes/routeJean/**/* src/lib/folderCopy/routeJean && cpx static/staticJean/**/* src/lib/folderCopy/staticJean && npm run build",
+		"package-tar-gz": "cpx package.json package && cpx README.md package && cpx dist/**/* package/dist",
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",

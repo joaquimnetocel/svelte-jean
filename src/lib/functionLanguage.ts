@@ -1,10 +1,7 @@
-// MODULES
-import type { typeLanguage } from './typeLanguage.js';
-/////
 // NPM MODULES
 import { getContext } from 'svelte';
 /////
 
-export function functionLanguage() {
-	return getContext<typeLanguage>('contextLanguage');
+export function functionLanguage<genericType>() {
+	return getContext<genericType>('contextLanguage');
 }

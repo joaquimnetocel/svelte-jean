@@ -8,8 +8,8 @@
 	// MODULES
 	import { functionReadActiveMenuStore } from '../stores/storeActiveMenu.js';
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
-	import type { typeMenu } from '../typeMenu.js';
 	import type { typeActiveMenu } from './typeActiveMenu.js';
+	import type { typeMenuArray } from './typeMenuArray.js';
 	/////
 	// STATES
 	let stateCollapsed = true;
@@ -19,7 +19,7 @@
 	const storeActiveMenu = functionReadActiveMenuStore();
 	/////
 	// PROPS
-	export let propMenuItem: typeMenu[number];
+	export let propMenuItem: typeMenuArray[number];
 	export let propActiveMenu: typeActiveMenu;
 	/////
 </script>

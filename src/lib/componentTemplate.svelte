@@ -1,5 +1,5 @@
 <script lang="ts">
-	// MODULES
+	// MODULES:
 	import { functionCreateActiveMenuStore } from './stores/storeActiveMenu.js';
 	import type { typeColorScheme } from './stores/storeColorScheme.js';
 	import { functionCreateColorSchemeStore } from './stores/storeColorScheme.js';
@@ -18,23 +18,20 @@
 		functionCreateTextDirectionStore,
 		functionReadTextDirectionStore
 	} from './stores/storeTextDirection.js';
+	import type { typeAllLanguages } from './typeAllLanguages.js';
 	import type { typeInitialProps } from './typeInitialProps.js';
-	import type { typeLanguage } from './typeLanguage.js';
-	/////
-	// NPM MODULES
+	// NPM MODULES:
 	import { setContext } from 'svelte';
-	/////
 
-	// PROPS
+	// PROPS:
 	export let propHeaderColor: typeHeaderColor = 'enumLight';
 	export let propSidebarColor: typeSidebarColor = 'enumDark';
 	export let propColorScheme: typeColorScheme = 'enumLight';
 	export let propSidebar = false;
 	export let propRightBottom = true;
 	export let propTextDirection: typeTextDirection = 'enumLeftToRight';
-	export let propLanguage: typeLanguage = 'en';
-	/////
-	// CONSTANTS
+	export let propLanguage: typeAllLanguages = 'en';
+	// CONSTANTS:
 	const objectInitialProps: typeInitialProps = {
 		propHeaderColor,
 		propSidebarColor,
@@ -43,12 +40,10 @@
 		propRightBottom,
 		propTextDirection
 	};
-	/////
-	// CONTEXT ADDS
-	setContext<typeLanguage>('contextLanguage', propLanguage);
+	// CONTEXT:
+	setContext<typeAllLanguages>('contextLanguage', propLanguage);
 	setContext<typeInitialProps>('contextInitialProps', objectInitialProps);
-	/////
-	// STORES ADDED TO CONTEXT
+	// CREATE STORES:
 	functionCreateColorSchemeStore(propColorScheme);
 	functionCreateHeaderColorStore(propHeaderColor);
 	functionCreateSidebarColorStore(propSidebarColor);
@@ -57,16 +52,14 @@
 	functionCreateRightBottomStore(propRightBottom);
 	functionCreateMobileMenuStore();
 	functionCreateActiveMenuStore();
-	/////
-	// STORES
+	// READ STORES:
 	const storeTextDirection = functionReadTextDirectionStore();
 	const storeRightBottom = functionReadRightBottomStore();
-	/////
 </script>
 
 <svelte:head>
-	<link href="/staticJean/solto.css" rel="stylesheet" type="text/css" />
-	<link href="/staticJean/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="/staticJean/folderCss/solto.css" rel="stylesheet" type="text/css" />
+	<link href="/staticJean/folderCss/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<!-- <link
 		href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 		rel="stylesheet"
@@ -74,9 +67,9 @@
 		crossorigin="anonymous"
 	/> -->
 	{#if $storeTextDirection === 'enumRightToLeft'}
-		<link href="/staticJean/theme-rtl.min.css" rel="stylesheet" type="text/css" />
+		<link href="/staticJean/folderCss/theme-rtl.min.css" rel="stylesheet" type="text/css" />
 	{:else}
-		<link href="/staticJean/theme.min.css" rel="stylesheet" type="text/css" />
+		<link href="/staticJean/folderCss/theme.min.css" rel="stylesheet" type="text/css" />
 	{/if}
 </svelte:head>
 

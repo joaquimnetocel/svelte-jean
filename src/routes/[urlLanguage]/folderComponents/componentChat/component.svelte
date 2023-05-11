@@ -2,7 +2,6 @@
 	// IMAGES
 	import image301 from './301.webp';
 	/////
-
 	// STATES
 	let stateCollapsed = true;
 	/////

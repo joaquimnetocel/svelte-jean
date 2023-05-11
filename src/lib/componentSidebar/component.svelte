@@ -6,19 +6,19 @@
 	// MODULES
 	import { functionReadMobileMenuStore } from '../stores/storeMobileMenu.js';
 	import { functionReadSidebarColorStore } from '../stores/storeSidebarColor.js';
-	import type { typeMenu } from '../typeMenu.js';
 	import type { typeActiveMenu } from './typeActiveMenu.js';
+	import type { typeMenuArray } from './typeMenuArray.js';
 	/////
 	// NPM MODULES
 	import { slide } from 'svelte/transition';
 	/////
 	// PROPS
-	export let propMenu: typeMenu = [];
+	export let propMenu: typeMenuArray = [];
 	export let propActiveMenu: typeActiveMenu = {
 		stringBackgroundColor: '#ffecd2',
 		stringBackgroundSecondaryColor: '#fcb69f',
 		stringBackgroundGradientDirection: '270deg',
-		stringColor: 'black'
+		stringColor: 'black',
 	};
 	/////
 

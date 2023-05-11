@@ -1,8 +1,4 @@
-/**
- * @author Phil Teare
- * using wikipedia data
- */
-const objectLanguages = {
+const objectAllLanguages = {
 	ab: {
 		name: 'Abkhaz',
 		nativeName: 'аҧсуа'
@@ -511,6 +507,10 @@ const objectLanguages = {
 		name: 'Pashto, Pushto',
 		nativeName: 'پښتو'
 	},
+	ptbr: {
+		name: 'Portuguese',
+		nativeName: 'Português'
+	},
 	pt: {
 		name: 'Portuguese',
 		nativeName: 'Português'
@@ -733,4 +733,4 @@ const objectLanguages = {
 	}
 };
 
-export type typeLanguage = keyof typeof objectLanguages;
+export type typeAllLanguages = keyof typeof objectAllLanguages;

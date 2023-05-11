@@ -1,25 +1,21 @@
 <script lang="ts">
-	// IMAGES
+	// MODULES:
+	import { functionClickOutside } from '../functionClickOutside.js';
+	// NPM MODULES:
+	import { slide } from 'svelte/transition';
+	// IMAGES:
 	import image30 from './folderImages/image30.webp';
 	import image57 from './folderImages/image57.webp';
 	import image58 from './folderImages/image58.webp';
 	import image59 from './folderImages/image59.webp';
 	import imageAvatar from './folderImages/imageAvatar.webp';
-	/////
-	// MODULES
-	import { functionClickOutside } from '../functionClickOutside.js';
-	/////
-	// NPM MODULE
-	import { slide } from 'svelte/transition';
-	/////
-	// STATES
+
+	// STATES:
 	let stateCollapsed = true;
-	/////
-	// FUNCTIONS
+	// FUNCTIONS:
 	const functionClick = function () {
 		stateCollapsed = !stateCollapsed;
 	};
-	/////
 </script>
 
 <li class="nav-item dropdown">

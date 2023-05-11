@@ -9,6 +9,6 @@ type typeRecursive<genericType> = {
 	objectMenu: genericType;
 	arraySubmenus?: typeRecursive<genericType>;
 }[];
-type typeMenu<genericMenuName = string> = typeRecursive<typeMenuElement<genericMenuName>>;
+type typeMenuArray<genericMenuName = string> = typeRecursive<typeMenuElement<genericMenuName>>;
 
-export type { typeMenu };
+export type { typeMenuArray };

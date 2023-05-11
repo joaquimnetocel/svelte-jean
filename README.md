@@ -14,6 +14,13 @@ ADMIN TEMPLATE FOR SVELTEKIT.
 npm install svelte-jean.tar.gz ## OR npm install svelte-jean
 npx cpx node_modules/svelte-jean/dist/folderCopy/staticJean/**/* static/staticJean
 npx cpx node_modules/svelte-jean/dist/folderCopy/routeJean/**/* src/routes/routeJean
+cd src/routes/routeJean
+npx replace '../../../../index.js' 'svelte-jean' . -r
+npx replace '../../../index.js' 'svelte-jean' . -r
+npx replace '../../index.js' 'svelte-jean' . -r
+cd ..
+cd ..
+cd ..
 ```
 
 FINALLY, RUN `npm run dev` AND VISIT `http://localhost:5173/routeJean`

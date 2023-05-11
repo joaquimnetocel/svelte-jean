@@ -1,11 +1,11 @@
 <script lang="ts">
 	// MODULES
 	import { functionReadActiveMenuStore } from '../stores/storeActiveMenu.js';
-	import type { typeMenu } from '../typeMenu.js';
 	import type { typeActiveMenu } from './typeActiveMenu.js';
+	import type { typeMenuArray } from './typeMenuArray.js';
 	/////
 	// PROPS
-	export let propSubmenu: typeMenu;
+	export let propSubmenu: typeMenuArray;
 	export let propActiveMenu: typeActiveMenu;
 	/////
 	// STATES

@@ -15,6 +15,7 @@ EVERYTHING INSIDE `src/lib` IS PART OF THE LIBRARY AND EVERYTHING INSIDE `src/ro
 TO BUILD THE PACKAGE:
 
 ```bash
+npm run package-prepare
 npm run package
 ```
 
@@ -45,9 +46,8 @@ npm pack svelte-jean
 ## GENERATING A _.tar.gz_ FILE WITHOUT PUBLISHING TO NPM
 
 ```bash
-npm run package-offline
-cd src/lib/folderCopy/routeJean
-npx replace '$lib/index.js' 'svelte-jean' . -r
+npm run package-prepare
+npm run package-tar-gz
 ```
 
 * USE [7ZIP](https://www.7-zip.org/) TO CREATE A `svelte-jean.tar` FILE FROM _package_ FOLDER.

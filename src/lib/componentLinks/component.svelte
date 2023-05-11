@@ -1,26 +1,17 @@
 <script lang="ts">
-	// IMAGES
-	import imageGermany from './folderImages/imageGermany.jpg';
-	import imageItaly from './folderImages/imageItaly.jpg';
-	import imageRussia from './folderImages/imageRussia.jpg';
-	import imageSpain from './folderImages/imageSpain.jpg';
-	import imageUs from './folderImages/imageUs.jpg';
-	/////
-	// MODULES
+	// MODULES:
 	import { functionClickOutside } from '../functionClickOutside.js';
-	/////
-	// NPM MODULE
+	import type { typeLinksArray } from './typeLinksArray.js';
+	// NPM MODULES:
 	import { slide } from 'svelte/transition';
-	/////
-
-	// STATES
+	// STATES:
 	let stateCollapsed = true;
-	/////
-	// FUNCTIONS
+	// PROPS:
+	export let propLinks: typeLinksArray;
+	//FUNCTIONS:
 	const functionClick = function () {
 		stateCollapsed = !stateCollapsed;
 	};
-	/////
 </script>
 
 <li class="nav-item dropdown">
@@ -38,10 +29,20 @@
 		data-bs-auto-close="outside"
 		aria-expanded={!stateCollapsed}
 	>
-		<img src={imageUs} alt="" class="me-0 me-sm-1" height="12" />
+		<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="2" cy="2" r="2" fill="currentColor" />
+			<circle cx="2" cy="8" r="2" fill="currentColor" />
+			<circle cx="2" cy="14" r="2" fill="currentColor" />
+			<circle cx="8" cy="8" r="2" fill="currentColor" />
+			<circle cx="8" cy="14" r="2" fill="currentColor" />
+			<circle cx="14" cy="8" r="2" fill="currentColor" />
+			<circle cx="14" cy="14" r="2" fill="currentColor" />
+			<circle cx="8" cy="2" r="2" fill="currentColor" />
+			<circle cx="14" cy="2" r="2" fill="currentColor" /></svg
+		>
 		<svg
-			fill="var(--phoenix-body-color)"
 			width="8"
+			fill="var(--phoenix-body-color)"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 320 512"
 		>
@@ -58,26 +59,23 @@
 			data-bs-popper="static"
 		>
 			<div class="card bg-white position-relative border-0">
-				<a href="/en" class="dropdown-item">
-					<img src={imageUs} alt="" class="me-1" height="12" />
-					<span class="align-middle">English</span>
-				</a>
-				<a href="/de" class="dropdown-item">
-					<img src={imageGermany} alt="" class="me-1" height="12" />
-					<span class="align-middle">German</span>
-				</a>
-				<a href="/it" class="dropdown-item">
-					<img src={imageItaly} alt="" class="me-1" height="12" />
-					<span class="align-middle">Italian</span>
-				</a>
-				<a href="/ru" class="dropdown-item">
-					<img src={imageRussia} alt="" class="me-1" height="12" />
-					<span class="align-middle">Russian</span>
-				</a>
-				<a href="/es" class="dropdown-item">
-					<img src={imageSpain} alt="" class="me-1" height="12" />
-					<span class="align-middle">Spanish</span>
-				</a>
+				<div class="card-body pt-3 px-3 pb-0 overflow-auto scrollbar" style="height: 20rem">
+					<div class="row text-center align-items-center gx-0 gy-0">
+						{#each propLinks as currentLink}
+							<div class="col-4">
+								<a
+									class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
+									href={currentLink.stringLink}
+								>
+									<img src={currentLink.stringImage} alt="" width="30" />
+									<p class="mb-0 text-black text-truncate fs--2 mt-1 pt-1">
+										{currentLink.stringText}
+									</p>
+								</a>
+							</div>
+						{/each}
+					</div>
+				</div>
 			</div>
 		</div>
 	{/if}

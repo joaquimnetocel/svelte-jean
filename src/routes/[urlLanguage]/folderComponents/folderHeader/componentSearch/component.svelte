@@ -1,4 +1,5 @@
 <script lang="ts">
+	// IMAGES:
 	import image10 from './image10.webp';
 	import image12 from './image12.webp';
 	import image3 from './image3.png';

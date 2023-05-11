@@ -1,12 +1,7 @@
+// MODULES:
 import type { typeMenu } from '$lib/index.js';
 
-export type typeMenuStoreName =
-	| 'menuStore'
-	| 'menuEcommerce'
-	| 'menuProjectManagement'
-	| 'menuCRM'
-	| 'menuSocialFeed';
-
+// CONSTANTS:
 const stringIcon = `
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -24,6 +19,14 @@ const stringIcon = `
 		<path d="M22 12A10 10 0 0 0 12 2v10z" />
 	</svg>
 `;
+
+// EXPORTS:
+export type typeMenuStoreName =
+	| 'menuStore'
+	| 'menuEcommerce'
+	| 'menuProjectManagement'
+	| 'menuCRM'
+	| 'menuSocialFeed';
 
 export const objectMenuStore: typeMenu<typeMenuStoreName>[number] = {
 	objectMenu: {

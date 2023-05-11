@@ -1,8 +1,12 @@
 <script lang="ts">
+	// NPM MODULES
 	import { functionReadActiveMenuStore } from '$lib/index.js';
-	import type { typeMenuName } from './folderMenu/typeMenuName.js';
-	const storeActiveMenu = functionReadActiveMenuStore<typeMenuName>();
+	/////
+
+	// STORES
+	const storeActiveMenu = functionReadActiveMenuStore();
 	$storeActiveMenu = 'menuHome';
+	/////
 </script>
 
 <div class="row">
