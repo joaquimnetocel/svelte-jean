@@ -4,7 +4,7 @@ export type typeNotificationsArray = {
 	stringText?: string;
 	stringIcon?: string;
 	stringSecondaryText?: string;
-	stringDate: string;
+	stringDate?: string;
 	stringImage?: string;
 	booleanOnline?: boolean;
 }[];

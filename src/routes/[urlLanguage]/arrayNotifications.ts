@@ -1,36 +1,15 @@
 // MODULES:
 import type { typeNotificationsArray } from '$lib/index.js';
 
-const stringDate = `
-<!-- <span class="me-1 fas fa-clock"></span> Font Awesome fontawesome.com -->
-<svg
-	class="svg-inline--fa fa-clock me-1"
-	aria-hidden="true"
-	focusable="false"
-	data-prefix="fas"
-	data-icon="clock"
-	role="img"
-	xmlns="http://www.w3.org/2000/svg"
-	viewBox="0 0 512 512"
-	data-fa-i2svg=""
->
-	<path
-		fill="currentColor"
-		d="M256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512zM232 256C232 264 236 271.5 242.7 275.1L338.7 339.1C349.7 347.3 364.6 344.3 371.1 333.3C379.3 322.3 376.3 307.4 365.3 300L280 243.2V120C280 106.7 269.3 96 255.1 96C242.7 96 231.1 106.7 231.1 120L232 256z"
-	/>
-</svg>
-<span class="fw-bold">10:41 AM</span>
-August 7,2021
-`;
-
 // EXPORTS:
 export const arrayNotifications: typeNotificationsArray = [
 	{
-		booleanRead: false,
+		booleanRead: true,
 		stringTitle: 'Joaquim Neto',
 		stringText: 'Mentioned you in a comment.',
 		stringIcon: '💬',
-		stringDate: stringDate,
+		stringDate: `<span class="fw-bold">10:41 AM</span>
+		August 7,2021`,
 		stringImage: '/staticJean/folderImages/folderUsers/image30.webp',
 		booleanOnline: true,
 		stringSecondaryText: '10m',
@@ -41,7 +20,8 @@ export const arrayNotifications: typeNotificationsArray = [
 		stringText: 'Created an event.',
 		stringIcon: '📅',
 		stringImage: 'J',
-		stringDate: stringDate,
+		stringDate: `<span class="fw-bold">10:41 AM</span>
+		August 7,2021`,
 		booleanOnline: true,
 		stringSecondaryText: '20m',
 	},
@@ -50,7 +30,42 @@ export const arrayNotifications: typeNotificationsArray = [
 		stringTitle: 'Jessie Morrison',
 		stringText: 'Liked your comment.',
 		stringIcon: '👍',
-		stringDate: stringDate,
+		stringDate: `<span class="fw-bold">10:41 AM</span>
+		August 7,2021`,
 		booleanOnline: false,
+		stringImage: undefined,
+		stringSecondaryText: undefined,
+	},
+	{
+		booleanRead: false,
+		stringTitle: 'Maria Smith',
+		stringText: 'Mentioned you in a comment.',
+		stringIcon: '💬',
+		stringImage: '/staticJean/folderImages/folderUsers/image57.webp',
+		stringDate: `<span class="fw-bold">10:41 AM</span>
+		August 7,2021`,
+		booleanOnline: false,
+		stringSecondaryText: undefined,
+	},
+	{
+		booleanRead: false,
+		stringTitle: 'Liz Samson',
+		stringText: 'Tagged you in a comment.',
+		stringIcon: '👤',
+		stringImage: '/staticJean/folderImages/folderUsers/image59.webp',
+		stringDate: `<span class="fw-bold">10:41 AM</span>
+		August 7,2021`,
+		booleanOnline: false,
+		stringSecondaryText: undefined,
+	},
+	{
+		booleanRead: false,
+		stringTitle: 'Robert Button',
+		stringText: 'Liked your comment.',
+		stringImage: '/staticJean/folderImages/folderUsers/image58.webp',
+		stringIcon: '👍',
+		stringDate: undefined,
+		booleanOnline: true,
+		stringSecondaryText: undefined,
 	},
 ];
