@@ -1,13 +1,13 @@
 <script lang="ts">
 	// COMPONENTS:
-	import { Language, Links } from '$lib/index.js';
+	import { Language, Links, Notifications } from '$lib/index.js';
 	import ComponentChat from './folderComponents/componentChat/component.svelte';
-	import ComponentNotifications from './folderComponents/folderHeader/componentNotifications/component.svelte';
 	import ComponentSearch from './folderComponents/folderHeader/componentSearch/component.svelte';
 	import ComponentUser from './folderComponents/folderHeader/componentUser/component.svelte';
 	// MODULES:
 	import { arrayLanguages } from './arrayLanguages.js';
 	import { arrayLinks } from './arrayLinks.js';
+	import { arrayNotifications } from './arrayNotifications.js';
 	import { arrayMenus } from './folderMenu/arrayMenus.js';
 	// NPM MODULES:
 	import { ColorScheme, Customize, Footer, Header, Logo, Sidebar, Template } from '$lib/index.js';
@@ -31,7 +31,7 @@
 			<svelte:fragment slot="slotRight">
 				<ColorScheme />
 				<Language propLanguages={arrayLanguages} propSelected={data.urlLanguage} />
-				<ComponentNotifications />
+				<Notifications propNotifications={arrayNotifications} />
 				<Links propLinks={arrayLinks} />
 				<ComponentUser />
 			</svelte:fragment>

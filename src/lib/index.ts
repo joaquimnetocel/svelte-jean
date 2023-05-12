@@ -7,6 +7,8 @@ import type { typeLanguagesArray } from './componentLanguage/typeLanguagesArray.
 import Links from './componentLinks/component.svelte';
 import type { typeLinksArray } from './componentLinks/typeLinksArray.js';
 import Logo from './componentLogo/component.svelte';
+import Notifications from './componentNotifications/component.svelte';
+import type { typeNotificationsArray } from './componentNotifications/typeNotificationsArray.js';
 import Sidebar from './componentSidebar/component.svelte';
 import type { typeMenuArray } from './componentSidebar/typeMenuArray.js';
 import Template from './componentTemplate.svelte';
@@ -24,8 +26,10 @@ export {
 	Customize,
 	Language,
 	Links,
+	Notifications,
 	type typeAllLanguages,
 	type typeMenuArray,
 	type typeLanguagesArray,
 	type typeLinksArray,
+	type typeNotificationsArray,
 };
