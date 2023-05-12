@@ -5,10 +5,10 @@
 	import ComponentSearch from './folderComponents/folderHeader/componentSearch/component.svelte';
 	import ComponentUser from './folderComponents/folderHeader/componentUser/component.svelte';
 	// MODULES:
-	import { arrayLanguages } from './arrayLanguages.js';
-	import { arrayLinks } from './arrayLinks.js';
-	import { arrayNotifications } from './arrayNotifications.js';
-	import { arrayMenus } from './folderMenu/arrayMenus.js';
+	import { arrayLanguages } from './folderData/arrayLanguages.js';
+	import { arrayLinks } from './folderData/arrayLinks.js';
+	import { arrayMenus } from './folderData/arrayMenus.js';
+	import { arrayNotifications } from './folderData/arrayNotifications.js';
 	// NPM MODULES:
 	import { ColorScheme, Customize, Footer, Header, Logo, Sidebar, Template } from '$lib/index.js';
 

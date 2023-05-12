@@ -127,7 +127,7 @@
 																	>
 																		{#if currentNotification.stringImage.length === 1}
 																			<div class="avatar-name rounded-circle">
-																				<span>{currentNotification.stringImage.charAt(0)}</span>
+																				<span>{currentNotification.stringImage}</span>
 																			</div>
 																		{:else}
 																			<img
