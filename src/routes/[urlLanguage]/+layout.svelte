@@ -23,7 +23,7 @@
 	<svelte:fragment slot="slotHeader">
 		<Header>
 			<svelte:fragment slot="slotLeft">
-				<Logo propTitle="jean" />
+				<Logo propTitle="jean" propLanguage={data.urlLanguage} />
 			</svelte:fragment>
 			<svelte:fragment slot="slotCenter">
 				<ComponentSearch />
