@@ -34,7 +34,7 @@
 						propActiveMenu.stringBackgroundSecondaryColor !== undefined}
 					class:classActive={$storeActiveMenu === currentSubmenu.objectMenu.stringName &&
 						propActiveMenu.stringBackgroundSecondaryColor === undefined}
-					class="d-inline ps-2 ps-lg-0 pe-lg-3 pe-2"
+					class="d-flex align-items-center ps-2 ps-lg-0 pe-lg-3 pe-2"
 				>
 					<span class="nav-link-text">
 						{currentSubmenu.objectMenu.stringSlot}
