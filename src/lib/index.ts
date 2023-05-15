@@ -12,6 +12,8 @@ import type { typeNotificationsArray } from './componentNotifications/typeNotifi
 import Sidebar from './componentSidebar/component.svelte';
 import type { typeMenuArray } from './componentSidebar/typeMenuArray.js';
 import Template from './componentTemplate.svelte';
+import User from './componentUser/component.svelte';
+import type { typeUserMenuArray } from './componentUser/typeUserMenuArray.js';
 import { functionReadActiveMenuStore } from './stores/storeActiveMenu.js';
 import type { typeAllLanguages } from './typeAllLanguages.js';
 
@@ -27,9 +29,11 @@ export {
 	Language,
 	Links,
 	Notifications,
+	User,
 	type typeAllLanguages,
 	type typeMenuArray,
 	type typeLanguagesArray,
 	type typeLinksArray,
 	type typeNotificationsArray,
+	typeUserMenuArray,
 };

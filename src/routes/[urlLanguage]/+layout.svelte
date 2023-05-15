@@ -1,20 +1,24 @@
 <script lang="ts">
 	// COMPONENTS:
-	import { Language, Links, Notifications } from '$lib/index.js';
+	import { Language, Links, Notifications, User } from '$lib/index.js';
 	import ComponentChat from './folderComponents/componentChat/component.svelte';
 	import ComponentSearch from './folderComponents/folderHeader/componentSearch/component.svelte';
-	import ComponentUser from './folderComponents/folderHeader/componentUser/component.svelte';
-	// MODULES:
+	// DATA:
 	import { arrayLanguages } from './folderData/arrayLanguages.js';
 	import { arrayLinks } from './folderData/arrayLinks.js';
 	import { arrayMenus } from './folderData/arrayMenus.js';
 	import { arrayNotifications } from './folderData/arrayNotifications.js';
+	import { arrayUserMenu } from './folderData/arrayUserMenu.js';
 	// NPM MODULES:
 	import { ColorScheme, Customize, Footer, Header, Logo, Sidebar, Template } from '$lib/index.js';
 
 	// PROPS:
 	export let data;
 </script>
+
+<svelte:head>
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</svelte:head>
 
 <Template propLanguage={data.urlLanguage}>
 	<svelte:fragment slot="slotSidebar">
@@ -33,7 +37,7 @@
 				<Language propLanguages={arrayLanguages} propSelected={data.urlLanguage} />
 				<Notifications propNotifications={arrayNotifications} />
 				<Links propLinks={arrayLinks} />
-				<ComponentUser />
+				<User propUserMenu={arrayUserMenu} />
 			</svelte:fragment>
 		</Header>
 	</svelte:fragment>

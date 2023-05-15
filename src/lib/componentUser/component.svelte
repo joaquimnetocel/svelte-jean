@@ -1,12 +1,18 @@
 <script lang="ts">
 	// MODULES:
 	import { functionClickOutside } from '../functionClickOutside.js';
+	import type { typeUserMenuArray } from './typeUserMenuArray.js';
 	// NPM MODULES:
 	import { slide } from 'svelte/transition';
 	// IMAGES:
-	import image57 from './folderImages/image57.webp';
-	import image571 from './folderImages/image571.webp';
+	import imageUser from './imageUser.webp';
 
+	// PROPS:
+	export let propImage = imageUser;
+	export let propName = 'Joaquim Neto';
+	export let propUserMenu: typeUserMenuArray = [];
+	export let propSignOutButtonText = 'SIGN OUT';
+	export let propSignOutButtonHref = '';
 	// STATES:
 	let stateCollapsed = true;
 	//FUNCTIONS:
@@ -30,7 +36,7 @@
 		aria-expanded={!stateCollapsed}
 	>
 		<div class="classAvatar classAvatar-l">
-			<img class="rounded-circle" src={image57} alt="PROFILE" />
+			<img width="40" class="rounded-circle" src={propImage} alt="" />
 			<svg
 				fill="var(--phoenix-body-color)"
 				width="8"
@@ -55,44 +61,34 @@
 				<div class="card-body p-0">
 					<div class="text-center pt-4 pb-3">
 						<div class="avatar avatar-xl">
-							<img class="rounded-circle" src={image571} alt="" />
+							<img width="72" class="rounded-circle" src={propImage} alt="" />
 						</div>
-						<h6 class="mt-2 text-black">Jerry Seinfield</h6>
+						<h6 class="mt-2 text-black">{propName}</h6>
 					</div>
-					<div class="mb-3 mx-3">
-						<input
-							class="form-control form-control-sm"
-							id="statusUpdateInput"
-							type="text"
-							placeholder="Update your status"
-						/>
-					</div>
+					<slot name="slotBeforeOptions">
+						<div class="text-center mb-3 mx-3">
+							SLOT (slotBeforeOptions)
+							<!-- <input
+								class="form-control form-control-sm"
+								type="text"
+								placeholder="Update your status here..."
+							/> -->
+						</div>
+					</slot>
 				</div>
-				<div class="overflow-auto scrollbar" style="height: 10rem">
+				<div class="overflow-auto scrollbar" style="max-height: 10rem;">
 					<ul class="nav d-flex flex-column mb-2 pb-1">
-						<li class="nav-item">
-							<a
-								class="nav-link px-3"
-								href="file:///D:/folderProjects/sveltekitPhoenix/v1.11.0/indexf0f5%20-%20Copia.html#!"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16px"
-									height="16px"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									class="feather feather-user me-2 text-900"
-								>
-									<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-									<circle cx="12" cy="7" r="4" /></svg
-								><span>Profile</span></a
-							>
-						</li>
-						<li class="nav-item">
+						{#each propUserMenu as currentUserMenu}
+							<li class="nav-item">
+								<a class="nav-link px-3" href={currentUserMenu.stringHref}>
+									<span>
+										<!-- eslint-disable svelte/no-at-html-tags -->
+										{@html currentUserMenu.stringText}
+									</span>
+								</a>
+							</li>
+						{/each}
+						<!-- <li class="nav-item">
 							<a
 								class="nav-link px-3"
 								href="file:///D:/folderProjects/sveltekitPhoenix/v1.11.0/indexf0f5%20-%20Copia.html#!"
@@ -206,41 +202,14 @@
 									/></svg
 								>Language</a
 							>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 				<div class="card-footer p-0 border-top">
-					<ul class="nav d-flex flex-column my-3">
-						<li class="nav-item">
-							<a
-								class="nav-link px-3"
-								href="file:///D:/folderProjects/sveltekitPhoenix/v1.11.0/indexf0f5%20-%20Copia.html#!"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16px"
-									height="16px"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									class="feather feather-user-plus me-2 text-900"
-								>
-									<path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-									<circle cx="8.5" cy="7" r="4" />
-									<line x1="20" y1="8" x2="20" y2="14" />
-									<line x1="23" y1="11" x2="17" y2="11" /></svg
-								>Add another account</a
-							>
-						</li>
-					</ul>
-					<hr />
-					<div class="px-3">
+					<div class="px-3 mt-3">
 						<a
 							class="btn btn-phoenix-secondary d-flex flex-center w-100"
-							href="file:///D:/folderProjects/sveltekitPhoenix/v1.11.0/indexf0f5%20-%20Copia.html#!"
+							href={propSignOutButtonHref}
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -256,25 +225,29 @@
 							>
 								<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
 								<polyline points="16 17 21 12 16 7" />
-								<line x1="21" y1="12" x2="9" y2="12" /></svg
-							>Sign out</a
-						>
+								<line x1="21" y1="12" x2="9" y2="12" />
+							</svg>
+							{propSignOutButtonText}
+						</a>
 					</div>
-					<div class="my-2 text-center fw-bold fs--2 text-600">
-						<a
-							class="text-600 me-1"
-							href="file:///D:/folderProjects/sveltekitPhoenix/v1.11.0/indexf0f5%20-%20Copia.html#!"
-							>Privacy policy</a
-						>•<a
-							class="text-600 mx-1"
-							href="file:///D:/folderProjects/sveltekitPhoenix/v1.11.0/indexf0f5%20-%20Copia.html#!"
-							>Terms</a
-						>•<a
-							class="text-600 ms-1"
-							href="file:///D:/folderProjects/sveltekitPhoenix/v1.11.0/indexf0f5%20-%20Copia.html#!"
-							>Cookies</a
-						>
-					</div>
+					<slot name="slotFooter">
+						<div class="my-2 text-center fw-bold fs--2 text-600">
+							SLOT (slotFooter)
+							<!-- <a
+								class="text-600 me-1"
+								href="file:///D:/folderProjects/sveltekitPhoenix/v1.11.0/indexf0f5%20-%20Copia.html#!"
+								>Privacy policy</a
+							>•<a
+								class="text-600 mx-1"
+								href="file:///D:/folderProjects/sveltekitPhoenix/v1.11.0/indexf0f5%20-%20Copia.html#!"
+								>Terms</a
+							>•<a
+								class="text-600 ms-1"
+								href="file:///D:/folderProjects/sveltekitPhoenix/v1.11.0/indexf0f5%20-%20Copia.html#!"
+								>Cookies</a
+							> -->
+						</div>
+					</slot>
 				</div>
 			</div>
 		</div>

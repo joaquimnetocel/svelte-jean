@@ -62,15 +62,15 @@
 					stateCollapsed = !stateCollapsed;
 				}}
 				class:collapsed={stateCollapsed}
-				class="nav-link dropdown-indicator label-1"
+				class="nav-link d-flex label-1"
 				href="javascript:void(0);"
 				role="button"
-				data-bs-toggle="collapse"
+				data-bs-toggle=""
 				aria-expanded={!stateCollapsed}
 			>
 				<div class="d-flex align-items-center">
 					<!-- <span class="fas fa-caret-right"></span> Font Awesome fontawesome.com -->
-					<div class="dropdown-indicator-icon">
+					<div class="dropdown-indicator-icon me-2">
 						<svg
 							class="svg-inline--fa fa-caret-right"
 							aria-hidden="true"

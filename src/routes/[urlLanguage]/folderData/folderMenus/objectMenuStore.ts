@@ -1,24 +1,5 @@
 // MODULES:
-import type { typeMenu } from '$lib/index.js';
-
-// CONSTANTS:
-const stringIcon = `
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
-		width="16px"
-		height="16px"
-		viewBox="0 0 24 24"
-		fill="none"
-		stroke="currentColor"
-		stroke-width="2"
-		stroke-linecap="round"
-		stroke-linejoin="round"
-		class="feather feather-pie-chart"
-	>
-		<path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
-		<path d="M22 12A10 10 0 0 0 12 2v10z" />
-	</svg>
-`;
+import type { typeMenuArray } from '$lib/index.js';
 
 // EXPORTS:
 export type typeMenuStoreName =
@@ -28,36 +9,36 @@ export type typeMenuStoreName =
 	| 'menuCRM'
 	| 'menuSocialFeed';
 
-export const objectMenuStore: typeMenu<typeMenuStoreName>[number] = {
+export const objectMenuStore: typeMenuArray<typeMenuStoreName>[number] = {
 	objectMenu: {
-		stringIcon: stringIcon,
+		stringIcon: `<i style='font-size: 16px;' class='bx bx-store bx-tada-hover mt-1'></i>`,
 		stringSlot: 'Store',
-		stringName: 'menuStore'
+		stringName: 'menuStore',
 	},
 	arraySubmenus: [
 		{
 			objectMenu: {
 				stringSlot: 'E-commerce',
-				stringName: 'menuEcommerce'
-			}
+				stringName: 'menuEcommerce',
+			},
 		},
 		{
 			objectMenu: {
 				stringSlot: 'Project Management',
-				stringName: 'menuProjectManagement'
-			}
+				stringName: 'menuProjectManagement',
+			},
 		},
 		{
 			objectMenu: {
 				stringSlot: 'CRM',
-				stringName: 'menuCRM'
-			}
+				stringName: 'menuCRM',
+			},
 		},
 		{
 			objectMenu: {
 				stringSlot: 'Social Feed',
-				stringName: 'menuSocialFeed'
-			}
-		}
-	]
+				stringName: 'menuSocialFeed',
+			},
+		},
+	],
 };
