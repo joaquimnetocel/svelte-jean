@@ -1,8 +1,6 @@
 <script lang="ts">
 	// COMPONENTS:
-	import { Language, Links, Notifications, User } from '$lib/index.js';
-	import ComponentChat from './folderComponents/componentChat/component.svelte';
-	import ComponentSearch from './folderComponents/folderHeader/componentSearch/component.svelte';
+	import { Language, Links, Notifications, Search, User, Whatsapp } from '$lib/index.js';
 	// DATA:
 	import { arrayLanguages } from './folderData/arrayLanguages.js';
 	import { arrayLinks } from './folderData/arrayLinks.js';
@@ -30,14 +28,21 @@
 				<Logo propTitle="jean" propLanguage={data.urlLanguage} />
 			</svelte:fragment>
 			<svelte:fragment slot="slotCenter">
-				<ComponentSearch />
+				<Search />
 			</svelte:fragment>
 			<svelte:fragment slot="slotRight">
 				<ColorScheme />
 				<Language propLanguages={arrayLanguages} propSelected={data.urlLanguage} />
 				<Notifications propNotifications={arrayNotifications} />
 				<Links propLinks={arrayLinks} />
-				<User propUserMenu={arrayUserMenu} />
+				<User propUserMenu={arrayUserMenu}>
+					<span slot="slotBeforeOptions">
+						<div class="text-center mb-3 mx-3">SLOT (slotBeforeOptions)</div>
+					</span>
+					<span slot="slotFooter">
+						<div class="my-2 text-center fw-bold fs--2 text-600">SLOT (slotFooter)</div>
+					</span>
+				</User>
 			</svelte:fragment>
 		</Header>
 	</svelte:fragment>
@@ -49,10 +54,8 @@
 	<svelte:fragment slot="slotFooter">
 		<Footer>
 			<svelte:fragment slot="slotLeft">
-				Thank you for creating with Jean<span class="d-none d-sm-inline-block" />
-				<span class="d-none d-sm-inline-block mx-1">| </span>
-				<br class="d-sm-none" />{new Date().getFullYear()} ©
-				<a class="mx-1" href="https://themewagon.com/"> GitHub </a>
+				Thank you for creating with svelteJean {new Date().getFullYear()} ©
+				<a class="mx-1" href="https://github.com/"> GitHub </a>
 			</svelte:fragment>
 			<svelte:fragment slot="slotRight">v0.0.0</svelte:fragment>
 		</Footer>
@@ -61,6 +64,6 @@
 		<Customize />
 	</svelte:fragment>
 	<svelte:fragment slot="slotRightBottom">
-		<ComponentChat />
+		<Whatsapp propHref="" />
 	</svelte:fragment>
 </Template>

@@ -21,7 +21,9 @@
 			<ComponentMobileMenuButton />
 			<slot name="slotLeft" />
 		</div>
-		<slot name="slotCenter" />
+		<div class="d-none d-lg-block">
+			<slot name="slotCenter">SLOT (slotCenter)</slot>
+		</div>
 		<ul class="navbar-nav navbar-nav-icons flex-row">
 			<slot name="slotRight" />
 		</ul>
