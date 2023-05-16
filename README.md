@@ -13,14 +13,7 @@ ADMIN TEMPLATE FOR SVELTEKIT.
 ```bash
 npm install svelte-jean.tar.gz ## OR npm install svelte-jean
 npx cpx node_modules/svelte-jean/dist/folderCopy/staticJean/**/* static/staticJean
-npx cpx node_modules/svelte-jean/dist/folderCopy/routeJean/**/* src/routes/routeJean
-cd src/routes/routeJean
-npx replace '../../../../index.js' 'svelte-jean' . -r
-npx replace '../../../index.js' 'svelte-jean' . -r
-npx replace '../../index.js' 'svelte-jean' . -r
-cd ..
-cd ..
-cd ..
+npm run dev
 ```
 
-FINALLY, RUN `npm run dev` AND VISIT `http://localhost:5173/routeJean`
+FINALLY, RUN `npm run dev` AND VISIT `http://localhost:5173/en`

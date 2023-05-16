@@ -8,7 +8,7 @@
 	import { functionCreateMobileMenuStore } from './stores/storeMobileMenu.js';
 	import {
 		functionCreateRightBottomStore,
-		functionReadRightBottomStore
+		functionReadRightBottomStore,
 	} from './stores/storeRightBottom.js';
 	import { functionCreateSidebarStore } from './stores/storeSidebar.js';
 	import type { typeSidebarColor } from './stores/storeSidebarColor.js';
@@ -16,7 +16,7 @@
 	import type { typeTextDirection } from './stores/storeTextDirection.js';
 	import {
 		functionCreateTextDirectionStore,
-		functionReadTextDirectionStore
+		functionReadTextDirectionStore,
 	} from './stores/storeTextDirection.js';
 	import type { typeAllLanguages } from './typeAllLanguages.js';
 	import type { typeInitialProps } from './typeInitialProps.js';
@@ -38,7 +38,7 @@
 		propColorScheme,
 		propSidebar,
 		propRightBottom,
-		propTextDirection
+		propTextDirection,
 	};
 	// CONTEXT:
 	setContext<typeAllLanguages>('contextLanguage', propLanguage);
@@ -60,6 +60,7 @@
 <svelte:head>
 	<link href="/staticJean/folderCss/solto.css" rel="stylesheet" type="text/css" />
 	<link href="/staticJean/folderCss/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="/staticJean/folderCss/boxicons.min.css" rel="stylesheet" type="text/css" />
 	<!-- <link
 		href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 		rel="stylesheet"
