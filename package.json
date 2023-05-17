@@ -1,6 +1,6 @@
 {
 	"name": "svelte-jean",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"scripts": {
 		"package-prepare": "cpx static/staticJean/**/* src/lib/folderCopy/staticJean && npm run build",
 		"package-tar-gz": "cpx package.json package && cpx README.md package && cpx dist/**/* package/dist",
