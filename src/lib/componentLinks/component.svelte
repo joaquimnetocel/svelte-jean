@@ -85,4 +85,10 @@
 	.hover-bg-200:hover {
 		background-color: var(--phoenix-gray-200) !important;
 	}
+	.dropdown-nide-dots {
+		min-width: 15.375rem;
+	}
+	.dropdown-nide-dots.dropdown-menu-end:after {
+		right: 0.75rem !important;
+	}
 </style>

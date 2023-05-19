@@ -17,3 +17,9 @@
 		</div>
 	</div>
 </a>
+
+<style>
+	.navbar-brand {
+		margin-left: 0.4rem;
+	}
+</style>

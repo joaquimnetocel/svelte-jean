@@ -48,4 +48,23 @@
 		--phoenix-input-bg: #222834;
 		--phoenix-input-border-color: #373e53;
 	}
+	.navbar .navbar-logo {
+		height: 4rem;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+	.navbar-top {
+		font-size: 0.8rem;
+		font-weight: 600;
+		padding: 0;
+		background: var(--phoenix-navbar-top-bg-color);
+		min-height: var(--phoenix-navbar-top-height);
+		color: var(--phoenix-nav-link-color);
+		padding: 0 1.5rem 0 1.5rem;
+		border-bottom: 1px solid var(--phoenix-navbar-vertical-border-color);
+	}
 </style>

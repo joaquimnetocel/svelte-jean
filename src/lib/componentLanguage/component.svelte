@@ -53,7 +53,7 @@
 	{#if !stateCollapsed}
 		<div
 			transition:slide
-			class="show dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-nide-dots shadow border border-300"
+			class="show dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 shadow border border-300"
 			aria-labelledby="navbarDropdownNindeDots"
 			data-bs-popper="static"
 		>

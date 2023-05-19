@@ -75,4 +75,30 @@
 	.white-space-nowrap {
 		white-space: nowrap;
 	}
+	@media (min-width: 992px) {
+		:global(.navbar-vertical-collapsed)
+			:global(.navbar-vertical.navbar-expand-lg)
+			.navbar-vertical-footer {
+			bottom: 0;
+			width: calc(4rem - 1px);
+			background-color: var(--phoenix-navbar-vertical-bg-color);
+			padding-left: 0rem !important;
+			padding-right: 0rem !important;
+			-webkit-transition: width 0.2s ease;
+			-o-transition: width 0.2s ease;
+			transition: width 0.2s ease;
+		}
+		:global(.navbar-vertical-collapsed)
+			:global(.navbar-vertical.navbar-expand-lg)
+			:global(.navbar-vertical-footer)
+			.uil-arrow-from-right {
+			display: inline;
+		}
+		:global(.navbar-vertical-collapsed)
+			:global(.navbar-vertical.navbar-expand-lg)
+			:global(.navbar-vertical-footer)
+			.uil-left-arrow-to-left {
+			display: none;
+		}
+	}
 </style>

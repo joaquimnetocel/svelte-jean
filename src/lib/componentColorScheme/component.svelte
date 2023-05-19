@@ -79,3 +79,39 @@
 		</label>
 	</div>
 </li>
+
+<style>
+	.theme-control-toggle-input:not(:checked) ~ .theme-control-toggle-light {
+		display: none;
+	}
+	.theme-control-toggle-input:checked ~ .theme-control-toggle-dark {
+		display: none;
+	}
+	.theme-control-toggle .theme-control-toggle-input {
+		display: none;
+	}
+	.theme-control-toggle .theme-control-toggle-label:hover {
+		background-color: var(--phoenix-theme-control-toggle-hover-bg);
+		color: var(--phoenix-theme-control-toggle-hover-color);
+	}
+	.theme-control-toggle .theme-control-toggle-label {
+		height: 2rem;
+		width: 2rem;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		background-color: var(--phoenix-theme-control-toggle-bg);
+		color: var(--phoenix-theme-control-toggle-color);
+		border-radius: 50%;
+		cursor: pointer;
+		-webkit-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+</style>

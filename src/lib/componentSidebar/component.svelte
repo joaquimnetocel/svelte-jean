@@ -99,4 +99,15 @@
 	:global(html:not(.navbar-vertical-collapsed)) .navbar-vertical-content {
 		overflow: auto;
 	}
+	@media (min-width: 992px) {
+		:global(.navbar-vertical-collapsed) .navbar-vertical.navbar-expand-lg {
+			position: absolute;
+			top: 0;
+			height: auto;
+			min-height: 100%;
+			padding-top: var(--phoenix-navbar-top-height);
+			padding-bottom: 4rem;
+			width: 4rem;
+		}
+	}
 </style>

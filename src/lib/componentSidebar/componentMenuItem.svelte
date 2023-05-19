@@ -1,28 +1,26 @@
 <script lang="ts">
-	// COMPONENTS
+	// COMPONENTS:
 	import ComponentSubmenuItem from './componentSubmenuItem.svelte';
-	/////
-	// NPM MODULE
+	// NPM MODULES:
 	import { slide } from 'svelte/transition';
-	/////
-	// MODULES
+	// MODULES:
 	import { functionReadActiveMenuStore } from '../stores/storeActiveMenu.js';
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
 	import type { typeActiveMenu } from './typeActiveMenu.js';
 	import type { typeMenuArray } from './typeMenuArray.js';
-	/////
-	// STATES
+	// STATES:
 	let stateCollapsed = true;
-	/////
-	// STORES
+	// STORES:
 	const storeSidebar = functionReadSidebarStore();
 	const storeActiveMenu = functionReadActiveMenuStore();
-	/////
-	// PROPS
+	// PROPS:
 	export let propMenuItem: typeMenuArray[number];
 	export let propActiveMenu: typeActiveMenu;
-	/////
+	// STATES:
+	let stateWindowWidth: number;
 </script>
+
+<svelte:window bind:innerWidth={stateWindowWidth} />
 
 <li class="nav-item">
 	<div class="nav-item-wrapper">
@@ -101,7 +99,7 @@
 					<!---->
 				</div>
 			</a>
-			{#if !stateCollapsed || $storeSidebar}
+			{#if !stateCollapsed || ($storeSidebar && stateWindowWidth >= 992)}
 				<div transition:slide class="parent-wrapper label-1">
 					<ul class="nav collapse parent show" data-bs-parent="#navbarVerticalCollapse" id="home">
 						<li class="collapsed-nav-item-title d-none">{propMenuItem.objectMenu.stringSlot}</li>
