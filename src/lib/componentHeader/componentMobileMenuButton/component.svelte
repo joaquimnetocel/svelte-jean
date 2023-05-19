@@ -20,3 +20,10 @@
 >
 	<span class="navbar-toggle-icon"><span class="toggle-line" /></span>
 </button>
+
+<style>
+	.hover-bg-transparent:hover,
+	.hover-bg-transparent:focus {
+		background-color: rgba(0, 0, 0, 0) !important;
+	}
+</style>

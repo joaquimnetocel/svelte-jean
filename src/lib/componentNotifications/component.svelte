@@ -6,11 +6,6 @@
 	import { slide } from 'svelte/transition';
 	// IMAGES:
 	import imageUserWithoutPicture from './imageUserWithoutPicture.webp';
-	// import image30 from './folderImages/image30.webp';
-	// import image57 from './folderImages/image57.webp';
-	// import image58 from './folderImages/image58.webp';
-	// import image59 from './folderImages/image59.webp';
-	// import imageAvatar from './folderImages/imageAvatar.webp';
 
 	// PROPS:
 	export let propNotifications: typeNotificationsArray = [];
@@ -245,3 +240,101 @@
 		</div>
 	{/if}
 </li>
+
+<style>
+	.notification-card.unread {
+		background-color: var(--phoenix-gray-100);
+	}
+	:global(.dark) .notification-card.unread {
+		background-color: var(--phoenix-white);
+	}
+	.notification-card:hover {
+		background-color: var(--phoenix-gray-200) !important;
+	}
+	.fs--1 {
+		font-size: 0.8rem !important;
+	}
+	.flex-1 {
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	}
+	.simplebar-scrollbar::before {
+		background: var(--phoenix-scrollbar-bg);
+	}
+	.simplebar-content-wrapper::-webkit-scrollbar {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+	.simplebar-track.simplebar-vertical {
+		width: 10px;
+	}
+	.scrollbar-overlay:hover::-webkit-scrollbar,
+	.scrollbar-overlay:hover::-webkit-scrollbar-thumb,
+	.scrollbar-overlay:focus::-webkit-scrollbar,
+	.scrollbar-overlay:focus::-webkit-scrollbar-thumb {
+		visibility: visible;
+	}
+	.scrollbar-overlay {
+		overflow: auto;
+	}
+	.scrollbar-overlay::-webkit-scrollbar {
+		visibility: hidden;
+		-webkit-appearance: none;
+		width: 6px;
+		height: 6px;
+		background-color: rgba(0, 0, 0, 0);
+	}
+	.scrollbar-overlay::-webkit-scrollbar-thumb {
+		visibility: hidden;
+		border-radius: 3px;
+		background-color: var(--phoenix-scrollbar-bg);
+	}
+	.avatar {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.avatar-name {
+		font-size: 1.5789473684rem;
+		line-height: 1.2;
+	}
+	.avatar-m {
+		height: 2rem;
+		width: 2rem;
+	}
+	.status-online:before {
+		background-color: var(--phoenix-success);
+	}
+	.avatar .avatar-name {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		text-align: center;
+		color: var(--phoenix-avatar-name-color);
+		background-color: var(--phoenix-primary-100);
+		font-weight: bold;
+		text-transform: uppercase;
+		display: block;
+	}
+
+	.avatar img {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+		display: block;
+	}
+	.avatar-name > span {
+		position: absolute;
+		top: 53%;
+		left: 50%;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+		transform: translate3d(-50%, -50%, 0);
+		font-weight: 900 !important;
+	}
+	.avatar .avatar-placeholder {
+		background: var(--phoenix-gray-200);
+	}
+</style>

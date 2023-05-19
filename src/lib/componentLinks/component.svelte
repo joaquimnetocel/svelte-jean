@@ -62,7 +62,7 @@
 				<div class="card-body pt-3 px-3 pb-0 overflow-auto scrollbar" style="height: 20rem">
 					<div class="row text-center align-items-center gx-0 gy-0">
 						{#each propLinks as currentLink}
-							<div class="col-4">
+							<div class="col-4" style="width: 33.33333333%;">
 								<a
 									class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
 									href={currentLink.stringLink}
@@ -80,3 +80,9 @@
 		</div>
 	{/if}
 </li>
+
+<style>
+	.hover-bg-200:hover {
+		background-color: var(--phoenix-gray-200) !important;
+	}
+</style>

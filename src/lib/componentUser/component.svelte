@@ -114,6 +114,11 @@
 </li>
 
 <style>
+	.avatar {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
 	.classAvatar {
 		position: relative;
 		display: inline-block;
@@ -122,5 +127,16 @@
 	.classAvatar-l {
 		height: 2.5rem;
 		/* width: 2.5rem; */
+	}
+	.avatar-xl {
+		height: 3rem;
+		width: 3rem;
+	}
+	.avatar img {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+		display: block;
 	}
 </style>

@@ -461,3 +461,160 @@
 		<small class="text-uppercase text-700 fw-bold py-2 pe-2 ps-1 rounded-end">customize</small>
 	</div>
 </a>
+
+<style>
+	.dark .settings-panel .btn {
+		--phoenix-btn-color: #8a94ad;
+	}
+	:global(.dark) .offcanvas {
+		--phoenix-offcanvas-bg: #141824;
+	}
+	.col-6 {
+		width: 50%;
+	}
+	.form-switch {
+		padding-left: 2.5em;
+	}
+	.form-switch .form-check-input {
+		width: 2em;
+		margin-left: -2.5em;
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+		background-position: left center;
+		border-radius: 2em;
+		-webkit-transition: background-position 0.15s ease-in-out;
+		-o-transition: background-position 0.15s ease-in-out;
+		transition: background-position 0.15s ease-in-out;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.form-switch .form-check-input {
+			-webkit-transition: none;
+			-o-transition: none;
+			transition: none;
+		}
+	}
+	.form-switch .form-check-input:focus {
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+	}
+	.form-switch .form-check-input:checked {
+		background-position: right center;
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+	}
+	.fs--1 {
+		font-size: 0.8rem !important;
+	}
+	:global(.dark) .d-dark-none {
+		display: none;
+	}
+	.all-0 {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.flex-center {
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	.form-switch .form-check-input:checked {
+		background-color: #3874ff;
+	}
+	.setting-toggle:hover {
+		text-decoration: none !important;
+	}
+	@media (max-width: 575.98px) {
+		.setting-toggle {
+			-webkit-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+			outline: none;
+		}
+		.setting-toggle small {
+			display: none;
+		}
+	}
+	.setting-toggle {
+		position: fixed;
+		top: 50%;
+		right: -3px;
+		text-decoration: none;
+		z-index: 1016;
+		-webkit-transform: rotate(-90deg) translate3d(-25px, 39px, 0);
+		transform: rotate(-90deg) translate3d(-25px, 39px, 0);
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		margin-top: -83px;
+		-webkit-box-shadow: var(--phoenix-setting-toggle-shadow);
+		box-shadow: var(--phoenix-setting-toggle-shadow);
+	}
+
+	.settings-panel {
+		max-width: 28.62rem;
+		width: 100% !important;
+	}
+	.setting-panel-item {
+		border-radius: 0.5rem;
+		background-color: var(--phoenix-gray-soft);
+		margin-top: 1rem;
+		border: 1px solid var(--phoenix-border-color);
+		padding: 1rem 1rem 0 1rem;
+	}
+	@media (min-width: 768px) {
+		.setting-panel-item {
+			padding: 1.5rem 1.5rem 0.25rem 1.5rem;
+		}
+	}
+	.setting-panel-item-title {
+		line-height: 1.2;
+		color: var(--phoenix-gray-900);
+		margin-bottom: 0.5rem;
+	}
+	.setting-panel-item .btn-check + .btn-navbar-style {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		padding: 0;
+		margin-bottom: 1rem;
+		text-align: left;
+	}
+	.setting-panel-item .btn-check + .btn-navbar-style .img-prototype {
+		border: 2px solid var(--phoenix-gray-200);
+		border-radius: 0.5rem;
+		-webkit-transition: border 0.2s ease;
+		-o-transition: border 0.2s ease;
+		transition: border 0.2s ease;
+		margin-bottom: 0.5rem;
+		background-color: var(--phoenix-gray-100);
+	}
+	.setting-panel-item .btn-check + .btn-navbar-style .label-text {
+		position: relative;
+		padding-left: 1.5rem;
+	}
+	.setting-panel-item .btn-check + .btn-navbar-style .label-text:after {
+		position: absolute;
+		content: '';
+		left: 0;
+		width: 1rem;
+		height: 1rem;
+		border: 1px solid var(--phoenix-gray-500);
+		border-radius: 50%;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		-webkit-transition: border 0.2s ease;
+		-o-transition: border 0.2s ease;
+		transition: border 0.2s ease;
+	}
+	.setting-panel-item .btn-check:checked:not([disabled]) + .btn-navbar-style .img-prototype {
+		border-color: var(--phoenix-primary);
+	}
+	.setting-panel-item .btn-check:checked:not([disabled]) + .btn-navbar-style .label-text::after {
+		border: 5px solid var(--phoenix-primary);
+	}
+	.setting-panel-item .btn-check:disabled + .btn-navbar-style {
+		opacity: 0.5;
+	}
+</style>

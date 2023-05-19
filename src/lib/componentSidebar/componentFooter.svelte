@@ -49,3 +49,30 @@
 		{/if}
 	</button>
 </div>
+
+<style>
+	.navbar-vertical-footer {
+		position: fixed;
+		width: 15.875rem;
+		height: 4rem;
+		display: none;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		bottom: 0;
+		border-top: 1px solid var(--phoenix-navbar-footer-border-color);
+		-webkit-transition: width 0.2s ease;
+		-o-transition: width 0.2s ease;
+		transition: width 0.2s ease;
+	}
+	.btn {
+		color: var(--phoenix-navbar-vertical-link-color);
+		text-decoration: none;
+	}
+	.btn:hover {
+		color: var(--phoenix-navbar-vertical-link-hover-color);
+	}
+	.white-space-nowrap {
+		white-space: nowrap;
+	}
+</style>

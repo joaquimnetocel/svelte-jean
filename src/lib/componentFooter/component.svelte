@@ -12,3 +12,32 @@
 		</div>
 	</div>
 </footer>
+
+<style>
+	@media (min-width: 576px) {
+		.col-sm-auto {
+			-webkit-box-flex: 0;
+			-ms-flex: 0 0 auto;
+			flex: 0 0 auto;
+			width: auto;
+		}
+	}
+	.footer {
+		bottom: 0;
+		width: 100%;
+		height: 6rem;
+		border-top: 1px solid var(--phoenix-navbar-footer-border-color);
+		padding: 0 1.5rem;
+		left: 0;
+	}
+	@media (min-width: 576px) {
+		.footer {
+			height: 4rem;
+		}
+	}
+	@media (min-width: 992px) {
+		.footer {
+			padding: 0 2.5rem;
+		}
+	}
+</style>

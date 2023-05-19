@@ -11,4 +11,123 @@ export const arrayMenus: typeMenuArray<typeMenuName> = [
 	objectMenuHome,
 	objectMenuStore,
 	objectMenuEcommerce,
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
+	{
+		objectMenu: {
+			stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
+			stringSlot: 'Home',
+			stringName: 'menuEcommerce',
+		},
+	},
 ];

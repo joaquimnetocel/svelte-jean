@@ -70,7 +70,7 @@
 	{#if $storeTextDirection === 'enumRightToLeft'}
 		<link href="/staticJean/folderCss/theme-rtl.min.css" rel="stylesheet" type="text/css" />
 	{:else}
-		<link href="/staticJean/folderCss/theme.min.css" rel="stylesheet" type="text/css" />
+		<link href="/staticJean/folderCss/theme.slim.css" rel="stylesheet" type="text/css" />
 	{/if}
 </svelte:head>
 

@@ -17,3 +17,10 @@
 		</button>
 	</div>
 </form>
+
+<style>
+	:global(.dark) .btn-outline-secondary {
+		--phoenix-btn-color: #cbd0dd;
+		--phoenix-btn-border-color: #cbd0dd;
+	}
+</style>

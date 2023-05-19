@@ -275,3 +275,29 @@
 		><!-- <span class="fa-solid fa-chevron-down text-primary fs-1"></span> Font Awesome fontawesome.com -->
 	</button>
 </div>
+
+<style>
+	.fs--1 {
+		font-size: 0.8rem !important;
+	}
+	.flex-1 {
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	}
+	.status-online:before {
+		background-color: var(--phoenix-success);
+	}
+	.avatar {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.avatar img {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+		display: block;
+	}
+</style>
