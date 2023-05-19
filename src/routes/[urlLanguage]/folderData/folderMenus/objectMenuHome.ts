@@ -14,5 +14,6 @@ export const objectMenuHome: typeMenuArray<typeMenuHomeName>[number] = {
 		stringIcon: `<i style='font-size: 16px;' class='bx bx-home bx-tada-hover mt-1'></i>`,
 		stringSlot: 'Home',
 		stringName: 'menuHome',
+		stringHref: '/aa',
 	},
 };
