@@ -8,14 +8,11 @@ ONCE YOU'VE CREATED A PROJECT AND INSTALLED DEPENDENCIES WITH `npm install` (OR 
 npm run dev
 ```
 
-EVERYTHING INSIDE `src/lib` IS PART OF THE LIBRARY AND EVERYTHING INSIDE `src/routes` IS A SHOWCASE OR PREVIEW APP.
-
 ## BUILDING
 
 TO BUILD THE PACKAGE:
 
 ```bash
-npm run package-prepare
 npm run package
 ```
 
@@ -46,7 +43,6 @@ npm pack svelte-jean
 ## GENERATING A _.tar.gz_ FILE WITHOUT PUBLISHING TO NPM
 
 ```bash
-npm run package-prepare
 npm run package-tar-gz
 ```
 

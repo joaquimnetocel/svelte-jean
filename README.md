@@ -1,19 +1,38 @@
 # svelte-jean
 
-ADMIN TEMPLATE FOR SVELTEKIT.
+SVELTEKIT ADMIN TEMPLATE BASED ON BOOTSTRAP 5.
 
-## USING ON _[SVELTEKIT](https://kit.svelte.dev/)_
+## FEATURES
 
-* OPEN AN EXISTING _SVELTEKIT_ PROJECT OR CREATE A NEW PROJECT WITH `npm create svelte@latest project-name`.
+* RESPONSIVE.
+* MULTILEVEL MENUS.
+* USES ONLY BOOTSTRAP CSS (BOOTSTRAP JS IS NOT USED).
+* CUSTOMIZABLE.
+* LIGHT/DARK MODE.
+* TYPESCRIPT SUPPORT.
+* NOTIFICATIONS MENU.
+* USER MENU.
+
+## DEMO
+
+[DEMO (CLICK HERE)](https://www.google.com.br)
+
+## INSTALLATION FROM NPM
+
+```bash
+npm install svelte-jean
+```
+
+## INSTALLATION FROM `.tar.gz` FILE
 
 * COPY `svelte-jean.tar.gz` TO THE _SVELTEKIT_ PROJECT FOLDER.
 
 * GO TO THE _SVELTEKIT_ PROJECT FOLDER AND RUN:
 
 ```bash
-npm install svelte-jean.tar.gz ## OR npm install svelte-jean
-npx cpx node_modules/svelte-jean/dist/folderCopy/staticJean/**/* static/staticJean
-npm run dev
+npm install svelte-jean.tar.gz
 ```
 
-FINALLY, RUN `npm run dev` AND VISIT `http://localhost:5173/en`
+## COMPONENT STRUCTURE
+
+## PARAMETERS AND PROPS
