@@ -1,75 +1,90 @@
 // MODULES:
 import type { typeLinksArray } from '$lib/index.js';
+// IMAGES
+import imageBehance from '../folderImages/folderWebServices/imageBehance.webp';
+import imageBitbucket from '../folderImages/folderWebServices/imageBitbucket.webp';
+import imageFigma from '../folderImages/folderWebServices/imageFigma.webp';
+import imageGitlab from '../folderImages/folderWebServices/imageGitlab.webp';
+import imageGoogleCloud from '../folderImages/folderWebServices/imageGoogleCloud.webp';
+import imageGoogleDrive from '../folderImages/folderWebServices/imageGoogleDrive.webp';
+import imageGoogleMaps from '../folderImages/folderWebServices/imageGoogleMaps.webp';
+import imageGooglePhotos from '../folderImages/folderWebServices/imageGooglePhotos.webp';
+import imageLinkedin from '../folderImages/folderWebServices/imageLinkedin.webp';
+import imagePinterest from '../folderImages/folderWebServices/imagePinterest.webp';
+import imageSlack from '../folderImages/folderWebServices/imageSlack.webp';
+import imageSpotify from '../folderImages/folderWebServices/imageSpotify.webp';
+import imageTrello from '../folderImages/folderWebServices/imageTrello.webp';
+import imageTwitter from '../folderImages/folderWebServices/imageTwitter.webp';
 
 // EXPORTS:
 export const arrayLinks: typeLinksArray = [
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageBehance.webp',
+		stringImage: imageBehance,
 		stringText: 'Behance',
 		stringLink: 'https://www.behance.net/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageBitbucket.webp',
+		stringImage: imageBitbucket,
 		stringText: 'Bitbucket',
 		stringLink: 'https://bitbucket.org/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageFigma.webp',
+		stringImage: imageFigma,
 		stringText: 'Figma',
 		stringLink: 'https://www.figma.com/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageGitlab.webp',
+		stringImage: imageGitlab,
 		stringText: 'Gitlab',
 		stringLink: 'https://about.gitlab.com/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageGoogleCloud.webp',
+		stringImage: imageGoogleCloud,
 		stringText: 'Google Cloud',
 		stringLink: 'https://cloud.google.com/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageGoogleDrive.webp',
+		stringImage: imageGoogleDrive,
 		stringText: 'Google Drive',
 		stringLink: 'https://drive.google.com/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageGoogleMaps.webp',
+		stringImage: imageGoogleMaps,
 		stringText: 'Google Maps',
 		stringLink: 'https://www.google.com.br/maps/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageGooglePhotos.webp',
+		stringImage: imageGooglePhotos,
 		stringText: 'Google Photos',
 		stringLink: 'https://photos.google.com/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageLinkedin.webp',
+		stringImage: imageLinkedin,
 		stringText: 'Linkedin',
 		stringLink: 'https://www.linkedin.com/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imagePinterest.webp',
+		stringImage: imagePinterest,
 		stringText: 'Pinterest',
 		stringLink: '',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageSlack.webp',
+		stringImage: imageSlack,
 		stringText: 'Slack',
 		stringLink: 'https://slack.com/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageSpotify.webp',
+		stringImage: imageSpotify,
 		stringText: 'Spotify',
 		stringLink: 'https://open.spotify.com/',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageTrello.webp',
+		stringImage: imageTrello,
 		stringText: 'Trello',
 		stringLink: 'https://trello.com/pt-BR',
 	},
 	{
-		stringImage: '/staticJean/folderImages/folderWebServices/imageTwitter.webp',
+		stringImage: imageTwitter,
 		stringText: 'Twitter',
 		stringLink: 'https://twitter.com/',
 	},

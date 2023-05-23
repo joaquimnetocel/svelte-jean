@@ -1454,18 +1454,6 @@ html:not(.dark) .d-light-none {
 	letter-spacing: -0.04em;
 	margin-bottom: 0;
 }
-/* h1,
-.h1 {
-	font-weight: 800;
-} */
-/* h2,
-.h2 {
-	font-weight: 800;
-} */
-/* h3,
-.h3 {
-	font-weight: 800;
-} */
 @-webkit-keyframes strokeAnimation {
 	to {
 		stroke-dashoffset: calc(340px - 188px * var(--jean-circle-progress-bar) / 100);

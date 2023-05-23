@@ -1,16 +1,21 @@
 // MODULES:
 import type { typeNotificationsArray } from '$lib/index.js';
+// IMAGES:
+import imageLiz from '../folderImages/folderUsers/imageLiz.webp';
+import imageMaria from '../folderImages/folderUsers/imageMaria.webp';
+import imageMark from '../folderImages/folderUsers/imageMark.webp';
+import imageRobert from '../folderImages/folderUsers/imageRobert.webp';
 
 // EXPORTS:
 export const arrayNotifications: typeNotificationsArray = [
 	{
 		booleanRead: true,
-		stringTitle: 'Joaquim Neto',
+		stringTitle: 'Mark Stuart',
 		stringText: 'Mentioned you in a comment.',
 		stringIcon: '💬',
 		stringDate: `<span class="fw-bold">10:41 AM</span>
 		August 7,2021`,
-		stringImage: '/staticJean/folderImages/folderUsers/image30.webp',
+		stringImage: imageMark,
 		booleanOnline: true,
 		stringSecondaryText: '10m',
 	},
@@ -41,7 +46,7 @@ export const arrayNotifications: typeNotificationsArray = [
 		stringTitle: 'Maria Smith',
 		stringText: 'Mentioned you in a comment.',
 		stringIcon: '💬',
-		stringImage: '/staticJean/folderImages/folderUsers/image57.webp',
+		stringImage: imageMaria,
 		stringDate: `<span class="fw-bold">10:41 AM</span>
 		August 7,2021`,
 		booleanOnline: false,
@@ -52,7 +57,7 @@ export const arrayNotifications: typeNotificationsArray = [
 		stringTitle: 'Liz Samson',
 		stringText: 'Tagged you in a comment.',
 		stringIcon: '👤',
-		stringImage: '/staticJean/folderImages/folderUsers/image59.webp',
+		stringImage: imageLiz,
 		stringDate: `<span class="fw-bold">10:41 AM</span>
 		August 7,2021`,
 		booleanOnline: false,
@@ -62,7 +67,7 @@ export const arrayNotifications: typeNotificationsArray = [
 		booleanRead: false,
 		stringTitle: 'Robert Button',
 		stringText: 'Liked your comment.',
-		stringImage: '/staticJean/folderImages/folderUsers/image58.webp',
+		stringImage: imageRobert,
 		stringIcon: '👍',
 		stringDate: undefined,
 		booleanOnline: true,
