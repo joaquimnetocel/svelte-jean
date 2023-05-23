@@ -1,18 +1,15 @@
 <script lang="ts">
-	// COMPONENTS
+	// COMPONENTS:
 	import ComponentFooter from './componentFooter.svelte';
 	import ComponentMenuItem from './componentMenuItem.svelte';
-	/////
-	// MODULES
+	// MODULES:
 	import { functionReadMobileMenuStore } from '../stores/storeMobileMenu.js';
 	import { functionReadSidebarColorStore } from '../stores/storeSidebarColor.js';
 	import type { typeActiveMenu } from './typeActiveMenu.js';
 	import type { typeMenuArray } from './typeMenuArray.js';
-	/////
-	// NPM MODULES
+	// NPM MODULES:
 	import { slide } from 'svelte/transition';
-	/////
-	// PROPS
+	// PROPS:
 	export let propMenu: typeMenuArray = [];
 	export let propActiveMenu: typeActiveMenu = {
 		stringBackgroundColor: '#ffecd2',
@@ -20,12 +17,10 @@
 		stringBackgroundGradientDirection: '270deg',
 		stringColor: 'black',
 	};
-	/////
-
-	// STORES
+	export let propFooterText = 'COLLAPSED VIEW';
+	// STORES:
 	const storeMobileMenu = functionReadMobileMenuStore();
 	const storeSidebarColor = functionReadSidebarColorStore();
-	/////
 </script>
 
 <nav
@@ -51,7 +46,7 @@
 			</ul>
 		</div>
 	</div>
-	<ComponentFooter />
+	<ComponentFooter {propFooterText} />
 </nav>
 
 <style>

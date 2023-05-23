@@ -1,13 +1,12 @@
 <script lang="ts">
-	// MODULES
+	// MODULES:
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
-	/////
-	// NPM MODULES
+	// NPM MODULES:
 	import { Body } from 'svelte-body';
-	/////
-	// STORES
+	// STORES:
 	const storeSidebar = functionReadSidebarStore();
-	/////
+	// PROPS:
+	export let propFooterText = 'COLLAPSED VIEW';
 </script>
 
 <Body class={$storeSidebar ? 'navbar-vertical-collapsed' : ''} />
@@ -33,7 +32,7 @@
 			</svg>
 		{:else}
 			<span class="navbar-vertical-footer-text ms-2">
-				Collapsed View
+				{propFooterText}
 				<svg
 					fill="var(--jean-navbar-vertical-link-color)"
 					width="16"
