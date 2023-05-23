@@ -42,7 +42,7 @@
 		>
 		<svg
 			width="8"
-			fill="var(--phoenix-body-color)"
+			fill="var(--jean-body-color)"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 320 512"
 		>
@@ -83,7 +83,7 @@
 
 <style>
 	.hover-bg-200:hover {
-		background-color: var(--phoenix-gray-200) !important;
+		background-color: var(--jean-gray-200) !important;
 	}
 	.dropdown-nide-dots {
 		min-width: 15.375rem;

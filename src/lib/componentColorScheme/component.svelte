@@ -20,7 +20,7 @@
 			}}
 			class="form-check-input ms-0 theme-control-toggle-input"
 			type="checkbox"
-			data-theme-control="phoenixTheme"
+			data-theme-control="jeanTheme"
 			value="dark"
 			id="themeControlToggle"
 		/>
@@ -91,8 +91,8 @@
 		display: none;
 	}
 	.theme-control-toggle .theme-control-toggle-label:hover {
-		background-color: var(--phoenix-theme-control-toggle-hover-bg);
-		color: var(--phoenix-theme-control-toggle-hover-color);
+		background-color: var(--jean-theme-control-toggle-hover-bg);
+		color: var(--jean-theme-control-toggle-hover-color);
 	}
 	.theme-control-toggle .theme-control-toggle-label {
 		height: 2rem;
@@ -106,8 +106,8 @@
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
 		justify-content: center;
-		background-color: var(--phoenix-theme-control-toggle-bg);
-		color: var(--phoenix-theme-control-toggle-color);
+		background-color: var(--jean-theme-control-toggle-bg);
+		color: var(--jean-theme-control-toggle-color);
 		border-radius: 50%;
 		cursor: pointer;
 		-webkit-transition: all 0.2s ease-in-out;

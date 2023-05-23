@@ -38,7 +38,7 @@
 		<div class="classAvatar classAvatar-l">
 			<img width="40" class="rounded-circle" src={propImage} alt="" />
 			<svg
-				fill="var(--phoenix-body-color)"
+				fill="var(--jean-body-color)"
 				width="8"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 320 512"
@@ -83,10 +83,7 @@
 				</div>
 				<div class="card-footer p-0 border-top">
 					<div class="px-3 mt-3">
-						<a
-							class="btn btn-phoenix-secondary d-flex flex-center w-100"
-							href={propSignOutButtonHref}
-						>
+						<a class="btn btn-jean-secondary d-flex flex-center w-100" href={propSignOutButtonHref}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="16px"

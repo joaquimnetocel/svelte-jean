@@ -40,7 +40,7 @@
 			{objectSelectedLanguage.stringCode.toUpperCase()}
 		{/if}
 		<svg
-			fill="var(--phoenix-body-color)"
+			fill="var(--jean-body-color)"
 			width="8"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 320 512"

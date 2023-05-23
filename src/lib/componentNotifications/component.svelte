@@ -49,7 +49,7 @@
 			<path d="M13.73 21a2 2 0 0 1-3.46 0" />
 		</svg>
 		<svg
-			fill="var(--phoenix-body-color)"
+			fill="var(--jean-body-color)"
 			width="8"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 320 512"
@@ -230,13 +230,13 @@
 
 <style>
 	.notification-card.unread {
-		background-color: var(--phoenix-gray-100);
+		background-color: var(--jean-gray-100);
 	}
 	:global(.dark) .notification-card.unread {
-		background-color: var(--phoenix-white);
+		background-color: var(--jean-white);
 	}
 	.notification-card:hover {
-		background-color: var(--phoenix-gray-200) !important;
+		background-color: var(--jean-gray-200) !important;
 	}
 	.fs--1 {
 		font-size: 0.8rem !important;
@@ -247,7 +247,7 @@
 		flex: 1;
 	}
 	.simplebar-scrollbar::before {
-		background: var(--phoenix-scrollbar-bg);
+		background: var(--jean-scrollbar-bg);
 	}
 	.simplebar-content-wrapper::-webkit-scrollbar {
 		display: none;
@@ -276,7 +276,7 @@
 	.scrollbar-overlay::-webkit-scrollbar-thumb {
 		visibility: hidden;
 		border-radius: 3px;
-		background-color: var(--phoenix-scrollbar-bg);
+		background-color: var(--jean-scrollbar-bg);
 	}
 	.avatar {
 		position: relative;
@@ -292,15 +292,15 @@
 		width: 2rem;
 	}
 	.status-online:before {
-		background-color: var(--phoenix-success);
+		background-color: var(--jean-success);
 	}
 	.avatar .avatar-name {
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		text-align: center;
-		color: var(--phoenix-avatar-name-color);
-		background-color: var(--phoenix-primary-100);
+		color: var(--jean-avatar-name-color);
+		background-color: var(--jean-primary-100);
 		font-weight: bold;
 		text-transform: uppercase;
 		display: block;
@@ -322,6 +322,6 @@
 		font-weight: 900 !important;
 	}
 	.avatar .avatar-placeholder {
-		background: var(--phoenix-gray-200);
+		background: var(--jean-gray-200);
 	}
 </style>

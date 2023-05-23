@@ -56,21 +56,21 @@
 
 <style>
 	:global(.dark) .navbar-darker {
-		--phoenix-navbar-top-dropdown-hover-bg: #31374a;
-		--phoenix-navbar-vertical-bg-color: #222834;
-		--phoenix-navbar-vertical-label-color: #6e7891;
-		--phoenix-navbar-vertical-link-color: #9fa6bc;
-		--phoenix-navbar-vertical-link-hover-color: #eff2f6;
-		--phoenix-navbar-vertical-link-hover-bg: #31374a;
-		--phoenix-navbar-vertical-link-active-color: #fff;
-		--phoenix-navbar-vertical-link-disable-color: #8a94ad;
-		--phoenix-navbar-vertical-link-icon-color: #9fa6bc;
-		--phoenix-navbar-vertical-collapsed-menu-bg: #222834;
-		--phoenix-navbar-vertical-collapsed-menu-color: #9fa6bc;
-		--phoenix-navbar-top-bg-color: #222834;
-		--phoenix-nav-link-color: #8a94ad;
-		--phoenix-input-bg: #222834;
-		--phoenix-input-border-color: #373e53;
+		--jean-navbar-top-dropdown-hover-bg: #31374a;
+		--jean-navbar-vertical-bg-color: #222834;
+		--jean-navbar-vertical-label-color: #6e7891;
+		--jean-navbar-vertical-link-color: #9fa6bc;
+		--jean-navbar-vertical-link-hover-color: #eff2f6;
+		--jean-navbar-vertical-link-hover-bg: #31374a;
+		--jean-navbar-vertical-link-active-color: #fff;
+		--jean-navbar-vertical-link-disable-color: #8a94ad;
+		--jean-navbar-vertical-link-icon-color: #9fa6bc;
+		--jean-navbar-vertical-collapsed-menu-bg: #222834;
+		--jean-navbar-vertical-collapsed-menu-color: #9fa6bc;
+		--jean-navbar-top-bg-color: #222834;
+		--jean-nav-link-color: #8a94ad;
+		--jean-input-bg: #222834;
+		--jean-input-border-color: #373e53;
 	}
 	.navbar-vertical-content {
 		padding: 1rem 0;
@@ -87,7 +87,7 @@
 	:global(html:not(.navbar-vertical-collapsed)) .navbar-vertical-content::-webkit-scrollbar-thumb {
 		visibility: hidden;
 		border-radius: 3px;
-		background-color: var(--phoenix-scrollbar-bg);
+		background-color: var(--jean-scrollbar-bg);
 	}
 	:global(html:not(.navbar-vertical-collapsed)) .navbar-vertical-content::-webkit-scrollbar {
 		visibility: hidden;
@@ -105,7 +105,7 @@
 			top: 0;
 			height: auto;
 			min-height: 100%;
-			padding-top: var(--phoenix-navbar-top-height);
+			padding-top: var(--jean-navbar-top-height);
 			padding-bottom: 4rem;
 			width: 4rem;
 		}

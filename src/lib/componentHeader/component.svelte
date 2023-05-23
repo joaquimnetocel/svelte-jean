@@ -32,21 +32,21 @@
 
 <style>
 	:global(.dark) .navbar-darker {
-		--phoenix-navbar-top-dropdown-hover-bg: #31374a;
-		--phoenix-navbar-vertical-bg-color: #222834;
-		--phoenix-navbar-vertical-label-color: #6e7891;
-		--phoenix-navbar-vertical-link-color: #9fa6bc;
-		--phoenix-navbar-vertical-link-hover-color: #eff2f6;
-		--phoenix-navbar-vertical-link-hover-bg: #31374a;
-		--phoenix-navbar-vertical-link-active-color: #fff;
-		--phoenix-navbar-vertical-link-disable-color: #8a94ad;
-		--phoenix-navbar-vertical-link-icon-color: #9fa6bc;
-		--phoenix-navbar-vertical-collapsed-menu-bg: #222834;
-		--phoenix-navbar-vertical-collapsed-menu-color: #9fa6bc;
-		--phoenix-navbar-top-bg-color: #222834;
-		--phoenix-nav-link-color: #8a94ad;
-		--phoenix-input-bg: #222834;
-		--phoenix-input-border-color: #373e53;
+		--jean-navbar-top-dropdown-hover-bg: #31374a;
+		--jean-navbar-vertical-bg-color: #222834;
+		--jean-navbar-vertical-label-color: #6e7891;
+		--jean-navbar-vertical-link-color: #9fa6bc;
+		--jean-navbar-vertical-link-hover-color: #eff2f6;
+		--jean-navbar-vertical-link-hover-bg: #31374a;
+		--jean-navbar-vertical-link-active-color: #fff;
+		--jean-navbar-vertical-link-disable-color: #8a94ad;
+		--jean-navbar-vertical-link-icon-color: #9fa6bc;
+		--jean-navbar-vertical-collapsed-menu-bg: #222834;
+		--jean-navbar-vertical-collapsed-menu-color: #9fa6bc;
+		--jean-navbar-top-bg-color: #222834;
+		--jean-nav-link-color: #8a94ad;
+		--jean-input-bg: #222834;
+		--jean-input-border-color: #373e53;
 	}
 	.navbar .navbar-logo {
 		height: 4rem;
@@ -61,10 +61,10 @@
 		font-size: 0.8rem;
 		font-weight: 600;
 		padding: 0;
-		background: var(--phoenix-navbar-top-bg-color);
-		min-height: var(--phoenix-navbar-top-height);
-		color: var(--phoenix-nav-link-color);
+		background: var(--jean-navbar-top-bg-color);
+		min-height: var(--jean-navbar-top-height);
+		color: var(--jean-nav-link-color);
 		padding: 0 1.5rem 0 1.5rem;
-		border-bottom: 1px solid var(--phoenix-navbar-vertical-border-color);
+		border-bottom: 1px solid var(--jean-navbar-vertical-border-color);
 	}
 </style>

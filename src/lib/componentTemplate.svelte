@@ -70,7 +70,7 @@
 	@import 'boxicons/css/boxicons.min.css';
 	@import './folderCss/theme.slim.css';
 	.classContent {
-		padding-top: var(--phoenix-navbar-top-height);
+		padding-top: var(--jean-navbar-top-height);
 		padding-left: 0px !important;
 		padding-right: 0px;
 	}

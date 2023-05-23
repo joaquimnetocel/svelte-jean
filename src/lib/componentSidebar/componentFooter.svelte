@@ -21,7 +21,7 @@
 		<span class="uil uil-arrow-from-right fs-0" />
 		{#if $storeSidebar}
 			<svg
-				fill="var(--phoenix-body-color)"
+				fill="var(--jean-body-color)"
 				width="16"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 512 512"
@@ -35,7 +35,7 @@
 			<span class="navbar-vertical-footer-text ms-2">
 				Collapsed View
 				<svg
-					fill="var(--phoenix-body-color)"
+					fill="var(--jean-body-color)"
 					width="16"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 512 512"
@@ -60,17 +60,17 @@
 		-ms-flex-align: center;
 		align-items: center;
 		bottom: 0;
-		border-top: 1px solid var(--phoenix-navbar-footer-border-color);
+		border-top: 1px solid var(--jean-navbar-footer-border-color);
 		-webkit-transition: width 0.2s ease;
 		-o-transition: width 0.2s ease;
 		transition: width 0.2s ease;
 	}
 	.btn {
-		color: var(--phoenix-navbar-vertical-link-color);
+		color: var(--jean-navbar-vertical-link-color);
 		text-decoration: none;
 	}
 	.btn:hover {
-		color: var(--phoenix-navbar-vertical-link-hover-color);
+		color: var(--jean-navbar-vertical-link-hover-color);
 	}
 	.white-space-nowrap {
 		white-space: nowrap;
@@ -81,7 +81,7 @@
 			.navbar-vertical-footer {
 			bottom: 0;
 			width: calc(4rem - 1px);
-			background-color: var(--phoenix-navbar-vertical-bg-color);
+			background-color: var(--jean-navbar-vertical-bg-color);
 			padding-left: 0rem !important;
 			padding-right: 0rem !important;
 			-webkit-transition: width 0.2s ease;

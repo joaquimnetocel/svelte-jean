@@ -44,14 +44,14 @@
 		-webkit-transition: all 0.2s ease-in-out;
 		-o-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
-		background-color: var(--phoenix-hamburger-menu-color);
+		background-color: var(--jean-hamburger-menu-color);
 	}
 	.navbar-toggle-icon:after,
 	.navbar-toggle-icon:before {
 		content: '';
 		position: absolute;
 		height: 0.125rem;
-		background-color: var(--phoenix-hamburger-menu-color);
+		background-color: var(--jean-hamburger-menu-color);
 		left: 0;
 		-webkit-transition: all 0.2s ease-in-out;
 		-o-transition: all 0.2s ease-in-out;
@@ -84,6 +84,6 @@
 	}
 	.navbar-toggler-humburger-icon:hover,
 	.navbar-toggler-humburger-icon:focus {
-		background-color: var(--phoenix-gray-300);
+		background-color: var(--jean-gray-300);
 	}
 </style>

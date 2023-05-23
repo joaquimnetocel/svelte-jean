@@ -26,7 +26,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 6rem;
-		border-top: 1px solid var(--phoenix-navbar-footer-border-color);
+		border-top: 1px solid var(--jean-navbar-footer-border-color);
 		padding: 0 1.5rem;
 		left: 0;
 	}

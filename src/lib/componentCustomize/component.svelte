@@ -83,7 +83,7 @@
 		<!-- RESET BUTTON -->
 		<button
 			on:click={functionReset}
-			class="btn btn-phoenix-secondary w-100 d-flex justify-content-center align-items-center"
+			class="btn btn-jean-secondary w-100 d-flex justify-content-center align-items-center"
 			data-theme-control="reset"
 		>
 			<i style="font-size: 20px;" class="bx bx-refresh" />
@@ -104,7 +104,7 @@
 						name="theme-color"
 						type="radio"
 						value="enumLight"
-						data-theme-control="phoenixTheme"
+						data-theme-control="jeanTheme"
 					/>
 					<label class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherLight">
 						<span class="mb-2 rounded d-block"
@@ -121,7 +121,7 @@
 						name="theme-color"
 						type="radio"
 						value="enumDark"
-						data-theme-control="phoenixTheme"
+						data-theme-control="jeanTheme"
 					/>
 					<label class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherDark">
 						<span class="mb-2 rounded d-block">
@@ -142,7 +142,7 @@
 					<input
 						class="form-check-input ms-auto"
 						type="checkbox"
-						data-theme-control="phoenixSupportChat"
+						data-theme-control="jeanSupportChat"
 						bind:checked={$storeRightBottom}
 					/>
 				</div>
@@ -159,7 +159,7 @@
 						name="navigation-type"
 						type="radio"
 						value="vertical"
-						data-theme-control="phoenixNavbarPosition"
+						data-theme-control="jeanNavbarPosition"
 						checked
 					/>
 					<label class="btn d-inline-block btn-navbar-style fs--1" for="navbarPositionVertical">
@@ -180,7 +180,7 @@
 						name="navigation-type"
 						type="radio"
 						value="horizontal"
-						data-theme-control="phoenixNavbarPosition"
+						data-theme-control="jeanNavbarPosition"
 					/>
 					<label class="btn d-inline-block btn-navbar-style fs--1" for="navbarPositionHorizontal">
 						<span class="mb-2 rounded d-block">
@@ -197,7 +197,7 @@
 						name="navigation-type"
 						type="radio"
 						value="combo"
-						data-theme-control="phoenixNavbarPosition"
+						data-theme-control="jeanNavbarPosition"
 					/>
 					<label class="btn d-inline-block btn-navbar-style fs--1" for="navbarPositionCombo">
 						<span class="mb-2 rounded d-block">
@@ -221,7 +221,7 @@
 						type="radio"
 						name="config.name"
 						value="enumLight"
-						data-theme-control="phoenixNavbarVerticalStyle"
+						data-theme-control="jeanNavbarVerticalStyle"
 					/>
 					<label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-default">
 						<img class="img-fluid img-prototype d-dark-none" src={imageLight} alt="" /><img
@@ -241,7 +241,7 @@
 						type="radio"
 						name="config.name"
 						value="enumDark"
-						data-theme-control="phoenixNavbarVerticalStyle"
+						data-theme-control="jeanNavbarVerticalStyle"
 					/>
 					<label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-dark">
 						<img class="img-fluid img-prototype d-dark-none" src={imageVerticalDarker} alt="" />
@@ -264,7 +264,7 @@
 						name="navbar-top-style"
 						type="radio"
 						value="enumLight"
-						data-theme-control="phoenixNavbarTopStyle"
+						data-theme-control="jeanNavbarTopStyle"
 					/>
 					<label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDefault">
 						<span class="mb-2 rounded d-block">
@@ -285,7 +285,7 @@
 						name="navbar-top-style"
 						type="radio"
 						value="enumDark"
-						data-theme-control="phoenixNavbarTopStyle"
+						data-theme-control="jeanNavbarTopStyle"
 					/>
 					<label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDarker">
 						<span class="mb-2 rounded d-block">
@@ -318,7 +318,7 @@
 						name="navbar-shape"
 						type="radio"
 						value="default"
-						data-theme-control="phoenixNavbarTopShape"
+						data-theme-control="jeanNavbarTopShape"
 						checked
 					/><label class="btn d-inline-block btn-navbar-style fs--1" for="navbarShapeDefault">
 						<span class="mb-2 rounded d-block"
@@ -337,7 +337,7 @@
 						name="navbar-shape"
 						type="radio"
 						value="slim"
-						data-theme-control="phoenixNavbarTopShape"
+						data-theme-control="jeanNavbarTopShape"
 					/><label class="btn d-inline-block btn-navbar-style fs--1" for="navbarShapeSlim">
 						<span class="mb-2 rounded d-block"
 							><img
@@ -357,7 +357,7 @@
 		<!---->
 		<!-- <a
 			class="bun btn-primary d-grid mb-3 text-white dark__text-100 mt-5 btn btn-primary"
-			href="https://themes.getbootstrap.com/product/phoenix-admin-dashboard-webapp-template/"
+			href="https://themes.getbootstrap.com/product/jean-admin-dashboard-webapp-template/"
 			target="_blank">Purchase template</a
 		> -->
 	</div>
@@ -390,10 +390,10 @@
 
 <style>
 	.dark .settings-panel .btn {
-		--phoenix-btn-color: #8a94ad;
+		--jean-btn-color: #8a94ad;
 	}
 	:global(.dark) .offcanvas {
-		--phoenix-offcanvas-bg: #141824;
+		--jean-offcanvas-bg: #141824;
 	}
 	.col-6 {
 		width: 50%;
@@ -473,8 +473,8 @@
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 		margin-top: -83px;
-		-webkit-box-shadow: var(--phoenix-setting-toggle-shadow);
-		box-shadow: var(--phoenix-setting-toggle-shadow);
+		-webkit-box-shadow: var(--jean-setting-toggle-shadow);
+		box-shadow: var(--jean-setting-toggle-shadow);
 	}
 
 	.settings-panel {
@@ -483,9 +483,9 @@
 	}
 	.setting-panel-item {
 		border-radius: 0.5rem;
-		background-color: var(--phoenix-gray-soft);
+		background-color: var(--jean-gray-soft);
 		margin-top: 1rem;
-		border: 1px solid var(--phoenix-border-color);
+		border: 1px solid var(--jean-border-color);
 		padding: 1rem 1rem 0 1rem;
 	}
 	@media (min-width: 768px) {
@@ -495,7 +495,7 @@
 	}
 	.setting-panel-item-title {
 		line-height: 1.2;
-		color: var(--phoenix-gray-900);
+		color: var(--jean-gray-900);
 		margin-bottom: 0.5rem;
 	}
 	.setting-panel-item .btn-check + .btn-navbar-style {
@@ -506,13 +506,13 @@
 		text-align: left;
 	}
 	.setting-panel-item .btn-check + .btn-navbar-style .img-prototype {
-		border: 2px solid var(--phoenix-gray-200);
+		border: 2px solid var(--jean-gray-200);
 		border-radius: 0.5rem;
 		-webkit-transition: border 0.2s ease;
 		-o-transition: border 0.2s ease;
 		transition: border 0.2s ease;
 		margin-bottom: 0.5rem;
-		background-color: var(--phoenix-gray-100);
+		background-color: var(--jean-gray-100);
 	}
 	.setting-panel-item .btn-check + .btn-navbar-style .label-text {
 		position: relative;
@@ -524,7 +524,7 @@
 		left: 0;
 		width: 1rem;
 		height: 1rem;
-		border: 1px solid var(--phoenix-gray-500);
+		border: 1px solid var(--jean-gray-500);
 		border-radius: 50%;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
@@ -535,10 +535,10 @@
 		transition: border 0.2s ease;
 	}
 	.setting-panel-item .btn-check:checked:not([disabled]) + .btn-navbar-style .img-prototype {
-		border-color: var(--phoenix-primary);
+		border-color: var(--jean-primary);
 	}
 	.setting-panel-item .btn-check:checked:not([disabled]) + .btn-navbar-style .label-text::after {
-		border: 5px solid var(--phoenix-primary);
+		border: 5px solid var(--jean-primary);
 	}
 	.setting-panel-item .btn-check:disabled + .btn-navbar-style {
 		opacity: 0.5;
