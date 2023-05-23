@@ -1,7 +1,7 @@
 // MODULES:
-import type { typeMenuArrayEcommerceName } from './objectMenuEcommerce.js';
-import type { typeMenuHomeName } from './objectMenuHome.js';
-import type { typeMenuStoreName } from './objectMenuStore.js';
+import type { typeMenuHomeNames } from './objectMenuHome.js';
+import type { typeMenuStoreNames } from './objectMenuStore.js';
+import type { typeMenuArrayEcommerceNames } from './objectMenuUsers.js';
 
 // EXPORTS:
-export type typeMenuName = typeMenuStoreName | typeMenuArrayEcommerceName | typeMenuHomeName;
+export type typeMenuName = typeMenuStoreNames | typeMenuArrayEcommerceNames | typeMenuHomeNames;
