@@ -15,7 +15,6 @@
 	import { functionReadRightBottomStore } from '../stores/storeRightBottom.js';
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
 	import { functionReadSidebarColorStore } from '../stores/storeSidebarColor.js';
-	import { functionReadTextDirectionStore } from '../stores/storeTextDirection.js';
 	import type { typeInitialProps } from '../typeInitialProps.js';
 	/////
 	// NPM MODULES
@@ -27,7 +26,6 @@
 	/////
 	// STORES
 	const storeColorScheme = functionReadColorSchemeStore();
-	const storeTextDirection = functionReadTextDirectionStore();
 	const storeSidebarColor = functionReadSidebarColorStore();
 	const storeHeaderColor = functionReadHeaderColorStore();
 	const storeSidebar = functionReadSidebarStore();
@@ -35,19 +33,14 @@
 	/////
 	// STATES
 	let stateCollapsed = true;
-	let stateRtl = $storeTextDirection === 'enumLeftToRight' ? false : true;
 	/////
 	// FUNCTIONS
 	const functionReset = function () {
 		$storeColorScheme = objectInitialProps.propColorScheme;
 		$storeHeaderColor = objectInitialProps.propHeaderColor;
 		$storeSidebarColor = objectInitialProps.propSidebarColor;
-		$storeTextDirection = objectInitialProps.propTextDirection;
 		$storeSidebar = objectInitialProps.propSidebar;
 	};
-	/////
-	// REACTIVITY
-	$: $storeTextDirection = stateRtl ? 'enumRightToLeft' : 'enumLeftToRight';
 	/////
 </script>
 
@@ -59,8 +52,9 @@
 	id="settings-offcanvas"
 	tabindex="-1"
 	aria-labelledby="settings-offcanvas"
-	style:right={$storeTextDirection === 'enumRightToLeft' ? 'unset' : '0px'}
+	style:right="0px"
 >
+	<!-- {$storeTextDirection === 'enumRightToLeft' ? 'unset' : '0px'} -->
 	<div class="offcanvas-header align-items-start border-bottom flex-column">
 		<div class="pt-1 w-100 mb-6 d-flex justify-content-between align-items-start">
 			<div>
@@ -177,24 +171,6 @@
 						</span>
 						<span class="label-text"> DARK</span>
 					</label>
-				</div>
-			</div>
-		</div>
-		<!---->
-		<!-- TEXT DIRECTION -->
-		<div class="border rounded-3 p-4 setting-panel-item bg-white">
-			<p class="mb-0 text-700">TEXT DIRECTION</p>
-			<div class="d-flex justify-content-between align-items-center">
-				<h5 class="setting-panel-item-title mb-1">
-					{$storeTextDirection === 'enumRightToLeft' ? 'RIGHT TO LEFT' : 'LEFT TO RIGHT'}
-				</h5>
-				<div class="form-check form-switch mb-0">
-					<input
-						class="form-check-input ms-auto"
-						type="checkbox"
-						data-theme-control="phoenixIsRTL"
-						bind:checked={stateRtl}
-					/>
 				</div>
 			</div>
 		</div>

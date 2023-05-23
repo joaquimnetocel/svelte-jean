@@ -13,11 +13,6 @@
 	import { functionCreateSidebarStore } from './stores/storeSidebar.js';
 	import type { typeSidebarColor } from './stores/storeSidebarColor.js';
 	import { functionCreateSidebarColorStore } from './stores/storeSidebarColor.js';
-	import type { typeTextDirection } from './stores/storeTextDirection.js';
-	import {
-		functionCreateTextDirectionStore,
-		functionReadTextDirectionStore,
-	} from './stores/storeTextDirection.js';
 	import type { typeAllLanguages } from './typeAllLanguages.js';
 	import type { typeInitialProps } from './typeInitialProps.js';
 	// NPM MODULES:
@@ -29,7 +24,6 @@
 	export let propColorScheme: typeColorScheme = 'enumLight';
 	export let propSidebar = false;
 	export let propRightBottom = true;
-	export let propTextDirection: typeTextDirection = 'enumLeftToRight';
 	export let propLanguage: typeAllLanguages = 'en';
 	// CONSTANTS:
 	const objectInitialProps: typeInitialProps = {
@@ -38,7 +32,6 @@
 		propColorScheme,
 		propSidebar,
 		propRightBottom,
-		propTextDirection,
 	};
 	// CONTEXT:
 	setContext<typeAllLanguages>('contextLanguage', propLanguage);
@@ -48,33 +41,14 @@
 	functionCreateHeaderColorStore(propHeaderColor);
 	functionCreateSidebarColorStore(propSidebarColor);
 	functionCreateSidebarStore(propSidebar);
-	functionCreateTextDirectionStore(propTextDirection);
 	functionCreateRightBottomStore(propRightBottom);
 	functionCreateMobileMenuStore();
 	functionCreateActiveMenuStore();
 	// READ STORES:
-	const storeTextDirection = functionReadTextDirectionStore();
 	const storeRightBottom = functionReadRightBottomStore();
 </script>
 
-<svelte:head>
-	<link href="/staticJean/folderCss/solto.css" rel="stylesheet" type="text/css" />
-	<link href="/staticJean/folderCss/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="/staticJean/folderCss/boxicons.min.css" rel="stylesheet" type="text/css" />
-	<!-- <link
-		href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-		rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-		crossorigin="anonymous"
-	/> -->
-	{#if $storeTextDirection === 'enumRightToLeft'}
-		<link href="/staticJean/folderCss/theme-rtl.min.css" rel="stylesheet" type="text/css" />
-	{:else}
-		<link href="/staticJean/folderCss/theme.slim.css" rel="stylesheet" type="text/css" />
-	{/if}
-</svelte:head>
-
-<div dir={$storeTextDirection === 'enumRightToLeft' ? 'rtl' : 'ltr'}>
+<div>
 	<main class="main" id="top">
 		<div class="container-fluid px-0" data-layout="container">
 			<slot name="slotSidebar" />
@@ -92,6 +66,10 @@
 </div>
 
 <style>
+	@import './folderCss/solto.css';
+	@import 'bootstrap/dist/css/bootstrap.min.css';
+	@import 'boxicons/css/boxicons.min.css';
+	@import './folderCss/theme.slim.css';
 	.classContent {
 		padding-top: var(--phoenix-navbar-top-height);
 		padding-left: 0px !important;
