@@ -9,7 +9,7 @@
 
 	// PROPS:
 	export let propImage = imageUser;
-	export let propName = 'Joaquim Neto';
+	export let propName = 'John Smith';
 	export let propUserMenu: typeUserMenuArray = [];
 	export let propSignOutButtonText = 'SIGN OUT';
 	export let propSignOutButtonHref = '';
