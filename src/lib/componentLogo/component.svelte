@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { typeAllLanguages } from '../typeAllLanguages.js';
 	// IMAGES:
-	import imageLogo from './imageLogo.png';
+	import imageLogo from './imageLogo.webp';
 	// PROPS:
 	export let propWidth = 27;
 	export let propSource = imageLogo;
