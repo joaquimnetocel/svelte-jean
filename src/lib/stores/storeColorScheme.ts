@@ -6,6 +6,8 @@ import { writable, type Writable } from 'svelte/store';
 
 export type typeColorScheme = 'enumLight' | 'enumDark';
 
+const symbolContextKey = Symbol();
+
 export function functionCreateColorSchemeStore(parInitialValue: typeColorScheme = 'enumLight') {
 	const storeReturn = writable<typeColorScheme>(parInitialValue);
 	if (functionIsRunningOnBrowser()) {
@@ -14,8 +16,8 @@ export function functionCreateColorSchemeStore(parInitialValue: typeColorScheme 
 			localStorage.stringColorScheme = value;
 		});
 	}
-	setContext('contextColorSchemeStore', storeReturn);
+	setContext(symbolContextKey, storeReturn);
 }
 export function functionReadColorSchemeStore() {
-	return getContext<Writable<typeColorScheme>>('contextColorSchemeStore');
+	return getContext<Writable<typeColorScheme>>(symbolContextKey);
 }

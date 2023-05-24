@@ -4,6 +4,8 @@ import { functionIsRunningOnBrowser } from '../functionIsRunningOnBrowser.js';
 import { getContext, setContext } from 'svelte';
 import { writable, type Writable } from 'svelte/store';
 
+const symbolContextKey = Symbol();
+
 export function functionCreateRightBottomStore(parInitialValue: boolean) {
 	const storeReturn = writable<boolean>(parInitialValue);
 	if (functionIsRunningOnBrowser()) {
@@ -12,8 +14,8 @@ export function functionCreateRightBottomStore(parInitialValue: boolean) {
 			localStorage.booleanRightBottom = value;
 		});
 	}
-	setContext('contextRightBottomStore', storeReturn);
+	setContext(symbolContextKey, storeReturn);
 }
 export function functionReadRightBottomStore() {
-	return getContext<Writable<boolean>>('contextRightBottomStore');
+	return getContext<Writable<boolean>>(symbolContextKey);
 }
