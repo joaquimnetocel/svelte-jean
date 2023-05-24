@@ -1,12 +1,12 @@
-// NPM MODULES
-import { browser } from '$app/environment';
+// MODULES:
+import { functionIsRunningOnBrowser } from '../functionIsRunningOnBrowser.js';
+// NPM MODULES:
 import { getContext, setContext } from 'svelte';
 import { writable, type Writable } from 'svelte/store';
-/////
 
 export function functionCreateSidebarStore(parInitialValue: boolean) {
 	const storeReturn = writable<boolean>(parInitialValue);
-	if (browser) {
+	if (functionIsRunningOnBrowser()) {
 		storeReturn.set(localStorage.booleanSidebarCollapsed === 'true' ? true : parInitialValue);
 		storeReturn.subscribe((value) => {
 			localStorage.booleanSidebarCollapsed = value;

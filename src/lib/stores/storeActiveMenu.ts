@@ -1,12 +1,12 @@
-// NPM MODULES
-import { browser } from '$app/environment';
+// MODULES:
+import { functionIsRunningOnBrowser } from '../functionIsRunningOnBrowser.js';
+// NPM MODULES:
 import { getContext, setContext } from 'svelte';
 import { writable, type Writable } from 'svelte/store';
-/////
 
 export function functionCreateActiveMenuStore() {
 	const storeReturn = writable<string>('');
-	if (browser) {
+	if (functionIsRunningOnBrowser()) {
 		storeReturn.set(localStorage.stringActiveMenu ?? '');
 		storeReturn.subscribe((value) => {
 			localStorage.stringActiveMenu = value;
