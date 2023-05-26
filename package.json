@@ -1,8 +1,27 @@
 {
 	"name": "svelte-jean",
-	"version": "0.0.3",
+	"version": "0.0.7",
+	"description": "svelte-jean is a Svelte/Sveltekit admin template based on Bootstrap 5.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/joaquimnetocel/svelte-jean.git"
+	},
+	"bugs": {
+		"url": "https://github.com/joaquimnetocel/svelte-jean/issues"
+	},
+	"keywords": [
+		"admin",
+		"admin-template",
+		"svelte",
+		"sveltejs",
+		"sveltekit",
+		"template",
+		"bootstrap5"
+	],
+	"author": "Joaquim Neto <joaquim.neto.cel@gmail.com>",
+	"license": "ISC",
 	"scripts": {
-		"package-tar-gz": "cpx package.json package && cpx README.md package && cpx dist/**/* package/dist",
+		"package-tar-gz": "cpx package.json package && cpx README.md package && npm run build && cpx dist/**/* package/dist",
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
@@ -17,6 +36,10 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
+		},
+		"./dist/folderCss/*.css": {
+			"import": "./dist/folderCss/*.css",
+			"require": "./dist/folderCss/*.css"
 		}
 	},
 	"files": [

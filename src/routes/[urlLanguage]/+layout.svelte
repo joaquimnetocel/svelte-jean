@@ -63,3 +63,9 @@
 		<Whatsapp propHref="" />
 	</svelte:fragment>
 </Template>
+
+<style>
+	@import 'bootstrap/dist/css/bootstrap.min.css';
+	@import 'boxicons/css/boxicons.min.css';
+	@import '$lib/folderCss/theme.slim.css';
+</style>

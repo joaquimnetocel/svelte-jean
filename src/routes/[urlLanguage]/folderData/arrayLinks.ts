@@ -16,7 +16,6 @@ import imageSpotify from '../folderImages/folderWebServices/imageSpotify.webp';
 import imageTrello from '../folderImages/folderWebServices/imageTrello.webp';
 import imageTwitter from '../folderImages/folderWebServices/imageTwitter.webp';
 
-// EXPORTS:
 export const arrayLinks: typeLinksArray = [
 	{
 		stringImage: imageBehance,

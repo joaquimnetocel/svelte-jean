@@ -1,14 +1,9 @@
 // MODULES:
 import type { typeMenuArray } from '$lib/index.js';
 
-// EXPORTS:
-export type typeMenuArrayUsersNames =
-	| 'menuUsers'
-	| 'menuAdministrators'
-	| 'menuManagers'
-	| 'menuSellers';
+type typeMenuNames = 'menuUsers' | 'menuAdministrators' | 'menuManagers' | 'menuSellers';
 
-export const objectMenuUsers: typeMenuArray<typeMenuArrayUsersNames>[number] = {
+export const objectMenuUsers: typeMenuArray<typeMenuNames>[number] = {
 	objectMenu: {
 		stringHref: undefined,
 		stringSlot: 'USERS',
