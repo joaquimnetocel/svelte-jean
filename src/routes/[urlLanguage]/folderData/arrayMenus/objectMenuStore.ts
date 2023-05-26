@@ -1,4 +1,4 @@
-// MODULES:
+// NPM MODULES:
 import type { typeMenuArray } from '$lib/index.js';
 
 type typeMenuNames = 'menuStore' | 'menuProducts' | 'menuClients' | 'menuOrders';

@@ -1,14 +1,26 @@
 <script lang="ts">
-	// COMPONENTS:
-	import { Language, Links, Notifications, Search, User, Whatsapp } from '$lib/index.js';
 	// DATA:
 	import { arrayLanguages } from './folderData/arrayLanguages.js';
 	import { arrayLinks } from './folderData/arrayLinks.js';
-	import { arrayMenus } from './folderData/arrayMenus.js';
+	import { arrayMenus } from './folderData/arrayMenus/arrayMenus.js';
 	import { arrayNotifications } from './folderData/arrayNotifications.js';
 	import { arrayUserMenu } from './folderData/arrayUserMenu.js';
 	// NPM MODULES:
-	import { ColorScheme, Customize, Footer, Header, Logo, Sidebar, Template } from '$lib/index.js';
+	import {
+		ColorScheme,
+		Customize,
+		Footer,
+		Header,
+		Language,
+		Links,
+		Logo,
+		Notifications,
+		Search,
+		Sidebar,
+		Template,
+		User,
+		Whatsapp,
+	} from '$lib/index.js';
 
 	// PROPS:
 	export let data;
@@ -67,5 +79,5 @@
 <style>
 	@import 'bootstrap/dist/css/bootstrap.min.css';
 	@import 'boxicons/css/boxicons.min.css';
-	@import '$lib/folderCss/theme.slim.css';
+	@import '$lib/folderCss/theme.min.css';
 </style>

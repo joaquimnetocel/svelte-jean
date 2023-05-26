@@ -4,8 +4,6 @@
 	import type { typeLinksArray } from './typeLinksArray.js';
 	// NPM MODULES:
 	import { slide } from 'svelte/transition';
-	// IMAGES:
-	import imageGoogleCloud from './imageGoogleCloud.webp';
 
 	// STATES:
 	let stateCollapsed = true;
@@ -70,9 +68,7 @@
 									class="d-block hover-bg-200 p-2 rounded-3 text-center text-decoration-none mb-3"
 									href={currentLink.stringLink}
 								>
-									{#if currentLink.stringImage === 'default image'}
-										<img src={imageGoogleCloud} alt="" width="30" />
-									{:else if currentLink.stringImage !== undefined}
+									{#if currentLink.stringImage !== undefined}
 										<img src={currentLink.stringImage} alt="" width="30" />
 									{/if}
 									<p

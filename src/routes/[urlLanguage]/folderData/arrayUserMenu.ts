@@ -1,3 +1,4 @@
+// NPM MODULES:
 import type { typeUserMenuArray } from '$lib/index.js';
 
 export const arrayUserMenu: typeUserMenuArray = [

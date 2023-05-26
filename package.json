@@ -1,6 +1,6 @@
 {
 	"name": "svelte-jean",
-	"version": "0.0.7",
+	"version": "0.0.11",
 	"description": "svelte-jean is a Svelte/Sveltekit admin template based on Bootstrap 5.",
 	"repository": {
 		"type": "git",
@@ -40,6 +40,10 @@
 		"./dist/folderCss/*.css": {
 			"import": "./dist/folderCss/*.css",
 			"require": "./dist/folderCss/*.css"
+		},
+		"./dist/componentCustomize/folderImages/*.png": {
+			"import": "./dist/componentCustomize/folderImages/*.png",
+			"require": "./dist/componentCustomize/folderImages/*.png"
 		}
 	},
 	"files": [
@@ -51,6 +55,7 @@
 		"svelte": "^3.54.0"
 	},
 	"devDependencies": {
+		"@rollup/plugin-image": "^3.0.2",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
 		"@sveltejs/package": "^2.0.0",
