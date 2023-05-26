@@ -20,7 +20,7 @@
 		<span class="uil uil-arrow-from-right fs-0" />
 		{#if $storeSidebar}
 			<svg
-				fill="var(--jean-body-color)"
+				fill="var(--jean-navbar-vertical-link-color)"
 				width="16"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 512 512"

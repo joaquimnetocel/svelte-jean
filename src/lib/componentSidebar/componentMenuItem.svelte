@@ -9,7 +9,7 @@
 	import type { typeActiveMenu } from './typeActiveMenu.js';
 	import type { typeMenuArray } from './typeMenuArray.js';
 	// STATES:
-	let stateCollapsed = true;
+	let stateCollapsed = false;
 	// STORES:
 	const storeSidebar = functionReadSidebarStore();
 	const storeActiveMenu = functionReadActiveMenuStore();

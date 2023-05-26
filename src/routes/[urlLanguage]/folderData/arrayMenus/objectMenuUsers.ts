@@ -23,7 +23,7 @@ export const objectMenuUsers: typeMenuArray<typeMenuNames>[number] = {
 					objectMenu: {
 						stringSlot: 'MANAGERS',
 						stringName: 'menuManagers',
-						stringHref: undefined,
+						stringHref: '/en/folderRoutes/routeManagers',
 						stringIcon: undefined,
 					},
 				},
@@ -31,6 +31,8 @@ export const objectMenuUsers: typeMenuArray<typeMenuNames>[number] = {
 					objectMenu: {
 						stringSlot: 'SELLERS',
 						stringName: 'menuSellers',
+						stringHref: '/en/folderRoutes/routeSellers',
+						stringIcon: undefined,
 					},
 				},
 			],

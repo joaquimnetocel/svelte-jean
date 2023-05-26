@@ -9,7 +9,7 @@
 	export let propActiveMenu: typeActiveMenu;
 	/////
 	// STATES
-	let stateCollapsed = true;
+	let stateCollapsed = false;
 	/////
 	// STORES
 	const storeActiveMenu = functionReadActiveMenuStore();
