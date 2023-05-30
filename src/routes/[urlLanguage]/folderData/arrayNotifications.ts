@@ -1,5 +1,5 @@
 // NPM MODULES:
-import type { typeNotificationsArray } from '$lib/index.js';
+import type { typeNotificationsArray } from '$lib/index.js'; // import type { typeNotificationsArray } from 'svelte-jean';
 
 export const arrayNotifications: typeNotificationsArray = [
 	{

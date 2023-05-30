@@ -4,9 +4,9 @@
 
 SVELTE/SVELTEKIT ADMIN TEMPLATE BASED ON BOOTSTRAP 5.
 
-## DEMO
+## EXAMPLE
 
-[DEMO (CLICK HERE)](https://www.google.com.br)
+[SVELTE LAB EXAMPLE (CLICK HERE)](https://www.sveltelab.dev/934c4qw48i1gtum)
 
 ## FEATURES
 

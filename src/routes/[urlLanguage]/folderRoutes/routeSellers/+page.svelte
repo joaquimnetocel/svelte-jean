@@ -1,12 +1,11 @@
 <script lang="ts">
-	// NPM MODULES
+	// NPM MODULES:
 	import { functionReadActiveMenuStore } from '$lib/index.js';
-	/////
+	// import { functionReadActiveMenuStore } from 'svelte-jean';
 
-	// STORES
+	// STORES:
 	const storeActiveMenu = functionReadActiveMenuStore();
 	$storeActiveMenu = 'menuSellers';
-	/////
 </script>
 
 <div class="row">

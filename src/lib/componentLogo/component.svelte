@@ -22,4 +22,12 @@
 	.navbar-brand {
 		margin-left: 0.4rem;
 	}
+	.logo-text {
+		font-size: 1.63625rem;
+		color: var(--jean-logo-text);
+		line-height: 1.2;
+		font-weight: 600;
+		letter-spacing: -0.04em;
+		margin-bottom: 0;
+	}
 </style>

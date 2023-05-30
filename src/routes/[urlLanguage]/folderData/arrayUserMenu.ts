@@ -1,5 +1,5 @@
 // NPM MODULES:
-import type { typeUserMenuArray } from '$lib/index.js';
+import type { typeUserMenuArray } from '$lib/index.js'; // import type { typeUserMenuArray } from 'svelte-jean';
 
 export const arrayUserMenu: typeUserMenuArray = [
 	{

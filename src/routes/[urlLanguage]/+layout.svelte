@@ -21,6 +21,7 @@
 		User,
 		Whatsapp,
 	} from '$lib/index.js';
+	// REPLACE $lib/index.js WITH svelte-jean
 
 	// PROPS:
 	export let data;
@@ -79,5 +80,5 @@
 <style>
 	@import 'bootstrap/dist/css/bootstrap.min.css';
 	@import 'boxicons/css/boxicons.min.css';
-	@import '$lib/folderCss/theme.min.css';
+	@import '$lib/folderCss/theme.min.css'; /* @import 'svelte-jean/dist/folderCss/theme.min.css'; */
 </style>

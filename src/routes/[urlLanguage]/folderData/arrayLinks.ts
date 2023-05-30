@@ -1,5 +1,5 @@
 // NPM MODULES:
-import type { typeLinksArray } from '$lib/index.js';
+import type { typeLinksArray } from '$lib/index.js'; // import type { typeLinksArray } from 'svelte-jean';
 
 export const arrayLinks: typeLinksArray = [
 	{
