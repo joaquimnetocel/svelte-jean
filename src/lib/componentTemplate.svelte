@@ -70,8 +70,6 @@
 		padding-top: var(--jean-navbar-top-height);
 		padding-left: 0px !important;
 		padding-right: 0px;
-	}
-	.content {
 		min-height: 100vh;
 		position: relative;
 		padding-bottom: 6rem;

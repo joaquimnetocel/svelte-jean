@@ -44,14 +44,14 @@
 		-webkit-transition: all 0.2s ease-in-out;
 		-o-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
-		background-color: var(--jean-hamburger-menu-color);
+		background-color: var(--jean-navbar-vertical-link-color);
 	}
 	.navbar-toggle-icon:after,
 	.navbar-toggle-icon:before {
 		content: '';
 		position: absolute;
 		height: 0.125rem;
-		background-color: var(--jean-hamburger-menu-color);
+		background-color: var(--jean-navbar-vertical-link-color);
 		left: 0;
 		-webkit-transition: all 0.2s ease-in-out;
 		-o-transition: all 0.2s ease-in-out;
@@ -85,5 +85,13 @@
 	.navbar-toggler-humburger-icon:hover,
 	.navbar-toggler-humburger-icon:focus {
 		background-color: var(--jean-gray-300);
+	}
+	.btn:focus {
+		color: var(--jean-btn-hover-color);
+		background-color: var(--jean-btn-hover-bg);
+		border-color: var(--jean-btn-hover-border-color);
+		outline: 0;
+		-webkit-box-shadow: var(--jean-btn-box-shadow), var(--jean-btn-focus-box-shadow);
+		box-shadow: var(--jean-btn-box-shadow), var(--jean-btn-focus-box-shadow);
 	}
 </style>
