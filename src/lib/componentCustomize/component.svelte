@@ -35,7 +35,7 @@
 	const storeRightBottom = functionReadRightBottomStore();
 	/////
 	// STATES
-	let stateCollapsed = false;
+	let stateCollapsed = true;
 	/////
 	// FUNCTIONS
 	const functionReset = function () {
