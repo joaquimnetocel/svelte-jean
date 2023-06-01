@@ -1322,11 +1322,6 @@ html:not(.navbar-vertical-collapsed) .navbar-vertical .navbar-vertical-content {
 		position: relative;
 		background: rgba(0, 0, 0, 0);
 	}
-	.navbar-vertical.navbar-expand-lg ~ .navbar-top ~ .content {
-		padding-left: 2.5rem;
-		padding-right: 2.5rem;
-		margin-left: 15.875rem;
-	}
 }
 @media (min-width: 992px) {
 	.navbar-vertical-collapsed
@@ -1348,9 +1343,6 @@ html:not(.navbar-vertical-collapsed) .navbar-vertical .navbar-vertical-content {
 		padding-top: 10px;
 		padding-bottom: 10px;
 		line-height: 1.2;
-	}
-	.navbar-vertical-collapsed .navbar-vertical.navbar-expand-lg + .navbar.navbar-top ~ .content {
-		margin-left: 4rem !important;
 	}
 	.navbar-vertical-collapsed .navbar-vertical.navbar-expand-lg .navbar-vertical-content {
 		overflow: visible;

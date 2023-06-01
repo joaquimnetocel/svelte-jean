@@ -35,7 +35,7 @@
 	const storeRightBottom = functionReadRightBottomStore();
 	/////
 	// STATES
-	let stateCollapsed = true;
+	let stateCollapsed = false;
 	/////
 	// FUNCTIONS
 	const functionReset = function () {
@@ -71,10 +71,9 @@
 				<p class="mb-0 fs--1">Explore different styles according to your preferences.</p>
 			</div>
 			<button
+				style="color:var(--jean-1100)"
 				class="btn p-1 fw-bolder"
 				type="button"
-				data-bs-dismiss="offcanvas"
-				aria-label="Close"
 				on:click={() => (stateCollapsed = true)}
 			>
 				<i style="font-size: 20px;" class="bx bx-x mt-1" />
@@ -83,7 +82,7 @@
 		<!-- RESET BUTTON -->
 		<button
 			on:click={functionReset}
-			class="btn btn-jean-secondary w-100 d-flex justify-content-center align-items-center"
+			class="btn btn-secondary btn-sm w-100 d-flex justify-content-center align-items-center"
 			data-theme-control="reset"
 		>
 			<i style="font-size: 20px;" class="bx bx-refresh" />
@@ -106,7 +105,11 @@
 						value="enumLight"
 						data-theme-control="jeanTheme"
 					/>
-					<label class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherLight">
+					<label
+						style="cursor:pointer;"
+						class="d-inline-block btn-navbar-style fs--1"
+						for="themeSwitcherLight"
+					>
 						<span class="mb-2 rounded d-block"
 							><img class="img-fluid img-prototype mb-0" src={imageLight} alt="" />
 						</span>
@@ -123,7 +126,11 @@
 						value="enumDark"
 						data-theme-control="jeanTheme"
 					/>
-					<label class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherDark">
+					<label
+						style="cursor:pointer;"
+						class="d-inline-block btn-navbar-style fs--1"
+						for="themeSwitcherDark"
+					>
 						<span class="mb-2 rounded d-block">
 							<img class="img-fluid img-prototype mb-0" src={imageDark} alt="" />
 						</span>
@@ -223,7 +230,11 @@
 						value="enumLight"
 						data-theme-control="jeanNavbarVerticalStyle"
 					/>
-					<label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-default">
+					<label
+						style="cursor:pointer;"
+						class="d-block w-100 btn-navbar-style fs--1"
+						for="navbar-style-default"
+					>
 						<img class="img-fluid img-prototype d-dark-none" src={imageLight} alt="" /><img
 							class="img-fluid img-prototype d-light-none"
 							src={imageDark}
@@ -243,7 +254,11 @@
 						value="enumDark"
 						data-theme-control="jeanNavbarVerticalStyle"
 					/>
-					<label class="btn d-block w-100 btn-navbar-style fs--1" for="navbar-style-dark">
+					<label
+						style="cursor:pointer;"
+						class="d-block w-100 btn-navbar-style fs--1"
+						for="navbar-style-dark"
+					>
 						<img class="img-fluid img-prototype d-dark-none" src={imageVerticalDarker} alt="" />
 						<img class="img-fluid img-prototype d-light-none" src={imageVerticalLighter} alt="" />
 						<span class="label-text d-dark-none"> DARK</span>
@@ -266,7 +281,11 @@
 						value="enumLight"
 						data-theme-control="jeanNavbarTopStyle"
 					/>
-					<label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDefault">
+					<label
+						style="cursor:pointer;"
+						class="d-inline-block btn-navbar-style fs--1"
+						for="navbarTopDefault"
+					>
 						<span class="mb-2 rounded d-block">
 							<img class="img-fluid img-prototype d-dark-none mb-0" src={imageTop} alt="" /><img
 								class="img-fluid img-prototype d-light-none mb-0"
@@ -287,7 +306,11 @@
 						value="enumDark"
 						data-theme-control="jeanNavbarTopStyle"
 					/>
-					<label class="btn d-inline-block btn-navbar-style fs--1" for="navbarTopDarker">
+					<label
+						style="cursor:pointer;"
+						class="d-inline-block btn-navbar-style fs--1"
+						for="navbarTopDarker"
+					>
 						<span class="mb-2 rounded d-block">
 							<img
 								class="img-fluid img-prototype d-dark-none mb-0"

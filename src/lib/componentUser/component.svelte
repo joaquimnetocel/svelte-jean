@@ -83,7 +83,7 @@
 				</div>
 				<div class="card-footer p-0 border-top">
 					<div class="px-3 mt-3">
-						<a class="btn btn-jean-secondary w-100" href={propSignOutButtonHref}>
+						<a class="btn btn-secondary btn-sm w-100" href={propSignOutButtonHref}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="16px"

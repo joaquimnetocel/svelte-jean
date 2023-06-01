@@ -10,7 +10,7 @@
 		functionCreateRightBottomStore,
 		functionReadRightBottomStore,
 	} from './stores/storeRightBottom.js';
-	import { functionCreateSidebarStore } from './stores/storeSidebar.js';
+	import { functionCreateSidebarStore, functionReadSidebarStore } from './stores/storeSidebar.js';
 	import type { typeSidebarColor } from './stores/storeSidebarColor.js';
 	import { functionCreateSidebarColorStore } from './stores/storeSidebarColor.js';
 	import type { typeAllLanguages } from './typeAllLanguages.js';
@@ -46,15 +46,18 @@
 	functionCreateActiveMenuStore();
 	// READ STORES:
 	const storeRightBottom = functionReadRightBottomStore();
+	const storeSidebar = functionReadSidebarStore();
 </script>
 
 <div>
-	<main class="main" id="top">
-		<div class="container-fluid px-0" data-layout="container">
+	<main class="main">
+		<div class="container-fluid px-0">
 			<slot name="slotSidebar" />
 			<slot name="slotHeader" />
-			<div class="content classContent">
-				<slot name="slotBody" />
+			<div class:classSidebarCollapsed={$storeSidebar} class="d-flex flex-column px-0 classContent">
+				<div class="flex-grow-1">
+					<slot name="slotBody" />
+				</div>
 				<slot name="slotFooter" />
 			</div>
 		</div>
@@ -67,11 +70,16 @@
 
 <style>
 	.classContent {
-		padding-top: var(--jean-navbar-top-height);
-		padding-left: 0px !important;
-		padding-right: 0px;
 		min-height: 100vh;
+		padding-top: 4rem;
 		position: relative;
-		padding-bottom: 6rem;
+	}
+	@media (min-width: 992px) {
+		.classContent:not(.classSidebarCollapsed) {
+			margin-left: 15.875rem;
+		}
+		.classSidebarCollapsed.classContent {
+			margin-left: 4rem;
+		}
 	}
 </style>
