@@ -54,11 +54,13 @@
 		<div class="container-fluid px-0">
 			<slot name="slotSidebar" />
 			<slot name="slotHeader" />
-			<div class:classSidebarCollapsed={$storeSidebar} class="d-flex flex-column px-0 classContent">
-				<div class="flex-grow-1">
-					<slot name="slotBody" />
+			<div class:classSidebarCollapsed={$storeSidebar} class="classContent">
+				<div class="d-flex flex-column h-100">
+					<div class="flex-grow-1">
+						<slot name="slotBody" />
+					</div>
+					<slot name="slotFooter" />
 				</div>
-				<slot name="slotFooter" />
 			</div>
 		</div>
 		{#if $storeRightBottom}
@@ -70,9 +72,9 @@
 
 <style>
 	.classContent {
-		min-height: 100vh;
+		height: 100vh;
 		padding-top: 4rem;
-		position: relative;
+		/* position: relative; */
 	}
 	@media (min-width: 992px) {
 		.classContent:not(.classSidebarCollapsed) {
