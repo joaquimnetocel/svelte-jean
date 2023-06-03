@@ -56,7 +56,7 @@
 		</Header>
 	</svelte:fragment>
 	<svelte:fragment slot="slotBody">
-		<div class="mx-4 my-4">
+		<div class="px-4 py-4 h-100">
 			<slot />
 		</div>
 	</svelte:fragment>
