@@ -1112,8 +1112,8 @@ html:not(.navbar-vertical-collapsed) .navbar-vertical .navbar-vertical-content {
 .navbar-vertical .navbar-vertical-content .navbar-nav .nav-link {
 	word-break: break-word;
 	line-height: 1.188rem;
-	padding-left: 1.5rem;
-	white-space: nowrap;
+	padding-left: 0.75rem;
+	/* white-space: nowrap; */
 	color: var(--jean-navbar-vertical-link-color);
 }
 .navbar-vertical .navbar-vertical-content .navbar-nav .nav-link.dropdown-indicator {
@@ -1261,7 +1261,7 @@ html:not(.navbar-vertical-collapsed) .navbar-vertical .navbar-vertical-content {
 	.navbar-vertical.navbar-expand-lg .navbar-vertical-content .navbar-nav .nav-link {
 		padding-top: 0.35rem;
 		padding-bottom: 0.35rem;
-		padding-left: 1.75rem;
+		/* padding-left: 0.75rem; */
 		margin-left: 0.75rem;
 		margin-right: 0.75rem;
 		border-radius: 0.5rem;
@@ -1276,7 +1276,7 @@ html:not(.navbar-vertical-collapsed) .navbar-vertical .navbar-vertical-content {
 		background-color: var(--jean-navbar-vertical-link-hover-bg);
 	}
 	.navbar-vertical.navbar-expand-lg .navbar-vertical-content .navbar-nav .nav .nav-link {
-		padding-left: 3.3125rem;
+		padding-left: 2.5rem;
 		scroll-margin-top: 200px;
 	}
 	.navbar-vertical.navbar-expand-lg

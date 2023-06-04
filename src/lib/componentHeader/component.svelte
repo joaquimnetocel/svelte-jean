@@ -22,7 +22,7 @@
 			<slot name="slotLeft" />
 		</div>
 		<div class="d-none d-lg-block">
-			<slot name="slotCenter">SLOT (slotCenter)</slot>
+			<slot name="slotCenter" />
 		</div>
 		<ul class="navbar-nav navbar-nav-icons flex-row">
 			<slot name="slotRight" />
