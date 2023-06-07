@@ -13,7 +13,7 @@
 	<div class="d-flex align-items-center">
 		<div class="d-flex align-items-center">
 			<img src={propSource} alt="Logo" width={propWidth} />
-			<p class="logo-text ms-2 d-none d-sm-block">{propTitle}</p>
+			<p class="logo-text ms-2 d-none d-md-block">{propTitle}</p>
 		</div>
 	</div>
 </a>

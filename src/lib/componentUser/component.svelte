@@ -67,7 +67,7 @@
 					</div>
 					<slot name="slotBeforeOptions" />
 				</div>
-				<div class="overflow-auto scrollbar" style="max-height: 10rem;">
+				<div class="overflow-auto border-top classBorderColor scrollbar" style="max-height: 10rem;">
 					<ul class="nav d-flex flex-column mb-2 pb-1">
 						{#each propUserMenu as currentUserMenu}
 							<li class="nav-item">
@@ -81,8 +81,8 @@
 						{/each}
 					</ul>
 				</div>
-				<div class="card-footer p-0 border-top">
-					<div class="px-3 mt-3">
+				<div class="card-footer border-top classBorderColor p-0">
+					<div class="px-3 mt-3 mb-3">
 						<a class="btn btn-secondary btn-sm w-100" href={propSignOutButtonHref}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -102,8 +102,8 @@
 							</svg>
 							{propSignOutButtonText}
 						</a>
+						<slot name="slotFooter" />
 					</div>
-					<slot name="slotFooter" />
 				</div>
 			</div>
 		</div>
@@ -135,5 +135,15 @@
 		-o-object-fit: cover;
 		object-fit: cover;
 		display: block;
+	}
+	.card-footer {
+		color: var(--jean-card-cap-color);
+		background-color: var(--jean-card-cap-bg);
+	}
+	.card-footer:last-child {
+		border-radius: 0 0 var(--jean-card-inner-border-radius) var(--jean-card-inner-border-radius);
+	}
+	.classBorderColor {
+		border-color: var(--jean-border-color) !important;
 	}
 </style>

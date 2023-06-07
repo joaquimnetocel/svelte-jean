@@ -324,4 +324,16 @@
 	.avatar .avatar-placeholder {
 		background: var(--jean-gray-200);
 	}
+	.card-footer {
+		padding: var(--jean-card-cap-padding-y) var(--jean-card-cap-padding-x);
+		color: var(--jean-card-cap-color);
+		background-color: var(--jean-card-cap-bg);
+		border-top: var(--jean-card-border-width) solid var(--jean-card-border-color);
+	}
+	.card-footer:last-child {
+		border-radius: 0 0 var(--jean-card-inner-border-radius) var(--jean-card-inner-border-radius);
+	}
+	.border-top {
+		border-top: var(--jean-border-width) var(--jean-border-style) var(--jean-border-color) !important;
+	}
 </style>

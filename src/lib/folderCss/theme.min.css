@@ -938,15 +938,6 @@ button:not(:disabled),
 .card-header:first-child {
 	border-radius: var(--jean-card-inner-border-radius) var(--jean-card-inner-border-radius) 0 0;
 }
-.card-footer {
-	padding: var(--jean-card-cap-padding-y) var(--jean-card-cap-padding-x);
-	color: var(--jean-card-cap-color);
-	background-color: var(--jean-card-cap-bg);
-	border-top: var(--jean-card-border-width) solid var(--jean-card-border-color);
-}
-.card-footer:last-child {
-	border-radius: 0 0 var(--jean-card-inner-border-radius) var(--jean-card-inner-border-radius);
-}
 .offcanvas {
 	--jean-offcanvas-zindex: 1045;
 	--jean-offcanvas-width: 458px;
@@ -978,9 +969,6 @@ button:not(:disabled),
 }
 .border {
 	border: var(--jean-border-width) var(--jean-border-style) var(--jean-border-color) !important;
-}
-.border-top {
-	border-top: var(--jean-border-width) var(--jean-border-style) var(--jean-border-color) !important;
 }
 .border-bottom {
 	border-bottom: var(--jean-border-width) var(--jean-border-style) var(--jean-border-color) !important;

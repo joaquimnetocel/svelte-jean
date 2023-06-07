@@ -26,6 +26,7 @@
 	<div class="nav-item-wrapper">
 		{#if propMenuItem.arraySubmenus === undefined}
 			<a
+				data-sveltekit-preload-data={propMenuItem.objectMenu.stringPreload ?? 'hover'}
 				on:click={() => ($storeActiveMenu = propMenuItem.objectMenu.stringName)}
 				class:classActiveGradient={$storeActiveMenu === propMenuItem.objectMenu.stringName &&
 					propActiveMenu.stringBackgroundSecondaryColor !== undefined}

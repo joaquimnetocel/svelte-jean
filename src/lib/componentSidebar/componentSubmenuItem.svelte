@@ -21,6 +21,7 @@
 		{#if currentSubmenu.arraySubmenus === undefined}
 			<!-- class:active={$storeActiveMenu === currentSubmenu.objectMenu.stringName} -->
 			<a
+				data-sveltekit-preload-data={currentSubmenu.objectMenu.stringPreload ?? 'hover'}
 				on:click={() => ($storeActiveMenu = currentSubmenu.objectMenu.stringName)}
 				class="nav-link"
 				href={currentSubmenu.objectMenu.stringHref ?? ''}

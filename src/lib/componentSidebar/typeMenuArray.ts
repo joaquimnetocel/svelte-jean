@@ -4,6 +4,7 @@ type typeMenuElement<genericMenuName> = {
 	stringIcon?: string;
 	stringHref?: string;
 	stringName: genericMenuName;
+	stringPreload?: 'tap' | 'hover' | 'off';
 };
 type typeRecursive<genericType> = {
 	objectMenu: genericType;

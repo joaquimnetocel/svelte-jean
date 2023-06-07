@@ -9,5 +9,6 @@ export const objectMenuHome: typeMenuArray<typeMenuNames>[number] = {
 		stringSlot: 'HOME',
 		stringName: 'menuHome',
 		stringHref: '/',
+		stringPreload: 'tap',
 	},
 };
