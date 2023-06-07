@@ -9,6 +9,7 @@ export const objectMenuStore: typeMenuArray<typeMenuNames>[number] = {
 		stringSlot: 'STORE',
 		stringName: 'menuStore',
 		stringHref: undefined,
+		stringPreload: undefined,
 	},
 	arraySubmenus: [
 		{
@@ -17,6 +18,7 @@ export const objectMenuStore: typeMenuArray<typeMenuNames>[number] = {
 				stringName: 'menuProducts',
 				stringHref: '/en/folderRoutes/routeProducts',
 				stringIcon: undefined,
+				stringPreload: undefined,
 			},
 		},
 		{
@@ -25,6 +27,7 @@ export const objectMenuStore: typeMenuArray<typeMenuNames>[number] = {
 				stringName: 'menuClients',
 				stringHref: '/en/folderRoutes/routeClients',
 				stringIcon: undefined,
+				stringPreload: undefined,
 			},
 		},
 		{
@@ -32,6 +35,8 @@ export const objectMenuStore: typeMenuArray<typeMenuNames>[number] = {
 				stringSlot: 'ORDERS',
 				stringName: 'menuOrders',
 				stringHref: '/en/folderRoutes/routeOrders',
+				stringIcon: undefined,
+				stringPreload: undefined,
 			},
 		},
 	],

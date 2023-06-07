@@ -9,6 +9,7 @@ export const objectMenuUsers: typeMenuArray<typeMenuNames>[number] = {
 		stringSlot: 'USERS',
 		stringName: 'menuUsers',
 		stringIcon: `<i style='font-size: 16px;' class='bx bx-user bx-tada-hover mt-1'></i>`,
+		stringPreload: undefined,
 	},
 	arraySubmenus: [
 		{
@@ -17,6 +18,7 @@ export const objectMenuUsers: typeMenuArray<typeMenuNames>[number] = {
 				stringName: 'menuAdministrators',
 				stringHref: undefined,
 				stringIcon: undefined,
+				stringPreload: undefined,
 			},
 			arraySubmenus: [
 				{
@@ -25,6 +27,7 @@ export const objectMenuUsers: typeMenuArray<typeMenuNames>[number] = {
 						stringName: 'menuManagers',
 						stringHref: '/en/folderRoutes/routeManagers',
 						stringIcon: undefined,
+						stringPreload: undefined,
 					},
 				},
 				{
@@ -33,6 +36,7 @@ export const objectMenuUsers: typeMenuArray<typeMenuNames>[number] = {
 						stringName: 'menuSellers',
 						stringHref: '/en/folderRoutes/routeSellers',
 						stringIcon: undefined,
+						stringPreload: undefined,
 					},
 				},
 			],
