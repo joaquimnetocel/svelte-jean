@@ -71,7 +71,11 @@
 					<ul class="nav d-flex flex-column mb-2 pb-1">
 						{#each propUserMenu as currentUserMenu}
 							<li class="nav-item">
-								<a class="nav-link px-3" href={currentUserMenu.stringHref}>
+								<a
+									class="nav-link px-3"
+									href={currentUserMenu.stringHref}
+									target={currentUserMenu.stringTarget ?? '_self'}
+								>
 									<span>
 										<!-- eslint-disable svelte/no-at-html-tags -->
 										{@html currentUserMenu.stringText}

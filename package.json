@@ -1,6 +1,6 @@
 {
 	"name": "svelte-jean",
-	"version": "0.0.21",
+	"version": "0.0.22",
 	"description": "svelte-jean is a Svelte/Sveltekit admin template based on Bootstrap 5.",
 	"repository": {
 		"type": "git",
