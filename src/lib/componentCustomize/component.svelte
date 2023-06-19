@@ -43,6 +43,7 @@
 		$storeHeaderColor = objectInitialProps.propHeaderColor;
 		$storeSidebarColor = objectInitialProps.propSidebarColor;
 		$storeSidebar = objectInitialProps.propSidebar;
+		$storeRightBottom = objectInitialProps.propRightBottom;
 	};
 	/////
 </script>
