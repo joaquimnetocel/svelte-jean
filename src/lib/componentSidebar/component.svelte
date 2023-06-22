@@ -10,6 +10,7 @@
 	// NPM MODULES:
 	import { slide } from 'svelte/transition';
 	// PROPS:
+	export let propStartCollapsed = false;
 	export let propMenu: typeMenuArray = [];
 	export let propActiveMenu: typeActiveMenu = {
 		stringBackgroundColor: '#ffecd2',
@@ -41,7 +42,11 @@
 		<div class="navbar-vertical-content">
 			<ul class="navbar-nav flex-column" id="navbarVerticalNav">
 				{#each propMenu as currentMenu}
-					<ComponentMenuItem {propActiveMenu} propMenuItem={currentMenu} />
+					<ComponentMenuItem
+						propCollapsed={propStartCollapsed}
+						{propActiveMenu}
+						propMenuItem={currentMenu}
+					/>
 				{/each}
 			</ul>
 		</div>

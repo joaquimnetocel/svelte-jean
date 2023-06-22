@@ -29,7 +29,7 @@
 
 <Template propLanguage={data.urlLanguage}>
 	<svelte:fragment slot="slotSidebar">
-		<Sidebar propMenu={arrayMenus} />
+		<Sidebar propMenu={arrayMenus} propStartCollapsed={true} />
 	</svelte:fragment>
 	<svelte:fragment slot="slotHeader">
 		<Header>
@@ -66,7 +66,7 @@
 				Thank you for creating with svelteJean {new Date().getFullYear()} ©
 				<a class="mx-1" href="https://github.com/"> GitHub </a>
 			</svelte:fragment>
-			<svelte:fragment slot="slotRight">v0.0.0</svelte:fragment>
+			<svelte:fragment slot="slotRight">v0.0.23</svelte:fragment>
 		</Footer>
 	</svelte:fragment>
 	<svelte:fragment slot="slotCustomize">

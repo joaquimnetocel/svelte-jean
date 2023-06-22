@@ -7,9 +7,7 @@
 	// PROPS
 	export let propSubmenu: typeMenuArray;
 	export let propActiveMenu: typeActiveMenu;
-	/////
-	// STATES
-	let stateCollapsed = false;
+	export let propCollapsed = false;
 	/////
 	// STORES
 	const storeActiveMenu = functionReadActiveMenuStore();
@@ -46,16 +44,16 @@
 			<!-- svelte-ignore a11y-invalid-attribute -->
 			<a
 				on:click={() => {
-					stateCollapsed = !stateCollapsed;
+					propCollapsed = !propCollapsed;
 				}}
 				class="nav-link dropdown-indicator"
 				href="javascript:void(0);"
 				data-bs-toggle="collapse"
-				aria-expanded={!stateCollapsed}
+				aria-expanded={!propCollapsed}
 			>
 				<div class="d-flex align-items-center">
 					<div class="dropdown-indicator-icon">
-						{#if stateCollapsed}
+						{#if propCollapsed}
 							<i style="font-size: medium;" class="bx bx-caret-down mt-1" />
 						{:else}
 							<i style="font-size: medium;" class="bx bx-caret-right mt-1" />
@@ -72,7 +70,7 @@
 					</span>
 				</div>
 			</a><!-- more inner pages-->
-			{#if !stateCollapsed}
+			{#if !propCollapsed}
 				<div class="parent-wrapper">
 					<ul class="nav collapse parent show" data-bs-parent="#e-commerce" id="admin">
 						<svelte:self {propActiveMenu} propSubmenu={currentSubmenu.arraySubmenus} />
