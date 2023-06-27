@@ -5,12 +5,14 @@
 	import { slide } from 'svelte/transition';
 	// MODULES:
 	import { functionReadActiveMenuStore } from '../stores/storeActiveMenu.js';
+	import { functionReadMobileMenuStore } from '../stores/storeMobileMenu.js';
 	import { functionReadSidebarStore } from '../stores/storeSidebar.js';
 	import type { typeActiveMenu } from './typeActiveMenu.js';
 	import type { typeMenuArray } from './typeMenuArray.js';
 	// STORES:
 	const storeSidebar = functionReadSidebarStore();
 	const storeActiveMenu = functionReadActiveMenuStore();
+	const storeMobileMenu = functionReadMobileMenuStore();
 	// PROPS:
 	export let propCollapsed = false;
 	export let propMenuItem: typeMenuArray[number];
@@ -26,7 +28,10 @@
 		{#if propMenuItem.arraySubmenus === undefined}
 			<a
 				data-sveltekit-preload-data={propMenuItem.objectMenu.stringPreload ?? 'hover'}
-				on:click={() => ($storeActiveMenu = propMenuItem.objectMenu.stringName)}
+				on:click={() => {
+					$storeActiveMenu = propMenuItem.objectMenu.stringName;
+					$storeMobileMenu = true;
+				}}
 				class:classActiveGradient={$storeActiveMenu === propMenuItem.objectMenu.stringName &&
 					propActiveMenu.stringBackgroundSecondaryColor !== undefined}
 				class:classActive={$storeActiveMenu === propMenuItem.objectMenu.stringName &&

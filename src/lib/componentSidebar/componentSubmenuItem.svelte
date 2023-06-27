@@ -1,6 +1,7 @@
 <script lang="ts">
 	// MODULES
 	import { functionReadActiveMenuStore } from '../stores/storeActiveMenu.js';
+	import { functionReadMobileMenuStore } from '../stores/storeMobileMenu.js';
 	import type { typeActiveMenu } from './typeActiveMenu.js';
 	import type { typeMenuArray } from './typeMenuArray.js';
 	/////
@@ -11,6 +12,7 @@
 	/////
 	// STORES
 	const storeActiveMenu = functionReadActiveMenuStore();
+	const storeMobileMenu = functionReadMobileMenuStore();
 	/////
 </script>
 
@@ -20,7 +22,10 @@
 			<!-- class:active={$storeActiveMenu === currentSubmenu.objectMenu.stringName} -->
 			<a
 				data-sveltekit-preload-data={currentSubmenu.objectMenu.stringPreload ?? 'hover'}
-				on:click={() => ($storeActiveMenu = currentSubmenu.objectMenu.stringName)}
+				on:click={() => {
+					$storeActiveMenu = currentSubmenu.objectMenu.stringName;
+					$storeMobileMenu = true;
+				}}
 				class="nav-link"
 				href={currentSubmenu.objectMenu.stringHref ?? ''}
 				data-bs-toggle=""
