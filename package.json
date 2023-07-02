@@ -52,7 +52,7 @@
 		"!dist/**/*.spec.*"
 	],
 	"peerDependencies": {
-		"svelte": "^3.54.0"
+		"svelte": "^3.54.0 || 4.0.0"
 	},
 	"devDependencies": {
 		"@rollup/plugin-image": "^3.0.2",
