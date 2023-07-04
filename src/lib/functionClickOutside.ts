@@ -11,6 +11,6 @@ export function functionClickOutside(node: HTMLElement, handler: () => void) {
 	return {
 		destroy() {
 			document.removeEventListener('click', handleClick, true);
-		}
+		},
 	};
 }
