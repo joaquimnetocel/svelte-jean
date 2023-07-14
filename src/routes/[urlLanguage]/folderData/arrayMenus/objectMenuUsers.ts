@@ -8,7 +8,7 @@ export const objectMenuUsers: typeMenuArray<typeMenuNames>[number] = {
 		stringHref: undefined,
 		stringSlot: 'USERS',
 		stringName: 'menuUsers',
-		stringIcon: `<i style='font-size: 16px;' class='bx bx-user bx-tada-hover mt-1'></i>`,
+		stringIcon: `<i style='font-size: 16px;' class='bx bx-user bx-tada-hover align-middle'></i>`,
 		stringPreload: undefined,
 	},
 	arraySubmenus: [

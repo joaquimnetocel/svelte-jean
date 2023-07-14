@@ -5,7 +5,7 @@ type typeMenuNames = 'menuStore' | 'menuProducts' | 'menuClients' | 'menuOrders'
 
 export const objectMenuStore: typeMenuArray<typeMenuNames>[number] = {
 	objectMenu: {
-		stringIcon: `<i style='font-size: 16px;' class='bx bx-store bx-tada-hover mt-1'></i>`,
+		stringIcon: `<i style='font-size: 16px;' class='bx bx-store bx-tada-hover align-middle'></i>`,
 		stringSlot: 'STORE',
 		stringName: 'menuStore',
 		stringHref: undefined,
@@ -14,16 +14,16 @@ export const objectMenuStore: typeMenuArray<typeMenuNames>[number] = {
 	arraySubmenus: [
 		{
 			objectMenu: {
-				stringSlot: 'PRODUCTS',
+				stringSlot: `PRODUCTS`,
 				stringName: 'menuProducts',
 				stringHref: '/en/folderRoutes/routeProducts',
-				stringIcon: undefined,
+				stringIcon: ``,
 				stringPreload: undefined,
 			},
 		},
 		{
 			objectMenu: {
-				stringSlot: 'CLIENTS',
+				stringSlot: `CLIENTS <i style='font-size: 16px;' class='bx bx-wrench bx-tada-hover align-middle'></i>`,
 				stringName: 'menuClients',
 				stringHref: '/en/folderRoutes/routeClients',
 				stringIcon: undefined,

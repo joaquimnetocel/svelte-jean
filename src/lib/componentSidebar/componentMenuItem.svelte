@@ -46,14 +46,17 @@
 					<!-- ICON -->
 					{#if propMenuItem.objectMenu.stringIcon !== undefined}
 						<span class="nav-link-icon">
-							<!-- eslint-disable svelte/no-at-html-tags -->
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 							{@html propMenuItem.objectMenu.stringIcon}
 						</span>
 					{/if}
 					<!---->
 					<!-- TEXT -->
 					<span class="nav-link-text-wrapper">
-						<span class="nav-link-text">{propMenuItem.objectMenu.stringSlot}</span>
+						<span class="nav-link-text">
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+							{@html propMenuItem.objectMenu.stringSlot}
+						</span>
 					</span>
 					<!---->
 				</div>
@@ -84,19 +87,26 @@
 					<!-- ICON -->
 					{#if propMenuItem.objectMenu.stringIcon !== undefined}
 						<span class="nav-link-icon">
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 							{@html propMenuItem.objectMenu.stringIcon}
 						</span>
 					{/if}
 					<!---->
 					<!-- TEXT -->
-					<span class="nav-link-text">{propMenuItem.objectMenu.stringSlot}</span>
+					<span class="nav-link-text">
+						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+						{@html propMenuItem.objectMenu.stringSlot}
+					</span>
 					<!---->
 				</div>
 			</a>
 			{#if !propCollapsed || ($storeSidebar && stateWindowWidth >= 992)}
 				<div transition:slide class="parent-wrapper label-1">
 					<ul class="nav collapse parent show" data-bs-parent="#navbarVerticalCollapse" id="home">
-						<li class="collapsed-nav-item-title d-none">{propMenuItem.objectMenu.stringSlot}</li>
+						<li class="collapsed-nav-item-title d-none">
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+							{@html propMenuItem.objectMenu.stringSlot}
+						</li>
 						<ComponentSubmenuItem
 							{propCollapsed}
 							{propActiveMenu}

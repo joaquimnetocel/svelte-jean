@@ -31,18 +31,15 @@
 				data-bs-toggle=""
 				aria-expanded="false"
 			>
-				<!-- <div class="d-flex align-items-center"> -->
 				<div
-					style="border-radius: 20px;padding-bottom:2px;"
 					class:classActiveGradient={$storeActiveMenu === currentSubmenu.objectMenu.stringName &&
 						propActiveMenu.stringBackgroundSecondaryColor !== undefined}
 					class:classActive={$storeActiveMenu === currentSubmenu.objectMenu.stringName &&
 						propActiveMenu.stringBackgroundSecondaryColor === undefined}
-					class="d-flex align-items-center ps-2 ps-lg-0 pe-lg-3 pe-2"
+					class="rounded-2 px-2 py-1"
 				>
-					<span class="nav-link-text">
-						{currentSubmenu.objectMenu.stringSlot}
-					</span>
+					<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+					{@html currentSubmenu.objectMenu.stringSlot}
 				</div>
 			</a>
 		{:else}
@@ -68,7 +65,7 @@
 
 					<span class="nav-link-text">
 						{#if currentSubmenu.objectMenu.stringIcon !== undefined}
-							<!-- eslint-disable svelte/no-at-html-tags -->
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 							{@html currentSubmenu.objectMenu.stringIcon}
 						{/if}
 						{currentSubmenu.objectMenu.stringSlot}

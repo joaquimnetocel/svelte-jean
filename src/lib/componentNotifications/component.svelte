@@ -160,7 +160,7 @@
 																				style="font-size: 18px;"
 																				class="bx bxs-watch bx-tada-hover"
 																			/>
-																			<!-- eslint-disable svelte/no-at-html-tags -->
+																			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 																			{@html currentNotification.stringDate}
 																		</div>
 																	{/if}

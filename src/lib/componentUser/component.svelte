@@ -77,7 +77,7 @@
 									target={currentUserMenu.stringTarget ?? '_self'}
 								>
 									<span>
-										<!-- eslint-disable svelte/no-at-html-tags -->
+										<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 										{@html currentUserMenu.stringText}
 									</span>
 								</a>
